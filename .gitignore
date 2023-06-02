@@ -1,0 +1,7 @@
+npl-project
+lib
+share
+.idea
+bin
+pyvenv.cfg
+.env
