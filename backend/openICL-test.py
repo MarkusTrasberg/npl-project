@@ -1,14 +1,14 @@
 print("Importing packages...")
-from openicl import DatasetReader, PromptTemplate, CoTInferencer, PPLInferencer,BM25Retriever, VoteKRetriever, TopkRetriever,  RandomRetriever, DPPRetriever, MDLRetriever, ZeroRetriever
+from openicl import DatasetReader, PromptTemplate, CoTInferencer, PPLInferencer,BM25Retriever,  VotekRetriever, TopkRetriever,  RandomRetriever, DPPRetriever, MDLRetriever, ZeroRetriever
 import openai
 import os
 from dotenv import load_dotenv
 from openicl import AccEvaluator
-
+from icl_close_distr_examples_retriever import CloseDistrExamplesRetriever
 # parameters that need to be retrieved from the frontend
 model_name = 'distilgpt2'
 ice_num = 4
-retriever_name = "topK"
+retriever_name = "close_distr_examples"
 inferencer_name = "ppl"
 
 
@@ -32,6 +32,8 @@ print("Initiating retriever and inferencer...")
 
 if retriever_name == "topK":
     retriever = TopkRetriever(data, ice_num=ice_num)
+elif retriever_name == "close_distr_examples":
+	retriever = CloseDistrExamplesRetriever(data, ice_num=ice_num)
 elif retriever_name ==	"bm25":
 	retriever = BM25Retriever(data, ice_num=ice_num)
 elif retriever_name == "random":
@@ -81,3 +83,5 @@ print(score)
 # score = AccEvaluator().score(predictions=predictions, references=data.references)
 
 # print(f'score: ${score}')
+
+
