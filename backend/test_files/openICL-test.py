@@ -1,42 +1,87 @@
 print("Importing packages...")
-from openicl import DatasetReader, PromptTemplate, BM25Retriever, GenInferencer
+from openicl import DatasetReader, PromptTemplate, CoTInferencer, PPLInferencer,BM25Retriever,  VotekRetriever, TopkRetriever,  RandomRetriever, DPPRetriever, MDLRetriever, ZeroRetriever
 import openai
 import os
 from dotenv import load_dotenv
-from datasets import load_dataset
-import nltk
-nltk.download("punkt")
+from openicl import AccEvaluator
+from icl_close_distr_examples_retriever import CloseDistrExamplesRetriever
+# parameters that need to be retrieved from the frontend
+model_name = 'distilgpt2'
+ice_num = 4
+retriever_name = "close_distr_examples"
+inferencer_name = "ppl"
 
-# os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:64"
-# os.environ["CUDA_VISIBLE_DEVICES"] = ""
 
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:256"
 load_dotenv()
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
 # Load dataset
 print("Loading dataset...")
-dataset = load_dataset("iohadrubin/mtop")
-dataset['train'] = dataset['train'].select([0, 1, 2])
-dataset['test'] = dataset['test'].select([0])
+data = DatasetReader('gsm8k', name='main',
+						input_columns=['question'], output_column='answer', ds_size=100)
 
-dr = DatasetReader(dataset, input_columns=['question'], output_column='logical_form')  
+template = PromptTemplate('</E> Question: </Q> \n Answer: </A>',
+							{'question':'</Q>', 'answer':'</A>'},
+							ice_token='</E>')
 
-tp_str = "</E></Q>\t</L>"      
-tp = PromptTemplate(tp_str, column_token_map={'question' : '</Q>', 'logical_form' : '</L>'}, ice_token='</E>')
+print("Initiating retriever and inferencer...")
 
-print("Initiating retriever...")
-rtr = BM25Retriever(dr, ice_num=1)
+# Initiate the retriever (heuristic)
+# topK, bm25, random, voteK, dpp, mdl, zero 
 
-print("Initiating inferencer...")
-infr = GenInferencer(api_name='gpt3', engine='text-davinci-003', sleep_time=3)
+if retriever_name == "topK":
+    retriever = TopkRetriever(data, ice_num=ice_num)
+elif retriever_name == "close_distr_examples":
+	retriever = CloseDistrExamplesRetriever(data, ice_num=ice_num)
+elif retriever_name ==	"bm25":
+	retriever = BM25Retriever(data, ice_num=ice_num)
+elif retriever_name == "random":
+      retriever = RandomRetriever(data, ice_num=ice_num)
+elif retriever_name == "voteK":
+      retriever = VoteKRetriever(data, ice_num=ice_num)
+elif retriever_name == "dpp":
+      retriever = DPPRetriever(data, ice_num=ice_num)
+elif retriever_name == "mdl":
+      retriever = MDLRetriever(data, ice_num=ice_num)
+else:
+      retriever = ZeroRetriever(data)
+      
+
+# Inference by Chain-of-Thought
+cot_list=["Let's think step by step.",
+			"\nTherefore, the answer (arabic numerals) is"]
+
+# inferencer = CoTInferencer(cot_list=cot_list, api_name='ada')
+inferencer = PPLInferencer(model_name=model_name)
 
 print("Running and calculating score...")
-print(infr.inference(rtr, ice_template=tp))
+predictions = inferencer.inference(retriever, ice_template=template)
+
+print(predictions)
+
+# compute accuracy for the prediction
+score = AccEvaluator().score(predictions=predictions, references=data.references)
+print(score)
+# data = DatasetReader('gpt3mix/sst2', input_columns=['text'], output_column='label')
+
+# # Define the prompt template for the task
+# tp_dict = {
+#     0: '</E> Positive Movie Review: </Q>',
+# 	1: '</E> Negative Movie Review: </Q>'
+# }
+
+# template = PromptTemplate(tp_dict, {'text':'</Q>'}, ice_token='</E>')
 
 
+# # Initiate the retriever and inferencer
+# retriever = TopkRetriever(data, ice_num=8)
+# inferencer = PPLInferencer(model_name='gpt2-xl')
 
+# # Run inference and calculate score
+# predictions = inferencer.inference(retriever, ice_template=template)
+# score = AccEvaluator().score(predictions=predictions, references=data.references)
 
-
-
+# print(f'score: ${score}')
 
 
