@@ -1,5 +1,7 @@
 from app import create_app
-from flask import Flask, request, jsonify
+from flask import Flask, Response, request, jsonify
+
+from backend.ICLModel import ICLModel
 
 # Create an application instance
 app = create_app()
@@ -81,6 +83,9 @@ def run():
                 model:
                     type: string
                     example: gpt3
+                use_api:
+                    type: boolean
+                    example true
                 model_engine:
                     type: string
                     example: text-davinci-003
@@ -118,9 +123,28 @@ def run():
     """
     request_json = request.get_json()
 
+    model = request_json["model"]
+    use_api = request_json["use_api"]
+    model_engine = request_json["model_engine"]
+    inferencer = request_json["inferencer"]
+    dataset = request_json["dataset"]
+    dataset_size = request_json["dataset_size"]
+    retriever = request_json["retriever"]
+    ice_size = request_json["ice_size"]
 
-
-    response = jsonify({'Got this json':request.data.decode('utf-8')})
+    # # Todo add model_engine exception
+        
+    
+    try:
+        model = ICLModel(model, use_api, model_engine, inferencer, dataset, dataset_size, retriever, ice_size)
+        # Todo result = model.run()
+    except Exception as e:
+        return Response(
+            str(e),
+            status=400,
+        )
+    
+    response = jsonify({"score": 0.99})
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
