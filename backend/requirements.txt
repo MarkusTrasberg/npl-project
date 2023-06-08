@@ -1,2 +1,4 @@
 openicl
-dotenv
+python-dotenv
+flask
+flasgger
