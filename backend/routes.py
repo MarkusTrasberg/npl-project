@@ -224,25 +224,29 @@ def run():
     api_name = request_json["api_name"]
     model_engine = request_json["model_engine"]
     inferencer = request_json["inferencer"]
-    dataset = request_json["dataset"]
+    datasets = request_json["datasets"]
     dataset_size = request_json["dataset_size"]
     dataset_split = request_json["dataset_split"]
     retriever = request_json["retriever"]
     ice_size = request_json["ice_size"]
     evaluator = request_json["evaluator"]
 
-    try:
-        model = ICLModel(model_name, api_name, model_engine, inferencer, dataset, dataset_size, dataset_split, retriever, ice_size, evaluator)
-        result = model.run()
-    except Exception as e:
-        return Response(
-            str(e),
-            status=400,
-        )
+    results = []
+    for dataset in datasets:
+        try:
+            model = ICLModel(model_name, api_name, model_engine, inferencer, dataset, dataset_size, dataset_split, retriever, ice_size, evaluator)
+            result = model.run()
+            results.append(result)
+        except Exception as e:
+            return Response(
+                str(e),
+                status=400,
+            )
     
-    # Todo multiple responses so that we can let the frontend know at what stage of the run we are (i.e. inferencing, predicting)
-    
-    response = jsonify(result)
+    # TODO: Multiple responses so that we can let the frontend know at what stage of the run we are (i.e. inferencing, predicting)
+    # TODO: Currently only returns results[0] but should combine answers.
+
+    response = jsonify(results[0])
     return response
 
 

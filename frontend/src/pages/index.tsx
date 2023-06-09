@@ -1,5 +1,4 @@
 import GridBasicExample from '../components/Form';
-import '../styles/globals.css';
 
 export default function Home() {
   return (
