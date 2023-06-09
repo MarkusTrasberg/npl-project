@@ -2,7 +2,6 @@ import Button from "react-bootstrap/esm/Button";
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
-
 import RangeSlider from 'react-bootstrap-range-slider';
 import React, { useState } from 'react';
 import axios from 'axios';
@@ -17,7 +16,11 @@ interface Parameters {
   evaluators: string[];
 }
 
-function GridBasicExample() {
+interface GridBasicExampleProps {
+  onButtonClick: (result: any) => void; // Replace `any` with the actual type of your `result`
+}
+
+function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
 
     const [dataset_size, setSize] = React.useState(70);
     const [dataset_split, setSplit] = React.useState(0.8);
@@ -33,7 +36,7 @@ function GridBasicExample() {
     // const [datasets, setDatasets] = useState<{ [key: string]: boolean }>({});
     const [datasets, setDatasets] = useState<string[]>([]);
 
-    const [accuracy, setAccuracy] = useState("");
+    // const [accuracy, setAccuracy] = useState("");
 
     const handleClick = async (e: React.FormEvent) => { 
       e.preventDefault();
@@ -50,7 +53,8 @@ function GridBasicExample() {
       console.log("Sending data.. ", dataToSend)
       try {
         const response = await axios.post('http://localhost:8000/debug', dataToSend);
-        setAccuracy("Accuracy: " + response.data["accuracy"]);
+        // setAccuracy("Accuracy: " + response.data["accuracy"]);
+        onButtonClick(response.data["accuracy"]);
       } catch (error) {
         console.error('There was an error!', error);
       }
@@ -85,7 +89,8 @@ function GridBasicExample() {
 
   return (
     <div className="text-lg">
-    <Form id="MainForm">
+      <h1 className="font-bold text-xl"> Training</h1>
+    <Form id="MainForm" className="">
       <Row>
         <Form.Text>
         Select model
@@ -144,9 +149,12 @@ function GridBasicExample() {
             Select # of samples to train from
         </Form.Text>
       </Row>
+      
+      <Form.Group>
       <Row>
-        <Col>
-        <Form.Group>
+
+        <Col lg={8} md={8} sm={12} xs={12}>
+
             <RangeSlider
             value={dataset_size}
             step={10}
@@ -154,13 +162,21 @@ function GridBasicExample() {
             max={100}
             onChange={e => setSize(Number(e.target.value))}
             />
-        </Form.Group>
+            
         </Col>
-        <Col>
-        <Form.Text>
+        <Col xs="3">
+          <Form.Control value={dataset_size}/>
+        </Col>
+         </Row>
+      </Form.Group>
+      <Form.Text>
             Select split size 
         </Form.Text>
-        <Form.Group>
+      <Form.Group>
+      <Row>
+
+        <Col lg={8} md={8} sm={12} xs={12}>
+
             <RangeSlider
             value={dataset_split}
             step={0.1}
@@ -168,14 +184,23 @@ function GridBasicExample() {
             max={1}
             onChange={e => setSplit(Number(e.target.value))}
             />
-        </Form.Group>
+            
         </Col>
-
-        <Col>
-        <Form.Text>
+        <Col xs="3">
+          <Form.Control value={dataset_split}/>
+        </Col>
+         </Row>
+      </Form.Group>
+        
+      
+      <Form.Group>
+      <Form.Text>
             Select ICE size 
         </Form.Text>
-        <Form.Group>
+      <Row>
+
+        <Col lg={8} md={8} sm={12} xs={12}>
+
             <RangeSlider
             value={ice_size}
             step={1}
@@ -183,15 +208,14 @@ function GridBasicExample() {
             max={5}
             onChange={e => setIce(Number(e.target.value))}
             />
-        </Form.Group>
+            
         </Col>
-
-        {/* <Col xs="3">
-          <Form.Control 
-            value={dataset_size} 
-            onChange={e => setSize(Number(e.target.value))} />
-        </Col> */}
-      </Row>
+        <Col xs="3">
+          <Form.Control value={ice_size}/>
+        </Col>
+         </Row>
+      </Form.Group>
+    
       <Row>
     <Col>
         <Form.Text>
@@ -229,8 +253,8 @@ function GridBasicExample() {
         </Button>
       </Row>
     </Form>
-    {accuracy}
     </div>
+
   );
 }
 
