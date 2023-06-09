@@ -7,12 +7,7 @@ from dotenv import load_dotenv
 from datasets import load_dataset
 import importlib
 
-MODEL_NAMES = ["gpt2", "google/flan-t5-small"] # Todo extend list
-API_NAMES = ["gpt3"]
-MODEL_ENGINES = {
-    "gpt3": ["text-davinci-003", "ada", "babbage", "curie", "davinci"],  # Todo extend list
-}
-DATASETS = ["gpt3mix/sst2", "iohadrubin/mtop"] # Todo extend list
+
 DATASET_PROMPTEMPLATES = {
 	"gpt3mix/sst2": PromptTemplate(
 		template={ 
@@ -28,14 +23,6 @@ DATASET_PROMPTEMPLATES = {
 		ice_token='</E>'
 	)
 }
-DATASET_INPUT_OUTPUT = {
-	"gpt3mix/sst2": (['text'], 'label'),
-	"iohadrubin/mtop": (['question'], 'logical_form')
-}
-INFERENCERS = ["PPLInferencer", "GenInferencer", "CoTInferencer"]
-RETRIEVERS = ["RandomRetriever", "BM25Retriever", "TopkRetriever",
-               			"VotekRetriever", "DPPRetriever", "MDLRetriever", "ZeroRetriever"]
-EVALUATORS = ["AccEvaluator", "BleuEvaluator", "RougeEvaluator", "SquadEvaluator"]
 
 class ICLModel():
     

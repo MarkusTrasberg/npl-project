@@ -6,6 +6,21 @@ from ICLModel import API_NAMES, DATASETS, EVALUATORS, INFERENCERS, MODEL_ENGINES
 # Create an application instance
 app = create_app()
 
+DATASET_INPUT_OUTPUT = {
+	"gpt3mix/sst2": (['text'], 'label'),
+	"iohadrubin/mtop": (['question'], 'logical_form')
+}
+INFERENCERS = ["PPLInferencer", "GenInferencer", "CoTInferencer"]
+RETRIEVERS = ["RandomRetriever", "BM25Retriever", "TopkRetriever",
+               			"VotekRetriever", "DPPRetriever", "MDLRetriever", "ZeroRetriever"]
+EVALUATORS = ["AccEvaluator", "BleuEvaluator", "RougeEvaluator", "SquadEvaluator"]
+MODEL_NAMES = ["gpt2", "google/flan-t5-small"] # Todo extend list
+API_NAMES = ["gpt3"]
+MODEL_ENGINES = {
+    "gpt3": ["text-davinci-003", "ada", "babbage", "curie", "davinci"],  # Todo extend list
+}
+DATASETS = ["gpt3mix/sst2", "iohadrubin/mtop"] # Todo extend list
+
 # Define a route to fetch the available parameters
 @app.route("/parameters", methods=["GET"], strict_slashes=False)
 def parameters():
@@ -62,9 +77,9 @@ def parameters():
     return response
 
 @app.route("/debug", methods=["POST"], strict_slashes=False)
-def run():
+def debug():
     """
-    Do an In-Context Learning run based on the specified paramters
+    Do an In-Context Learning debug run without openicl based on the specified paramters
     ---
     consumes:
       - application/json
@@ -123,6 +138,27 @@ def run():
       400:
         description: Bad request
     """
+    request_json = request.get_json()
+
+    model_name = request_json["model_name"]
+    api_name = request_json["api_name"]
+    model_engine = request_json["model_engine"]
+    inferencer = request_json["inferencer"]
+    dataset = request_json["dataset"]
+    dataset_size = request_json["dataset_size"]
+    dataset_split = request_json["dataset_split"]
+    retriever = request_json["retriever"]
+    ice_size = request_json["ice_size"]
+    evaluator = request_json["evaluator"]
+
+    if model_name not in MODEL_NAMES or api_name not in API_NAMES or model_engine not in MODEL_ENGINES or \
+        inferencer not in INFERENCERS or dataset not in DATASETS or retriever not in RETRIEVERS or \
+        evaluator not in EVALUATORS:
+            return Response(
+                "Wrong paramter set",
+                status=400,
+            )
+
     response = jsonify({'accuracy': 0.99})
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
