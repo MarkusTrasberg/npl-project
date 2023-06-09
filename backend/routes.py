@@ -61,6 +61,71 @@ def parameters():
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
+@app.route("/debug", methods=["POST"], strict_slashes=False)
+def run():
+    """
+    Do an In-Context Learning run based on the specified paramters
+    ---
+    consumes:
+      - application/json
+    parameters:
+        - name: input_data
+          in: body
+          description: ICL parameters to be set
+          required: True
+          schema:
+            type: object
+            properties:
+                model_name:
+                    type: string
+                    example: google/flan-t5-small
+                api_name:
+                    type: string
+                    example gpt3
+                model_engine:
+                    type: string
+                    example: text-davinci-003
+                inferencer:
+                    type: string
+                    example: GenInferencer
+                dataset:
+                    type: string
+                    example: gpt3mix/sst2
+                dataset_size:
+                    type: integer
+                    example: 100
+                dataset_split:
+                    type: number
+                    example: 0.8
+                retriever:
+                    type: string
+                    example: TopkRetriever
+                ice_size:
+                    type: integer
+                    examples: 3
+                evaluator:
+                    type: string
+                    example: AccEvaluator
+        - name: output_data
+          in: body
+          description: ICL run score
+          required: True
+          schema:
+            type: object
+            required: true
+            properties:
+                accuracy:
+                    type: number
+                    example: 0.99
+    responses:
+      200:
+        description: Successful response
+      400:
+        description: Bad request
+    """
+    response = jsonify({'accuracy': 0.99})
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
 @app.route("/run", methods=["POST"], strict_slashes=False)
 def run():
