@@ -1,7 +1,7 @@
 from app import create_app
 from flask import Flask, Response, request, jsonify
 
-from backend.ICLModel import API_NAMES, DATASETS, EVALUATORS, INFERENCERS, MODEL_ENGINES, MODEL_NAMES, RETRIEVERS, ICLModel
+from ICLModel import API_NAMES, DATASETS, EVALUATORS, INFERENCERS, MODEL_ENGINES, MODEL_NAMES, RETRIEVERS, ICLModel
 
 # Create an application instance
 app = create_app()
