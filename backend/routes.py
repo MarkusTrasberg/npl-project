@@ -1,24 +1,12 @@
 from app import create_app
 from flask import Flask, Response, request, jsonify
 
-from backend.ICLModel import ICLModel
+from backend.ICLModel import API_NAMES, DATASETS, EVALUATORS, INFERENCERS, MODEL_ENGINES, MODEL_NAMES, RETRIEVERS, ICLModel
 
 # Create an application instance
 app = create_app()
 
-# Define a route to fetch the available articles
-
-MODELS = ["gpt3", "opt-175b", "gpt2", "flan-t5-small"] # Todo extend list
-MODEL_ENGINES = {
-    "gpt3": ["text-davinci-003"],  # Todo extend list
-}
-DATASETS = ["gpt3mix/sst2"] # Todo extend list
-INFERENCERS = ["PPLInferencer", "GenInferencer", "CoTInferencer"]
-RETRIEVERS = ["RandomRetriever", "BM25Retriever", "TopkRetriever",
-               "VotekRetriever", "DPPRetriever", "MDLRetriever", "ZeroRetriever"]
-
-
-
+# Define a route to fetch the available parameters
 @app.route("/parameters", methods=["GET"], strict_slashes=False)
 def parameters():
     """
@@ -35,7 +23,10 @@ def parameters():
             type: object
             required: true
             properties:
-                models:
+                model_names:
+                    type: array
+                    example: [gpt2]
+                api_names:
                     type: array
                     example: [gpt3]
                 model_engines:
@@ -50,20 +41,26 @@ def parameters():
                 retrievers:
                     type: array
                     example: [TopkRetriever]
+                retrievers:
+                    type: array
+                    example: [AccEvaluator]
     responses:
       200:
         description: Successful response
     """
     parameters = {
-        "models": MODELS,
+        "model_names": MODEL_NAMES,
+        "api_names": API_NAMES,
         "model_engines": MODEL_ENGINES,
         "inferencers": INFERENCERS,
         "datasets": DATASETS,
-        "retrievers": RETRIEVERS
+        "retrievers": RETRIEVERS,
+        "evaluators": EVALUATORS,
     }
     response = jsonify(parameters)
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
+
 
 @app.route("/run", methods=["POST"], strict_slashes=False)
 def run():
@@ -80,12 +77,12 @@ def run():
           schema:
             type: object
             properties:
-                model:
+                model_name:
                     type: string
-                    example: gpt3
-                use_api:
-                    type: boolean
-                    example true
+                    example: google/flan-t5-small
+                api_name:
+                    type: string
+                    example gpt3
                 model_engine:
                     type: string
                     example: text-davinci-003
@@ -98,12 +95,18 @@ def run():
                 dataset_size:
                     type: integer
                     example: 100
+                dataset_split:
+                    type: number
+                    example: 0.8
                 retriever:
                     type: string
                     example: TopkRetriever
                 ice_size:
                     type: integer
                     examples: 3
+                evaluator:
+                    type: string
+                    example: AccEvaluator
         - name: output_data
           in: body
           description: ICL run score
@@ -112,7 +115,7 @@ def run():
             type: object
             required: true
             properties:
-                score:
+                accuracy:
                     type: number
                     example: 0.99
     responses:
@@ -123,28 +126,27 @@ def run():
     """
     request_json = request.get_json()
 
-    model = request_json["model"]
-    use_api = request_json["use_api"]
+    model_name = request_json["model_name"]
+    api_name = request_json["api_name"]
     model_engine = request_json["model_engine"]
     inferencer = request_json["inferencer"]
     dataset = request_json["dataset"]
     dataset_size = request_json["dataset_size"]
+    dataset_split = request_json["dataset_split"]
     retriever = request_json["retriever"]
     ice_size = request_json["ice_size"]
+    evaluator = request_json["evaluator"]
 
-    # # Todo add model_engine exception
-        
-    
     try:
-        model = ICLModel(model, use_api, model_engine, inferencer, dataset, dataset_size, retriever, ice_size)
-        # Todo result = model.run()
+        model = ICLModel(model_name, api_name, model_engine, inferencer, dataset, dataset_size, dataset_split, retriever, ice_size, evaluator)
+        result = model.run()
     except Exception as e:
         return Response(
             str(e),
             status=400,
         )
     
-    response = jsonify({"score": 0.99})
+    response = jsonify(result)
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 

@@ -1,127 +1,149 @@
 import os
 from dotenv import load_dotenv
-from openicl import *
+from openicl import DatasetReader, PromptTemplate
 import openai
 import os
 from dotenv import load_dotenv
 from datasets import load_dataset
+import importlib
+
+MODEL_NAMES = ["gpt2", "google/flan-t5-small"] # Todo extend list
+API_NAMES = ["gpt3"]
+MODEL_ENGINES = {
+    "gpt3": ["text-davinci-003", "ada", "babbage", "curie", "davinci"],  # Todo extend list
+}
+DATASETS = ["gpt3mix/sst2", "iohadrubin/mtop"] # Todo extend list
+DATASET_PROMPTEMPLATES = {
+	"gpt3mix/sst2": PromptTemplate(
+		template={ 
+			0: "</E>Positive Movie Review: </text>", 
+			1: "</E>Negative Movie Review: </text>"
+		}, 
+		column_token_map={'text': '</text>'}, 
+		ice_token='</E>'
+	),
+	"iohadrubin/mtop": PromptTemplate(
+		template="</E></Q>\t</L>",
+		column_token_map={'question' : '</Q>', 'logical_form' : '</L>'}, 
+		ice_token='</E>'
+	)
+}
+DATASET_INPUT_OUTPUT = {
+	"gpt3mix/sst2": (['text'], 'label'),
+	"iohadrubin/mtop": (['question'], 'logical_form')
+}
+INFERENCERS = ["PPLInferencer", "GenInferencer", "CoTInferencer"]
+RETRIEVERS = ["RandomRetriever", "BM25Retriever", "TopkRetriever",
+               			"VotekRetriever", "DPPRetriever", "MDLRetriever", "ZeroRetriever"]
+EVALUATORS = ["AccEvaluator", "BleuEvaluator", "RougeEvaluator", "SquadEvaluator"]
 
 class ICLModel():
     
 	def __init__(self,
-	      	model: str,
-			use_api: bool,
+	      	model_name: str,
+			api_name: bool,
 			model_engine: str,
 			inferencer: str,
 			dataset: str,
 			dataset_size: int,
+			dataset_split: float,
 			retriever: str,
 			ice_size: int,
+			evaluator: str,
 		):
 
-		self.model = model
-		self.use_api = use_api
+		self.model_name = model_name
+		self.api_name = api_name
 		self.model_engine = model_engine
 		self.inferencer = inferencer
 		self.dataset = dataset
 		self.dataset_size = dataset_size
+		self.dataset_split = dataset_split
 		self.retriever = retriever
 		self.ice_size = ice_size
+		self.evaluator = evaluator
+		self.use_api = False
+		self.prompt_template = None
+		self.dsr = None
+		self.rtvr = None
+		self.infr = None
 
 		# Get api key when using api
-		if self.use_api:
+		if self.api_name is not None:
 			load_dotenv()
-			self.openai.api_key = os.getenv('OPENAI_API_KEY')
+			openai.api_key = os.getenv('OPENAI_API_KEY')
+			self.use_api = True
 
-		self.setDatasetSpecifics()
+		self.setDatasetReader()
 
 		self.setRetriever()
 
-		self.setRetriever()
+		self.setInferencer()
 
 	def setDatasetReader(self):
-		# Todo set dataset specifics based on dataset
 		# Todo training/test split
 
 		print("Loading dataset...")
 
-		tp_str = "</E></Q>\t</L>"  
-		self.prompt_template = PromptTemplate(tp_str, column_token_map={'question' : '</Q>', 'logical_form' : '</L>'}, ice_token='</E>')
+		self.prompt_template = DATASET_PROMPTEMPLATES[self.dataset]
 
-		self.dataset_input_columns = []
-		self.dataset_output_column = ""
+		dataset_input_columns, dataset_output_column = DATASET_INPUT_OUTPUT[self.dataset]
 
 		ds = load_dataset(self.dataset)
-		self.dsr = DatasetReader(ds, ds_size=self.dataset_size, input_columns=self.dataset_input_columns, output_column=self.dataset_output_column)  
+		self.dsr = DatasetReader(ds, ds_size=self.dataset_size, input_columns=dataset_input_columns, output_column=dataset_output_column)  
 
 	def setRetriever(self):
-		# Todo can this be better?
+		# Todo set retriever specifics
+		# Todo check if each retriever needs different paramaters
+			# Todo randomrtvr needs seed
+			# Todo bm25tvr needs index_corpus, test_corpus and bm25
+			# Todo topkrtvr needs batch_size, model, tokenizer and index
+			# Todo votekrtvr needs batch_size, model, tokenizer, index and votek_k
+			# Todo dpprtvr needs batch_size, model, tokenizer, index, seed and scale_factor
+			# Todo mdlrtvr needs batch_size, model, tokenizer, index, select_time, labels and seed
+			# Todo zerortvr
 
 		print("Initiating retriever...")
 
-		if (self.retriever == "RandomRetriever"):
-			self.rtvr = RandomRetriever(self.dsr, ice_num=self.ice_size)
-
-		elif (self.retriever == "BM25Retriever"):
-			self.rtvr = BM25Retriever(self.dsr, ice_num=self.ice_size)
-
-		elif (self.retriever == "TopkRetriever"):
-			self.rtvr = TopkRetriever(self.dsr, ice_num=self.ice_size)
-
-		elif (self.retriever == "VotekRetriever"):
-			self.rtvr = VotekRetriever(self.dsr, ice_num=self.ice_size)
-
-		elif (self.retriever == "DPPRetriever"):
-			self.rtvr = DPPRetriever(self.dsr, ice_num=self.ice_size)
-
-		elif (self.retriever == "MDLRetriever"):
-			self.rtvr = MDLRetriever(self.dsr, ice_num=self.ice_size)
-
-		elif (self.retriever == "ZeroRetriever"):
-			self.rtvr = ZeroRetriever(self.dsr, ice_num=self.ice_size)
-
-		else:
-			raise Exception("Retriever parameter is not correct")
+		try:
+			RetrieverClass = getattr(importlib.import_module("openicl"), self.retriever)
+			self.rtvr = RetrieverClass(self.dsr, ice_num=self.ice_size)
+		except:
+			raise Exception("Retriever parameters are not correct")
 
 
 	def setInferencer(self):
-		# Todo can this be better?
 		# Todo set inferencer specifics
-		# Todo check if every inferencer needs different paramaters
+		# Todo check if each inferencer needs different paramaters
+			# Todo pplinfr needs labels
+			# Todo geninfr needs gen_field_replace_token and generation_kwargs
+			# Todo cotinfr needs gen_field_replace_token, generation_kwargs and cot_list
 
 		print("Initiating inferencer...")
 
-		if self.use_api:
-			# Todo check if model_engine works like this
-			if (self.retriever == "PPLInferencer"):
-				self.infr =  PPLInferencer(api_name=self.model, engine=self.model_engine, sleep_time=3)
-
-			elif (self.retriever == "GenInferencer"):
-				self.infr = GenInferencer(api_name=self.model, engine=self.model_engine, sleep_time=3)
-
-			elif (self.retriever == "CoTInferencer"):
-				self.infr = CoTInferencer(api_name=self.model, engine=self.model_engine, sleep_time=3)
-
+		try:
+			InferencerClass = getattr(importlib.import_module("openicl"), self.inferencer )
+			if self.use_api:
+				self.infr = InferencerClass(api_name=self.api_name, engine=self.model_engine, sleep_time=3)
 			else:
-				raise Exception("Inferencer parameter is not correct")
-		else:
-			if (self.retriever == "PPLInferencer"):
-				self.infr = PPLInferencer(model=self.model)
-
-			elif (self.retriever == "GenInferencer"):
-				self.infr = GenInferencer(model=self.model)
-
-			elif (self.retriever == "CoTInferencer"):
-				self.infr = CoTInferencer(model=self.model)
-
-			else:
-				raise Exception("Inferencer parameter is not correct")
+				self.infr = InferencerClass(model=self.model_name)
+		except:
+			raise Exception("Inferencer parameter is not correct")
 
 	
 	def run(self):
 		print("Running and calculating score...")
-
-		return self.infr.inference(self.rtvr, ice_template=self.prompt_template)
+		
+		predictions = self.infr.inference(self.rtvr, ice_template=self.prompt_template)
+		
+		try:
+			EvaluatorClass = getattr(importlib.import_module("openicl"), self.evaluator)
+			evaluator = EvaluatorClass()
+		except:
+			raise Exception("Evaluator parameter is not correct")
+		
+		score = evaluator.score(predictions=predictions, references=self.dsr.references)
+		return score
 
 
 
