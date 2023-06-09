@@ -146,6 +146,8 @@ def run():
             status=400,
         )
     
+    # Todo multiple responses so that we can let the frontend know at what stage of the run we are (i.e. inferencing, predicting)
+    
     response = jsonify(result)
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
