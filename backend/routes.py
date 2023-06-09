@@ -1,7 +1,7 @@
 from app import create_app
 from flask import Flask, Response, request, jsonify
 
-from ICLModel import API_NAMES, DATASETS, EVALUATORS, INFERENCERS, MODEL_ENGINES, MODEL_NAMES, RETRIEVERS, ICLModel
+from ICLModel import ICLModel
 
 # Create an application instance
 app = create_app()
@@ -96,7 +96,7 @@ def debug():
                     example: google/flan-t5-small
                 api_name:
                     type: string
-                    example gpt3
+                    example: gpt3
                 model_engine:
                     type: string
                     example: text-davinci-003
@@ -140,28 +140,28 @@ def debug():
     """
     request_json = request.get_json()
 
-    model_name = request_json["model_name"]
-    api_name = request_json["api_name"]
-    model_engine = request_json["model_engine"]
-    inferencer = request_json["inferencer"]
-    dataset = request_json["dataset"]
-    dataset_size = request_json["dataset_size"]
-    dataset_split = request_json["dataset_split"]
-    retriever = request_json["retriever"]
-    ice_size = request_json["ice_size"]
-    evaluator = request_json["evaluator"]
+#     model_name = request_json["model_name"]
+#     api_name = request_json["api_name"]
+#     model_engine = request_json["model_engine"]
+#     inferencer = request_json["inferencer"]
+#     dataset = request_json["dataset"]
+#     dataset_size = request_json["dataset_size"]
+#     dataset_split = request_json["dataset_split"]
+#     retriever = request_json["retriever"]
+#     ice_size = request_json["ice_size"]
+#     evaluator = request_json["evaluator"]
 
-    if model_name not in MODEL_NAMES or api_name not in API_NAMES or model_engine not in MODEL_ENGINES or \
-        inferencer not in INFERENCERS or dataset not in DATASETS or retriever not in RETRIEVERS or \
-        evaluator not in EVALUATORS:
-            return Response(
-                "Wrong paramter set",
-                status=400,
-            )
+#     if model_name not in MODEL_NAMES or api_name not in API_NAMES or model_engine not in MODEL_ENGINES or \
+#         inferencer not in INFERENCERS or dataset not in DATASETS or retriever not in RETRIEVERS or \
+#         evaluator not in EVALUATORS:
+#             return Response(
+#                 "Wrong paramter set",
+#                 status=400,
+#             )
 
-    response = jsonify({'accuracy': 0.99})
-    response.headers.add('Access-Control-Allow-Origin', '*')
-    return response
+#     response = jsonify({'accuracy': 0.99})
+#     response.headers.add('Access-Control-Allow-Origin', '*')
+#     return response
 
 @app.route("/run", methods=["POST"], strict_slashes=False)
 def run():
@@ -180,10 +180,9 @@ def run():
             properties:
                 model_name:
                     type: string
-                    example: google/flan-t5-small
                 api_name:
                     type: string
-                    example gpt3
+                    example: gpt3
                 model_engine:
                     type: string
                     example: text-davinci-003
