@@ -1,10 +1,12 @@
 from app import create_app
 from flask import Flask, Response, request, jsonify
+from flask_cors import CORS
 
 from ICLModel import ICLModel
 
 # Create an application instance
 app = create_app()
+CORS(app)
 
 DATASET_INPUT_OUTPUT = {
 	"gpt3mix/sst2": (['text'], 'label'),
@@ -73,7 +75,6 @@ def parameters():
         "evaluators": EVALUATORS,
     }
     response = jsonify(parameters)
-    response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
 @app.route("/debug", methods=["POST"], strict_slashes=False)
@@ -138,30 +139,23 @@ def debug():
       400:
         description: Bad request
     """
+
     request_json = request.get_json()
+    print(request_json)
 
-#     model_name = request_json["model_name"]
-#     api_name = request_json["api_name"]
-#     model_engine = request_json["model_engine"]
-#     inferencer = request_json["inferencer"]
-#     dataset = request_json["dataset"]
-#     dataset_size = request_json["dataset_size"]
-#     dataset_split = request_json["dataset_split"]
-#     retriever = request_json["retriever"]
-#     ice_size = request_json["ice_size"]
-#     evaluator = request_json["evaluator"]
+    response = jsonify({'accuracy': 0.99})
 
-#     if model_name not in MODEL_NAMES or api_name not in API_NAMES or model_engine not in MODEL_ENGINES or \
-#         inferencer not in INFERENCERS or dataset not in DATASETS or retriever not in RETRIEVERS or \
-#         evaluator not in EVALUATORS:
-#             return Response(
-#                 "Wrong paramter set",
-#                 status=400,
-#             )
-
-#     response = jsonify({'accuracy': 0.99})
-#     response.headers.add('Access-Control-Allow-Origin', '*')
-#     return response
+    model_name = request_json["model_name"]
+    inferencer = request_json["inferencer"]
+    datasets = request_json["datasets"]
+    dataset_size = request_json["dataset_size"]
+    dataset_split = request_json["dataset_split"]
+    retriever = request_json["retriever"]
+    ice_size = request_json["ice_size"]
+    evaluator = request_json["evaluator"]
+    response = jsonify({'accuracy': 0.99})
+    
+    return response
 
 @app.route("/run", methods=["POST"], strict_slashes=False)
 def run():
@@ -249,9 +243,8 @@ def run():
     # Todo multiple responses so that we can let the frontend know at what stage of the run we are (i.e. inferencing, predicting)
     
     response = jsonify(result)
-    response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=8000)

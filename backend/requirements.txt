@@ -3,3 +3,4 @@ python-dotenv
 flask
 flasgger
 importlib
+flask-cors
