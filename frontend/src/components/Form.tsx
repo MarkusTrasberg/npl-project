@@ -10,7 +10,6 @@ import axios from 'axios';
 interface Parameters {
   datasets: string[];
   inferencers: string[];
-  model_names: string[];
   models: string[];
   retrievers: string[];
   evaluators: string[];
@@ -29,7 +28,7 @@ function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
     const [presentResponse, setPresentResponse] = React.useState([]);
     const [parameters, setParameters] = React.useState<Parameters | null>(null);
 
-    const [model_name, setModel] = useState("");
+    const [model, setModel] = useState("");
     const [evaluator, setEvaluator] = useState("");
     const [inferencer, setInferencer] = useState("");
     const [retriever, setRetriever] = useState("");
@@ -41,7 +40,7 @@ function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
     const handleClick = async (e: React.FormEvent) => { 
       e.preventDefault();
       const dataToSend = { 
-        model_name, 
+        model, 
         evaluator, 
         inferencer, 
         retriever,
@@ -53,8 +52,7 @@ function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
       console.log("Sending data.. ", dataToSend)
       try {
         const response = await axios.post('http://localhost:8000/debug', dataToSend);
-        // setAccuracy("Accuracy: " + response.data["accuracy"]);
-        onButtonClick(response.data["accuracy"]);
+        onButtonClick(response.data);
       } catch (error) {
         console.error('There was an error!', error);
       }
@@ -70,7 +68,7 @@ function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
             setSize(70);
             setSplit(0.8);
             setIce(3);
-            setModel(response.data.model_names[0]);
+            setModel(response.data.models[0]);
             setEvaluator(response.data.evaluators[0]);
             setInferencer(response.data.inferencers[0]);
             setRetriever(response.data.retrievers[0]);
@@ -98,8 +96,8 @@ function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
       </Row>
       <Row>
       <Form.Select onChange={(e) => setModel(e.target.value)}>
-      {parameters?.model_names && parameters.model_names.map((model_name, index) => (
-                        <option value={model_name} key={index}>{model_name}</option>
+      {parameters?.models && parameters.models.map((model, index) => (
+                        <option value={model} key={index}>{model}</option>
                     ))}
       </Form.Select>
       </Row>
