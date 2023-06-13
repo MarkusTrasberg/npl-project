@@ -90,7 +90,7 @@ class ICLModel():
 
 			# A dataset should always be a DatasetDictionary class with a train and test entry
 			# Accelerator specifics are defined by 'accelerator_config.yaml'
-			self.rtvr = RetrieverClass(self.dsr, ice_num=self.ice_size,, index_split='train', test_split='test', accelerator=Accelerator())
+			self.rtvr = RetrieverClass(self.dsr, ice_num=self.ice_size, index_split='train', test_split='test', accelerator=Accelerator())
 		except:
 			raise Exception("Retriever parameters are not correct")
 
