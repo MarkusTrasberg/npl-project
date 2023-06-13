@@ -1,1 +1,1 @@
-FLASK_APP=routes.py FLASK_DEBUG=1 FLASK_ENV=development flask run -h localhost -p 8080
+accelerate launch --config_file /home/gadmiraal/nlp/npl-project/backend/accelerate_config.yaml test.py

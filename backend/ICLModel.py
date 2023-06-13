@@ -1,3 +1,4 @@
+import json
 import os
 from dotenv import load_dotenv
 from openicl import DatasetReader, PromptTemplate
@@ -6,8 +7,14 @@ import os
 from dotenv import load_dotenv
 from datasets import load_dataset
 import importlib
+from accelerate import Accelerator
+import torch
 
-
+# Todo extend with the new dataset and see if there is a train/test division
+DATASET_INPUT_OUTPUT = {
+	"gpt3mix/sst2": (['text'], 'label'),
+	"iohadrubin/mtop": (['question'], 'logical_form')
+}
 DATASET_PROMPTEMPLATES = {
 	"gpt3mix/sst2": PromptTemplate(
 		template={ 
@@ -27,39 +34,27 @@ DATASET_PROMPTEMPLATES = {
 class ICLModel():
     
 	def __init__(self,
-	      	model_name: str,
-			api_name: bool,
-			model_engine: str,
+	      	model_dict: dict,
 			inferencer: str,
 			dataset: str,
 			dataset_size: int,
-			dataset_split: float,
 			retriever: str,
 			ice_size: int,
 			evaluator: str,
 		):
 
-		self.model_name = model_name
-		self.api_name = api_name
-		self.model_engine = model_engine
+		self.model_dict = model_dict
 		self.inferencer = inferencer
 		self.dataset = dataset
 		self.dataset_size = dataset_size
-		self.dataset_split = dataset_split
 		self.retriever = retriever
 		self.ice_size = ice_size
 		self.evaluator = evaluator
-		self.use_api = False
+		self.use_api = model_dict['api']
 		self.prompt_template = None
 		self.dsr = None
 		self.rtvr = None
 		self.infr = None
-
-		# Get api key when using api
-		if self.api_name is not None:
-			load_dotenv()
-			openai.api_key = os.getenv('OPENAI_API_KEY')
-			self.use_api = True
 
 		self.setDatasetReader()
 
@@ -68,8 +63,6 @@ class ICLModel():
 		self.setInferencer()
 
 	def setDatasetReader(self):
-		# Todo training/test split
-
 		print("Loading dataset...")
 
 		self.prompt_template = DATASET_PROMPTEMPLATES[self.dataset]
@@ -94,7 +87,10 @@ class ICLModel():
 
 		try:
 			RetrieverClass = getattr(importlib.import_module("openicl"), self.retriever)
-			self.rtvr = RetrieverClass(self.dsr, ice_num=self.ice_size)
+
+			# A dataset should always be a DatasetDictionary class with a train and test entry
+			# Accelerator specifics are defined by 'accelerator_config.yaml'
+			self.rtvr = RetrieverClass(self.dsr, ice_num=self.ice_size,, index_split='train', test_split='test', accelerator=Accelerator())
 		except:
 			raise Exception("Retriever parameters are not correct")
 
@@ -111,9 +107,14 @@ class ICLModel():
 		try:
 			InferencerClass = getattr(importlib.import_module("openicl"), self.inferencer )
 			if self.use_api:
-				self.infr = InferencerClass(api_name=self.api_name, engine=self.model_engine, sleep_time=3)
+				# Get api key
+				load_dotenv()
+				openai.api_key = os.getenv('OPENAI_API_KEY')
+
+				# Set inferencer
+				self.infr = InferencerClass(api_name=self.model_dict['model'], engine=self.model_dict['engine'], sleep_time=3)
 			else:
-				self.infr = InferencerClass(model=self.model_name)
+				self.infr = InferencerClass(model=self.model_dict['model'])
 		except:
 			raise Exception("Inferencer parameter is not correct")
 
@@ -130,7 +131,17 @@ class ICLModel():
 			raise Exception("Evaluator parameter is not correct")
 		
 		score = evaluator.score(predictions=predictions, references=self.dsr.references)
-		return score
+
+		with open("icl_inference_output/predictions.json") as f:
+			data = json.load(f)
+
+		result = {
+			"accuracy": score['accuracy'],
+			"origin_prompt": [value["origin_prompt"] for value in data.values()],
+			"predictions": predictions,
+			"answers": self.dsr.references
+		}
+		return result
 
 
 
