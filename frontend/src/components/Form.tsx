@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import RangeSlider from 'react-bootstrap-range-slider';
 import React, { useState } from 'react';
 import axios from 'axios';
+import { ResultsProps } from '@/components/Results';
 
 
 interface Parameters {
@@ -16,16 +17,13 @@ interface Parameters {
 }
 
 interface GridBasicExampleProps {
-  onButtonClick: (result: any) => void; // Replace `any` with the actual type of your `result`
+  onButtonClick: (result: any) => void; 
 }
 
 function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
 
     const [dataset_size, setSize] = React.useState(70);
-    const [dataset_split, setSplit] = React.useState(0.8);
     const [ice_size, setIce] = React.useState(3);
-    const [type, setType] = React.useState([])
-    const [presentResponse, setPresentResponse] = React.useState([]);
     const [parameters, setParameters] = React.useState<Parameters | null>(null);
 
     const [model, setModel] = useState("");
@@ -34,8 +32,6 @@ function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
     const [retriever, setRetriever] = useState("");
     // const [datasets, setDatasets] = useState<{ [key: string]: boolean }>({});
     const [datasets, setDatasets] = useState<string[]>([]);
-
-    // const [accuracy, setAccuracy] = useState("");
 
     const handleClick = async (e: React.FormEvent) => { 
       e.preventDefault();
@@ -46,7 +42,6 @@ function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
         retriever,
         datasets,
         dataset_size,
-        dataset_split,
         ice_size
       };
       console.log("Sending data.. ", dataToSend)
@@ -66,7 +61,6 @@ function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
   
           if (response.data) {
             setSize(70);
-            setSplit(0.8);
             setIce(3);
             setModel(response.data.models[0]);
             setEvaluator(response.data.evaluators[0]);
@@ -156,40 +150,18 @@ function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
             <RangeSlider
             value={dataset_size}
             step={10}
+            tooltip="off"
             min={0}
             max={100}
             onChange={e => setSize(Number(e.target.value))}
             />
             
         </Col>
-        <Col xs="3">
+        <Col xs="2">
           <Form.Control value={dataset_size}/>
         </Col>
          </Row>
       </Form.Group>
-      <Form.Text>
-            Select split size 
-        </Form.Text>
-      <Form.Group>
-      <Row>
-
-        <Col lg={8} md={8} sm={12} xs={12}>
-
-            <RangeSlider
-            value={dataset_split}
-            step={0.1}
-            min={0}
-            max={1}
-            onChange={e => setSplit(Number(e.target.value))}
-            />
-            
-        </Col>
-        <Col xs="3">
-          <Form.Control value={dataset_split}/>
-        </Col>
-         </Row>
-      </Form.Group>
-        
       
       <Form.Group>
       <Form.Text>
@@ -202,13 +174,14 @@ function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
             <RangeSlider
             value={ice_size}
             step={1}
-            min={1}
+            min={0}
+            tooltip="off"
             max={5}
             onChange={e => setIce(Number(e.target.value))}
             />
             
         </Col>
-        <Col xs="3">
+        <Col xs="2">
           <Form.Control value={ice_size}/>
         </Col>
          </Row>

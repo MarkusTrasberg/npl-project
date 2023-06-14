@@ -23,10 +23,10 @@ function Results( {result}: ResultsProps) {
 
 
   const columns = [
-    { field: 'id', headerName: 'ID', width: 70 },
-    { field: 'question', headerName: 'Questions', width: 300 },
-    { field: 'prediction', headerName: 'Predictions', width: 300 },
-    { field: 'answer', headerName: 'Answers', width: 300 },
+    { field: 'id', headerName: 'ID', width: 30 },
+    { field: 'question', headerName: 'Questions', width: 600, type: 'textarea', whiteSpace: 'normal', wordWrap: 'break-word'},
+    { field: 'prediction', headerName: 'Predictions', width: 200 },
+    { field: 'answer', headerName: 'Answers', width: 200 },
   ];
 
   return (
