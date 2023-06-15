@@ -132,7 +132,7 @@ def parameters():
         description: Successful response
     """
     parameters = {
-        "models": MODELS,
+        "models": list(MODELS.keys()),
         "inferencers": INFERENCERS,
         "datasets": DATASETS,
         "retrievers": RETRIEVERS,
