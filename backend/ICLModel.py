@@ -64,9 +64,9 @@ DATASET_SPECIFICS = {
 		),
 		"promt_template_ppl": PromptTemplate(
 			template={
-				'A': "</E>Answer to multiple choice question:</Q>",
-				'B': "</E>Answer to multiple choice question:</Q>",
-				'C': "</E>Answer to multiple choice question:</Q>",
+				'A': "</E>Answer to the multiple choice question:</Q>",
+				'B': "</E>Answer to the multiple choice question:</Q>",
+				'C': "</E>Answer to the multiple choice question:</Q>",
 			},
 			column_token_map={'question':'</Q>', 'A': '</Ans1>', 'B': '</Ans2>', 'C': '</Ans3>'},
 			ice_token='</E>' 
@@ -85,11 +85,11 @@ DATASET_SPECIFICS = {
 		),
 		"promt_template_ppl": PromptTemplate(
 			template={
-				'A': "</E>Answer to multiple choice question:</Q>",
-				'B': "</E>Answer to multiple choice question:</Q>",
-				'C': "</E>Answer to multiple choice question:</Q>",
-				'D': "</E>Answer to multiple choice question:</Q>",
-				'E': "</E>Answer to multiple choice question:</Q>",
+				'A': "</E>Answer to the multiple choice question:</Q>",
+				'B': "</E>Answer to the multiple choice question:</Q>",
+				'C': "</E>Answer to the multiple choice question:</Q>",
+				'D': "</E>Answer to the multiple choice question:</Q>",
+				'E': "</E>Answer to the multiple choice question:</Q>",
 			},
 			column_token_map={'question':'</Q>', 'A': '</Ans1>', 'B': '</Ans2>', 'C': '</Ans3>', 'D': '</Ans4>', 'E': '</Ans5>'},
 			ice_token='</E>' 
@@ -101,8 +101,16 @@ DATASET_SPECIFICS = {
 		"name": "de-en",
 		"input_output": (["de"], 'en'),
 		"rename_columns": None,
-		"prompt_template": PromptTemplate(
+		"prompt_template_gen": PromptTemplate(
 			template='</E></de> = </en>',
+			column_token_map={'en': '</en>', 'de': '</de>'}, 
+			ice_token='</E>'
+		),
+		"prompt_template_ppl": PromptTemplate(
+			template= {
+				'de': "</E>Translation from the english sentence: </en>",
+				'en': "</E>Translation from the german sentence: </de>",
+			},
 			column_token_map={'en': '</en>', 'de': '</de>'}, 
 			ice_token='</E>'
 		),
