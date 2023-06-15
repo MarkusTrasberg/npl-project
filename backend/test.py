@@ -2,16 +2,16 @@ from ICLModel import ICLModel
 
 model = ICLModel(
     {
-        "api": True,
-        "model": "gpt3",
-        "engine": "text-davinci-003"
-    }, 
-    "CoTInferencer",
-    "gpt3mix/sst2",
+        "api": False,
+        "model": "roberta-large",
+        "engine": None,
+        "ppl_support": True
+    },
+    "GenInferencer",
+    "tasksource/bigbench",
     10,
     "TopkRetriever",
-    1,
-    "AccEvaluator",	
+    3,
 	)
 
 print(model.run())

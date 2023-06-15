@@ -4,3 +4,8 @@ flask
 flasgger
 importlib
 flask-cors
+accuracy
+sacrebleu
+rouge
+squad
+numpy

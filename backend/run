@@ -1,1 +1,1 @@
-accelerate launch --config_file /home/gadmiraal/nlp/npl-project/backend/accelerate_config.yaml routes.py
+accelerate launch --config_file /home/gadmiraal/nlp/npl-project/backend/accelerate_config.yaml test.py
