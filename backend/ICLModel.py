@@ -44,8 +44,8 @@ DATASET_SPECIFICS = {
 		),
 		"prompt_template_ppl": PromptTemplate(
 			template={
-				0: '</E>Positive Movie Review: </R>',
-				1: '</E>Negative Movie Review: </R>' 
+				0: '</E>Negative Movie Review: </R>',
+				1: '</E>Positive Movie Review: </R>' 
 			},
 			column_token_map={'text': '</R>'},
 			ice_token='</E>'
@@ -62,7 +62,7 @@ DATASET_SPECIFICS = {
 			column_token_map={'question':'</Q>', 'A': '</Ans1>', 'B': '</Ans2>', 'C': '</Ans3>', "answer": "</TrueAns>"},
         	ice_token='</E>'
 		),
-		"promt_template_ppl": PromptTemplate(
+		"prompt_template_ppl": PromptTemplate(
 			template={
 				'A': "</E>Answer to the multiple choice question:</Q>",
 				'B': "</E>Answer to the multiple choice question:</Q>",
@@ -198,7 +198,7 @@ class ICLModel():
 
 	def setRetriever(self):
 		# Todo set retriever specifics
-		# Todo check if each retriever needs different paramaters
+		# Todo check if each retriever needs different parameters
 			# Todo randomrtvr needs seed
 			# Todo bm25tvr needs index_corpus, test_corpus and bm25
 			# Todo topkrtvr needs batch_size, model, tokenizer and index
@@ -220,7 +220,7 @@ class ICLModel():
 
 	def setInferencer(self):
 		# Todo set inferencer specifics
-		# Todo check if each inferencer needs different paramaters
+		# Todo check if each inferencer needs different parameters
 			# Todo pplinfr needs labels
 			# Todo geninfr needs gen_field_replace_token and generation_kwargs
 			# Todo cotinfr needs gen_field_replace_token, generation_kwargs and cot_list
@@ -264,6 +264,7 @@ class ICLModel():
 	def score_sentiment(self, predictions):
 		evaluator = AccEvaluator()
 
+		# Set predictions to int
 		predictions = [int(p) for p in predictions]
 		
 		score = evaluator.score(predictions=predictions, references=self.dsr.references)

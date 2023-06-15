@@ -92,7 +92,7 @@ DATASETS = {
 @app.route("/parameters", methods=["GET"], strict_slashes=False)
 def parameters():
     """
-    Do an In-Context Learning run based on the specified paramters
+    Do an In-Context Learning run based on the specified parameters
     ---
     consumes:
       - application/json
@@ -355,7 +355,7 @@ def run():
                 status=400,
             )
     
-    # TODO: Multiple responses so that we can let the frontend know at what stage of the run we are (i.e. inferencing, predicting)
+    # TODO: Multiple responses so that we can let the frontend know at what stage of the run we are (i.e. inferring, predicting)
 
     response = jsonify(result)
     return response
