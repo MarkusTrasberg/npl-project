@@ -111,7 +111,7 @@ class TabuSearch:
 
 		for i in range(self.iterations):
 
-			if i % 100 == 0:
+			if i % 1000 == 0:
 				print(f"iteration: {i}")
 
 			best_candidate, best_candidate_eval, solution_neighboorhood = self.get_neighboorhood_solutions(best_candidate, tabu_list)

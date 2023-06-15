@@ -1,141 +1,351 @@
 {
     "0": {
-        "in-context examples": "",
+        "in-context examples": "Positive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\n",
         "label: 0": {
-            "testing input": "Positive Movie Review: \"It looks like an action movie , but it 's so poorly made , on all levels , that it does n't even qualify as a spoof of such .\"",
-            "prompt": "Positive Movie Review: \"It looks like an action movie , but it 's so poorly made , on all levels , that it does n't even qualify as a spoof of such .\"",
-            "PPL": 3.431402507581209
+            "testing input": "Positive Movie Review: \"Strictly a ` guy 's film ' in the worst sense of the expression .\"",
+            "prompt": "Positive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Strictly a ` guy 's film ' in the worst sense of the expression .\"",
+            "PPL": 2.9174792766571045
         },
         "label: 1": {
-            "testing input": "Negative Movie Review: \"It looks like an action movie , but it 's so poorly made , on all levels , that it does n't even qualify as a spoof of such .\"",
-            "prompt": "Negative Movie Review: \"It looks like an action movie , but it 's so poorly made , on all levels , that it does n't even qualify as a spoof of such .\"",
-            "PPL": 3.3527805930689762
+            "testing input": "Negative Movie Review: \"Strictly a ` guy 's film ' in the worst sense of the expression .\"",
+            "prompt": "Positive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"Strictly a ` guy 's film ' in the worst sense of the expression .\"",
+            "PPL": 2.9267637729644775
         },
-        "prediction": 1
+        "prediction": 0
     },
     "1": {
-        "in-context examples": "",
+        "in-context examples": "Negative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\n",
         "label: 0": {
-            "testing input": "Positive Movie Review: \"Overall , Cletis Tout is a winning comedy that excites the imagination and tickles the funny bone .\"",
-            "prompt": "Positive Movie Review: \"Overall , Cletis Tout is a winning comedy that excites the imagination and tickles the funny bone .\"",
-            "PPL": 4.242484783304149
+            "testing input": "Positive Movie Review: \"The cast , collectively a successful example of the lovable-loser protagonist , shows deft comic timing .\"",
+            "prompt": "Negative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"The cast , collectively a successful example of the lovable-loser protagonist , shows deft comic timing .\"",
+            "PPL": 3.047984814825859
         },
         "label: 1": {
-            "testing input": "Negative Movie Review: \"Overall , Cletis Tout is a winning comedy that excites the imagination and tickles the funny bone .\"",
-            "prompt": "Negative Movie Review: \"Overall , Cletis Tout is a winning comedy that excites the imagination and tickles the funny bone .\"",
-            "PPL": 4.344006768588362
+            "testing input": "Negative Movie Review: \"The cast , collectively a successful example of the lovable-loser protagonist , shows deft comic timing .\"",
+            "prompt": "Negative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"The cast , collectively a successful example of the lovable-loser protagonist , shows deft comic timing .\"",
+            "PPL": 3.07470703125
         },
         "prediction": 0
     },
     "2": {
-        "in-context examples": "",
+        "in-context examples": "Positive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\n",
         "label: 0": {
-            "testing input": "Positive Movie Review: \"No amount of burning , blasting , stabbing , and shooting can hide a weak script .\"",
-            "prompt": "Positive Movie Review: \"No amount of burning , blasting , stabbing , and shooting can hide a weak script .\"",
-            "PPL": 4.342608907948369
+            "testing input": "Positive Movie Review: \"The mystery of Enigma is how a rich historical subject , combined with so much first-rate talent ... could have yielded such a flat , plodding picture .\"",
+            "prompt": "Positive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"The mystery of Enigma is how a rich historical subject , combined with so much first-rate talent ... could have yielded such a flat , plodding picture .\"",
+            "PPL": 3.014733374535621
         },
         "label: 1": {
-            "testing input": "Negative Movie Review: \"No amount of burning , blasting , stabbing , and shooting can hide a weak script .\"",
-            "prompt": "Negative Movie Review: \"No amount of burning , blasting , stabbing , and shooting can hide a weak script .\"",
-            "PPL": 4.1925811767578125
+            "testing input": "Negative Movie Review: \"The mystery of Enigma is how a rich historical subject , combined with so much first-rate talent ... could have yielded such a flat , plodding picture .\"",
+            "prompt": "Positive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"The mystery of Enigma is how a rich historical subject , combined with so much first-rate talent ... could have yielded such a flat , plodding picture .\"",
+            "PPL": 2.9931260755845717
         },
         "prediction": 1
     },
     "3": {
-        "in-context examples": "",
+        "in-context examples": "Positive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\n",
         "label: 0": {
-            "testing input": "Positive Movie Review: \"The explosion essentially ruined -- or , rather , overpowered -- the fiction of the movie for me .\"",
-            "prompt": "Positive Movie Review: \"The explosion essentially ruined -- or , rather , overpowered -- the fiction of the movie for me .\"",
-            "PPL": 4.643731689453125
+            "testing input": "Positive Movie Review: \"Bogdanovich taps deep into the Hearst mystique , entertainingly reenacting a historic scandal .\"",
+            "prompt": "Positive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Bogdanovich taps deep into the Hearst mystique , entertainingly reenacting a historic scandal .\"",
+            "PPL": 3.0265833536783853
         },
         "label: 1": {
-            "testing input": "Negative Movie Review: \"The explosion essentially ruined -- or , rather , overpowered -- the fiction of the movie for me .\"",
-            "prompt": "Negative Movie Review: \"The explosion essentially ruined -- or , rather , overpowered -- the fiction of the movie for me .\"",
-            "PPL": 4.525687561035157
+            "testing input": "Negative Movie Review: \"Bogdanovich taps deep into the Hearst mystique , entertainingly reenacting a historic scandal .\"",
+            "prompt": "Positive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"Bogdanovich taps deep into the Hearst mystique , entertainingly reenacting a historic scandal .\"",
+            "PPL": 3.0167425907019414
         },
         "prediction": 1
     },
     "4": {
-        "in-context examples": "",
+        "in-context examples": "Negative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\n",
         "label: 0": {
-            "testing input": "Positive Movie Review: \"Tykwer 's surface flash is n't just a poor fit with Kieslowski 's lyrical pessimism ; it completely contradicts everything Kieslowski 's work aspired to , including the condition of art .\"",
-            "prompt": "Positive Movie Review: \"Tykwer 's surface flash is n't just a poor fit with Kieslowski 's lyrical pessimism ; it completely contradicts everything Kieslowski 's work aspired to , including the condition of art .\"",
-            "PPL": 4.125055852926002
+            "testing input": "Positive Movie Review: \"It is a likable story , told with competence .\"",
+            "prompt": "Negative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"It is a likable story , told with competence .\"",
+            "PPL": 2.8759064477337293
         },
         "label: 1": {
-            "testing input": "Negative Movie Review: \"Tykwer 's surface flash is n't just a poor fit with Kieslowski 's lyrical pessimism ; it completely contradicts everything Kieslowski 's work aspired to , including the condition of art .\"",
-            "prompt": "Negative Movie Review: \"Tykwer 's surface flash is n't just a poor fit with Kieslowski 's lyrical pessimism ; it completely contradicts everything Kieslowski 's work aspired to , including the condition of art .\"",
-            "PPL": 4.071112002966539
+            "testing input": "Negative Movie Review: \"It is a likable story , told with competence .\"",
+            "prompt": "Negative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"It is a likable story , told with competence .\"",
+            "PPL": 2.8912106348463325
         },
-        "prediction": 1
+        "prediction": 0
     },
     "5": {
-        "in-context examples": "",
+        "in-context examples": "Negative Movie Review: \"You 'll cry for your money back .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\n",
         "label: 0": {
-            "testing input": "Positive Movie Review: \"The star who helped give a spark to `` Chasing Amy '' and `` Changing Lanes '' falls flat as thinking man CIA agent Jack Ryan in this summer 's new action film , `` The Sum of All Fears . ''\"",
-            "prompt": "Positive Movie Review: \"The star who helped give a spark to `` Chasing Amy '' and `` Changing Lanes '' falls flat as thinking man CIA agent Jack Ryan in this summer 's new action film , `` The Sum of All Fears . ''\"",
-            "PPL": 4.165522161519752
+            "testing input": "Positive Movie Review: \"Attal 's hang-ups surrounding infidelity are so old-fashioned and , dare I say , outdated , it 's a wonder that he could n't have brought something fresher to the proceedings simply by accident .\"",
+            "prompt": "Negative Movie Review: \"You 'll cry for your money back .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Attal 's hang-ups surrounding infidelity are so old-fashioned and , dare I say , outdated , it 's a wonder that he could n't have brought something fresher to the proceedings simply by accident .\"",
+            "PPL": 3.0452926143523187
         },
         "label: 1": {
-            "testing input": "Negative Movie Review: \"The star who helped give a spark to `` Chasing Amy '' and `` Changing Lanes '' falls flat as thinking man CIA agent Jack Ryan in this summer 's new action film , `` The Sum of All Fears . ''\"",
-            "prompt": "Negative Movie Review: \"The star who helped give a spark to `` Chasing Amy '' and `` Changing Lanes '' falls flat as thinking man CIA agent Jack Ryan in this summer 's new action film , `` The Sum of All Fears . ''\"",
-            "PPL": 4.180984784971993
+            "testing input": "Negative Movie Review: \"Attal 's hang-ups surrounding infidelity are so old-fashioned and , dare I say , outdated , it 's a wonder that he could n't have brought something fresher to the proceedings simply by accident .\"",
+            "prompt": "Negative Movie Review: \"You 'll cry for your money back .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"Attal 's hang-ups surrounding infidelity are so old-fashioned and , dare I say , outdated , it 's a wonder that he could n't have brought something fresher to the proceedings simply by accident .\"",
+            "PPL": 3.0488375756048387
         },
         "prediction": 0
     },
     "6": {
-        "in-context examples": "",
+        "in-context examples": "Positive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\n",
         "label: 0": {
-            "testing input": "Positive Movie Review: \"There are deeply religious and spiritual people in this world who would argue that entering a church , synagogue or temple does n't mean you have to check your brain at the door .\"",
-            "prompt": "Positive Movie Review: \"There are deeply religious and spiritual people in this world who would argue that entering a church , synagogue or temple does n't mean you have to check your brain at the door .\"",
-            "PPL": 3.4810939881859757
+            "testing input": "Positive Movie Review: \"Beautiful to watch and holds a certain charm .\"",
+            "prompt": "Positive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Beautiful to watch and holds a certain charm .\"",
+            "PPL": 2.811722819010417
         },
         "label: 1": {
-            "testing input": "Negative Movie Review: \"There are deeply religious and spiritual people in this world who would argue that entering a church , synagogue or temple does n't mean you have to check your brain at the door .\"",
-            "prompt": "Negative Movie Review: \"There are deeply religious and spiritual people in this world who would argue that entering a church , synagogue or temple does n't mean you have to check your brain at the door .\"",
-            "PPL": 3.45967250917016
-        },
-        "prediction": 1
-    },
-    "7": {
-        "in-context examples": "",
-        "label: 0": {
-            "testing input": "Positive Movie Review: \"Elegant , mannered and teasing .\"",
-            "prompt": "Positive Movie Review: \"Elegant , mannered and teasing .\"",
-            "PPL": 4.500347900390625
-        },
-        "label: 1": {
-            "testing input": "Negative Movie Review: \"Elegant , mannered and teasing .\"",
-            "prompt": "Negative Movie Review: \"Elegant , mannered and teasing .\"",
-            "PPL": 4.596035766601562
+            "testing input": "Negative Movie Review: \"Beautiful to watch and holds a certain charm .\"",
+            "prompt": "Positive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"Beautiful to watch and holds a certain charm .\"",
+            "PPL": 2.8466509501139323
         },
         "prediction": 0
     },
-    "8": {
-        "in-context examples": "",
+    "7": {
+        "in-context examples": "Positive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\n",
         "label: 0": {
-            "testing input": "Positive Movie Review: \"If not a home run , then at least a solid base hit .\"",
-            "prompt": "Positive Movie Review: \"If not a home run , then at least a solid base hit .\"",
-            "PPL": 3.521286392211914
+            "testing input": "Positive Movie Review: \"If you are curious to see the darker side of what 's going on with young TV actors -LRB- Dawson Leery did what ?!? -RRB- , or see some interesting storytelling devices , you might want to check it out , but there 's nothing very attractive about this movie .\"",
+            "prompt": "Positive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"If you are curious to see the darker side of what 's going on with young TV actors -LRB- Dawson Leery did what ?!? -RRB- , or see some interesting storytelling devices , you might want to check it out , but there 's nothing very attractive about this movie .\"",
+            "PPL": 3.2242228190104165
         },
         "label: 1": {
-            "testing input": "Negative Movie Review: \"If not a home run , then at least a solid base hit .\"",
-            "prompt": "Negative Movie Review: \"If not a home run , then at least a solid base hit .\"",
-            "PPL": 3.4851139068603514
+            "testing input": "Negative Movie Review: \"If you are curious to see the darker side of what 's going on with young TV actors -LRB- Dawson Leery did what ?!? -RRB- , or see some interesting storytelling devices , you might want to check it out , but there 's nothing very attractive about this movie .\"",
+            "prompt": "Positive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"If you are curious to see the darker side of what 's going on with young TV actors -LRB- Dawson Leery did what ?!? -RRB- , or see some interesting storytelling devices , you might want to check it out , but there 's nothing very attractive about this movie .\"",
+            "PPL": 3.195977818896199
         },
         "prediction": 1
     },
-    "9": {
-        "in-context examples": "",
+    "8": {
+        "in-context examples": "Negative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\n",
         "label: 0": {
-            "testing input": "Positive Movie Review: \"Do we really need another film that praises female self-sacrifice ?\"",
-            "prompt": "Positive Movie Review: \"Do we really need another film that praises female self-sacrifice ?\"",
-            "PPL": 3.5501570928664434
+            "testing input": "Positive Movie Review: \"New ways of describing badness need to be invented to describe exactly how bad it is .\"",
+            "prompt": "Negative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"New ways of describing badness need to be invented to describe exactly how bad it is .\"",
+            "PPL": 2.8835158348083496
         },
         "label: 1": {
-            "testing input": "Negative Movie Review: \"Do we really need another film that praises female self-sacrifice ?\"",
-            "prompt": "Negative Movie Review: \"Do we really need another film that praises female self-sacrifice ?\"",
-            "PPL": 3.5122506277901784
+            "testing input": "Negative Movie Review: \"New ways of describing badness need to be invented to describe exactly how bad it is .\"",
+            "prompt": "Negative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nNegative Movie Review: \"New ways of describing badness need to be invented to describe exactly how bad it is .\"",
+            "PPL": 2.8852062225341797
+        },
+        "prediction": 0
+    },
+    "9": {
+        "in-context examples": "Positive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\n",
+        "label: 0": {
+            "testing input": "Positive Movie Review: \"Too clever by about nine-tenths .\"",
+            "prompt": "Positive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Too clever by about nine-tenths .\"",
+            "PPL": 2.8567901611328126
+        },
+        "label: 1": {
+            "testing input": "Negative Movie Review: \"Too clever by about nine-tenths .\"",
+            "prompt": "Positive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nNegative Movie Review: \"Too clever by about nine-tenths .\"",
+            "PPL": 2.8655713399251304
+        },
+        "prediction": 0
+    },
+    "10": {
+        "in-context examples": "Negative Movie Review: \"Murder by Numbers just does n't add up .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\n",
+        "label: 0": {
+            "testing input": "Positive Movie Review: \"The directing and story are disjointed , flaws that have to be laid squarely on Taylor 's doorstep .\"",
+            "prompt": "Negative Movie Review: \"Murder by Numbers just does n't add up .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"The directing and story are disjointed , flaws that have to be laid squarely on Taylor 's doorstep .\"",
+            "PPL": 2.976175481622869
+        },
+        "label: 1": {
+            "testing input": "Negative Movie Review: \"The directing and story are disjointed , flaws that have to be laid squarely on Taylor 's doorstep .\"",
+            "prompt": "Negative Movie Review: \"Murder by Numbers just does n't add up .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"The directing and story are disjointed , flaws that have to be laid squarely on Taylor 's doorstep .\"",
+            "PPL": 2.9477069739139443
+        },
+        "prediction": 1
+    },
+    "11": {
+        "in-context examples": "Positive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"You 'll cry for your money back .\"\n",
+        "label: 0": {
+            "testing input": "Positive Movie Review: \"You could easily mistake it for a sketchy work-in-progress that was inexplicably rushed to the megaplexes before its time .\"",
+            "prompt": "Positive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"You could easily mistake it for a sketchy work-in-progress that was inexplicably rushed to the megaplexes before its time .\"",
+            "PPL": 2.895046316462455
+        },
+        "label: 1": {
+            "testing input": "Negative Movie Review: \"You could easily mistake it for a sketchy work-in-progress that was inexplicably rushed to the megaplexes before its time .\"",
+            "prompt": "Positive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nNegative Movie Review: \"You could easily mistake it for a sketchy work-in-progress that was inexplicably rushed to the megaplexes before its time .\"",
+            "PPL": 2.913328321717626
+        },
+        "prediction": 0
+    },
+    "12": {
+        "in-context examples": "Negative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\n",
+        "label: 0": {
+            "testing input": "Positive Movie Review: \"It jumps around with little logic or continuity , presenting backstage bytes of information that never amount to a satisfying complete picture of this particular , anciently demanding métier .\"",
+            "prompt": "Negative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"It jumps around with little logic or continuity , presenting backstage bytes of information that never amount to a satisfying complete picture of this particular , anciently demanding métier .\"",
+            "PPL": 3.4085761176215277
+        },
+        "label: 1": {
+            "testing input": "Negative Movie Review: \"It jumps around with little logic or continuity , presenting backstage bytes of information that never amount to a satisfying complete picture of this particular , anciently demanding métier .\"",
+            "prompt": "Negative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"It jumps around with little logic or continuity , presenting backstage bytes of information that never amount to a satisfying complete picture of this particular , anciently demanding métier .\"",
+            "PPL": 3.3841855790879993
+        },
+        "prediction": 1
+    },
+    "13": {
+        "in-context examples": "Negative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\n",
+        "label: 0": {
+            "testing input": "Positive Movie Review: \"It treats Ana 's journey with honesty that is tragically rare in the depiction of young women in film .\"",
+            "prompt": "Negative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"It treats Ana 's journey with honesty that is tragically rare in the depiction of young women in film .\"",
+            "PPL": 2.958977153283039
+        },
+        "label: 1": {
+            "testing input": "Negative Movie Review: \"It treats Ana 's journey with honesty that is tragically rare in the depiction of young women in film .\"",
+            "prompt": "Negative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"It treats Ana 's journey with honesty that is tragically rare in the depiction of young women in film .\"",
+            "PPL": 2.984246406846374
+        },
+        "prediction": 0
+    },
+    "14": {
+        "in-context examples": "Positive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\n",
+        "label: 0": {
+            "testing input": "Positive Movie Review: \"The determination of Pinochet 's victims to seek justice , and their often heartbreaking testimony , spoken directly into director Patricio Guzman 's camera , pack a powerful emotional wallop .\"",
+            "prompt": "Positive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"The determination of Pinochet 's victims to seek justice , and their often heartbreaking testimony , spoken directly into director Patricio Guzman 's camera , pack a powerful emotional wallop .\"",
+            "PPL": 2.9113468479465796
+        },
+        "label: 1": {
+            "testing input": "Negative Movie Review: \"The determination of Pinochet 's victims to seek justice , and their often heartbreaking testimony , spoken directly into director Patricio Guzman 's camera , pack a powerful emotional wallop .\"",
+            "prompt": "Positive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nNegative Movie Review: \"The determination of Pinochet 's victims to seek justice , and their often heartbreaking testimony , spoken directly into director Patricio Guzman 's camera , pack a powerful emotional wallop .\"",
+            "PPL": 2.9391776419974662
+        },
+        "prediction": 0
+    },
+    "15": {
+        "in-context examples": "Positive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\n",
+        "label: 0": {
+            "testing input": "Positive Movie Review: \"Watching these eccentrics is both inspiring and pure joy .\"",
+            "prompt": "Positive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"Watching these eccentrics is both inspiring and pure joy .\"",
+            "PPL": 2.938481524707825
+        },
+        "label: 1": {
+            "testing input": "Negative Movie Review: \"Watching these eccentrics is both inspiring and pure joy .\"",
+            "prompt": "Positive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"Watching these eccentrics is both inspiring and pure joy .\"",
+            "PPL": 2.9522015331237297
+        },
+        "prediction": 0
+    },
+    "16": {
+        "in-context examples": "Positive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\n",
+        "label: 0": {
+            "testing input": "Positive Movie Review: \"a joyous occasion\"",
+            "prompt": "Positive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"a joyous occasion\"",
+            "PPL": 2.89079297936481
+        },
+        "label: 1": {
+            "testing input": "Negative Movie Review: \"a joyous occasion\"",
+            "prompt": "Positive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"a joyous occasion\"",
+            "PPL": 2.924144977072011
+        },
+        "prediction": 0
+    },
+    "17": {
+        "in-context examples": "Negative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"You 'll cry for your money back .\"\n",
+        "label: 0": {
+            "testing input": "Positive Movie Review: \"... feels as if -LRB- there 's -RRB- a choke leash around your neck so director Nick Cassavetes can give it a good , hard yank whenever he wants you to feel something .\"",
+            "prompt": "Negative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"... feels as if -LRB- there 's -RRB- a choke leash around your neck so director Nick Cassavetes can give it a good , hard yank whenever he wants you to feel something .\"",
+            "PPL": 3.260932673036663
+        },
+        "label: 1": {
+            "testing input": "Negative Movie Review: \"... feels as if -LRB- there 's -RRB- a choke leash around your neck so director Nick Cassavetes can give it a good , hard yank whenever he wants you to feel something .\"",
+            "prompt": "Negative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nNegative Movie Review: \"... feels as if -LRB- there 's -RRB- a choke leash around your neck so director Nick Cassavetes can give it a good , hard yank whenever he wants you to feel something .\"",
+            "PPL": 3.2552777458639706
+        },
+        "prediction": 1
+    },
+    "18": {
+        "in-context examples": "Positive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\n",
+        "label: 0": {
+            "testing input": "Positive Movie Review: \"Hard to resist .\"",
+            "prompt": "Positive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"Hard to resist .\"",
+            "PPL": 2.8748056512129936
+        },
+        "label: 1": {
+            "testing input": "Negative Movie Review: \"Hard to resist .\"",
+            "prompt": "Positive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"Hard to resist .\"",
+            "PPL": 2.8574746115165843
+        },
+        "prediction": 1
+    },
+    "19": {
+        "in-context examples": "Positive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\n",
+        "label: 0": {
+            "testing input": "Positive Movie Review: \"Alas , getting there is not even half the interest .\"",
+            "prompt": "Positive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Alas , getting there is not even half the interest .\"",
+            "PPL": 2.983376174676614
+        },
+        "label: 1": {
+            "testing input": "Negative Movie Review: \"Alas , getting there is not even half the interest .\"",
+            "prompt": "Positive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nNegative Movie Review: \"Alas , getting there is not even half the interest .\"",
+            "PPL": 2.9650138479764343
+        },
+        "prediction": 1
+    },
+    "20": {
+        "in-context examples": "Positive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\n",
+        "label: 0": {
+            "testing input": "Positive Movie Review: \"It should be interesting , it should be poignant , it turns out to be affected and boring .\"",
+            "prompt": "Positive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"It should be interesting , it should be poignant , it turns out to be affected and boring .\"",
+            "PPL": 2.988547155099322
+        },
+        "label: 1": {
+            "testing input": "Negative Movie Review: \"It should be interesting , it should be poignant , it turns out to be affected and boring .\"",
+            "prompt": "Positive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"It should be interesting , it should be poignant , it turns out to be affected and boring .\"",
+            "PPL": 2.9864788203276404
+        },
+        "prediction": 1
+    },
+    "21": {
+        "in-context examples": "Negative Movie Review: \"You 'll cry for your money back .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\n",
+        "label: 0": {
+            "testing input": "Positive Movie Review: \"Jones ... makes a great impression as the writer-director of this little $ 1.8 million charmer , which may not be cutting-edge indie filmmaking but has a huge heart .\"",
+            "prompt": "Negative Movie Review: \"You 'll cry for your money back .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"Jones ... makes a great impression as the writer-director of this little $ 1.8 million charmer , which may not be cutting-edge indie filmmaking but has a huge heart .\"",
+            "PPL": 2.987796497993729
+        },
+        "label: 1": {
+            "testing input": "Negative Movie Review: \"Jones ... makes a great impression as the writer-director of this little $ 1.8 million charmer , which may not be cutting-edge indie filmmaking but has a huge heart .\"",
+            "prompt": "Negative Movie Review: \"You 'll cry for your money back .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"Jones ... makes a great impression as the writer-director of this little $ 1.8 million charmer , which may not be cutting-edge indie filmmaking but has a huge heart .\"",
+            "PPL": 3.004147484188988
+        },
+        "prediction": 0
+    },
+    "22": {
+        "in-context examples": "Positive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\n",
+        "label: 0": {
+            "testing input": "Positive Movie Review: \"The movie does its best to work us over , with second helpings of love , romance , tragedy , false dawns , real dawns , comic relief , two separate crises during marriage ceremonies , and the lush scenery of the Cotswolds .\"",
+            "prompt": "Positive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"The movie does its best to work us over , with second helpings of love , romance , tragedy , false dawns , real dawns , comic relief , two separate crises during marriage ceremonies , and the lush scenery of the Cotswolds .\"",
+            "PPL": 3.233234405517578
+        },
+        "label: 1": {
+            "testing input": "Negative Movie Review: \"The movie does its best to work us over , with second helpings of love , romance , tragedy , false dawns , real dawns , comic relief , two separate crises during marriage ceremonies , and the lush scenery of the Cotswolds .\"",
+            "prompt": "Positive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nNegative Movie Review: \"The movie does its best to work us over , with second helpings of love , romance , tragedy , false dawns , real dawns , comic relief , two separate crises during marriage ceremonies , and the lush scenery of the Cotswolds .\"",
+            "PPL": 3.237008285522461
+        },
+        "prediction": 0
+    },
+    "23": {
+        "in-context examples": "Negative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\n",
+        "label: 0": {
+            "testing input": "Positive Movie Review: \"` Butterfingered ' is the word for the big-fisted direction of Jez Butterworth , who manages to blast even the smallest sensitivities from the romance with his clamorous approach .\"",
+            "prompt": "Negative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nPositive Movie Review: \"` Butterfingered ' is the word for the big-fisted direction of Jez Butterworth , who manages to blast even the smallest sensitivities from the romance with his clamorous approach .\"",
+            "PPL": 3.316428165307781
+        },
+        "label: 1": {
+            "testing input": "Negative Movie Review: \"` Butterfingered ' is the word for the big-fisted direction of Jez Butterworth , who manages to blast even the smallest sensitivities from the romance with his clamorous approach .\"",
+            "prompt": "Negative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nPositive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nNegative Movie Review: \"` Butterfingered ' is the word for the big-fisted direction of Jez Butterworth , who manages to blast even the smallest sensitivities from the romance with his clamorous approach .\"",
+            "PPL": 3.3083027065200294
+        },
+        "prediction": 1
+    },
+    "24": {
+        "in-context examples": "Positive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\n",
+        "label: 0": {
+            "testing input": "Positive Movie Review: \"A cockeyed shot all the way .\"",
+            "prompt": "Positive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nPositive Movie Review: \"A cockeyed shot all the way .\"",
+            "PPL": 2.8655405765821955
+        },
+        "label: 1": {
+            "testing input": "Negative Movie Review: \"A cockeyed shot all the way .\"",
+            "prompt": "Positive Movie Review: \"Some movies suck you in despite their flaws , and Heaven is one such beast .\"\nPositive Movie Review: \"Remarkable for its intelligence and intensity .\"\nPositive Movie Review: \"If you 're down for a silly hack-and-slash flick , you can do no wrong with Jason X.\"\nNegative Movie Review: \"You 'll cry for your money back .\"\nNegative Movie Review: \"Murder by Numbers just does n't add up .\"\nNegative Movie Review: \"A cockeyed shot all the way .\"",
+            "PPL": 2.845242540375525
         },
         "prediction": 1
     }

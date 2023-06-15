@@ -1,0 +1,242 @@
+{
+    "0": {
+        "in-context examples": "Answer the following question:\nOf these, a wolf will make its home very nearest to\nAnswer: mink\nAnswer the following question:\nA person who wants to visit a desert will be sure to pack more\nAnswer: tan shorts\nAnswer the following question:\nwhat celestial body is after the 8th one in this solar system?\nAnswer: pluto\n",
+        "label: A": {
+            "testing input": "Answer the following question:\nIf our earth is anything, it is this\nAnswer: alien",
+            "prompt": "Answer the following question:\nOf these, a wolf will make its home very nearest to\nAnswer: mink\nAnswer the following question:\nA person who wants to visit a desert will be sure to pack more\nAnswer: tan shorts\nAnswer the following question:\nwhat celestial body is after the 8th one in this solar system?\nAnswer: pluto\nAnswer the following question:\nIf our earth is anything, it is this\nAnswer: alien",
+            "PPL": 27.584312608506945
+        },
+        "label: B": {
+            "testing input": "Answer the following question:\nIf our earth is anything, it is this\nAnswer: nearest to Pluto",
+            "prompt": "Answer the following question:\nOf these, a wolf will make its home very nearest to\nAnswer: mink\nAnswer the following question:\nA person who wants to visit a desert will be sure to pack more\nAnswer: tan shorts\nAnswer the following question:\nwhat celestial body is after the 8th one in this solar system?\nAnswer: pluto\nAnswer the following question:\nIf our earth is anything, it is this\nAnswer: nearest to Pluto",
+            "PPL": 27.66667792137633
+        },
+        "label: C": {
+            "testing input": "Answer the following question:\nIf our earth is anything, it is this\nAnswer: frozen solid",
+            "prompt": "Answer the following question:\nOf these, a wolf will make its home very nearest to\nAnswer: mink\nAnswer the following question:\nA person who wants to visit a desert will be sure to pack more\nAnswer: tan shorts\nAnswer the following question:\nwhat celestial body is after the 8th one in this solar system?\nAnswer: pluto\nAnswer the following question:\nIf our earth is anything, it is this\nAnswer: frozen solid",
+            "PPL": 26.730405061141305
+        },
+        "label: D": {
+            "testing input": "Answer the following question:\nIf our earth is anything, it is this\nAnswer: mountainous",
+            "prompt": "Answer the following question:\nOf these, a wolf will make its home very nearest to\nAnswer: mink\nAnswer the following question:\nA person who wants to visit a desert will be sure to pack more\nAnswer: tan shorts\nAnswer the following question:\nwhat celestial body is after the 8th one in this solar system?\nAnswer: pluto\nAnswer the following question:\nIf our earth is anything, it is this\nAnswer: mountainous",
+            "PPL": 26.961919428228022
+        },
+        "prediction": "C"
+    },
+    "1": {
+        "in-context examples": "Answer the following question:\nThe color of our eyes are permanent because eye color is fixed at birth due to\nAnswer: parent's DNA\nAnswer the following question:\nWhat would light bounce off of when it hits it?\nAnswer: a freshly waxed car\nAnswer the following question:\nA person wants to fix up a fan so that it can run electrically, and finds that in order to do so they require\nAnswer: copper\n",
+        "label: A": {
+            "testing input": "Answer the following question:\nWhich of the following actions qualifies as cooking food?\nAnswer: setting it in the sun",
+            "prompt": "Answer the following question:\nThe color of our eyes are permanent because eye color is fixed at birth due to\nAnswer: parent's DNA\nAnswer the following question:\nWhat would light bounce off of when it hits it?\nAnswer: a freshly waxed car\nAnswer the following question:\nA person wants to fix up a fan so that it can run electrically, and finds that in order to do so they require\nAnswer: copper\nAnswer the following question:\nWhich of the following actions qualifies as cooking food?\nAnswer: setting it in the sun",
+            "PPL": 27.17564418859649
+        },
+        "label: B": {
+            "testing input": "Answer the following question:\nWhich of the following actions qualifies as cooking food?\nAnswer: shaking it up and down",
+            "prompt": "Answer the following question:\nThe color of our eyes are permanent because eye color is fixed at birth due to\nAnswer: parent's DNA\nAnswer the following question:\nWhat would light bounce off of when it hits it?\nAnswer: a freshly waxed car\nAnswer the following question:\nA person wants to fix up a fan so that it can run electrically, and finds that in order to do so they require\nAnswer: copper\nAnswer the following question:\nWhich of the following actions qualifies as cooking food?\nAnswer: shaking it up and down",
+            "PPL": 27.503254500679347
+        },
+        "label: C": {
+            "testing input": "Answer the following question:\nWhich of the following actions qualifies as cooking food?\nAnswer: putting it in the freezer",
+            "prompt": "Answer the following question:\nThe color of our eyes are permanent because eye color is fixed at birth due to\nAnswer: parent's DNA\nAnswer the following question:\nWhat would light bounce off of when it hits it?\nAnswer: a freshly waxed car\nAnswer the following question:\nA person wants to fix up a fan so that it can run electrically, and finds that in order to do so they require\nAnswer: copper\nAnswer the following question:\nWhich of the following actions qualifies as cooking food?\nAnswer: putting it in the freezer",
+            "PPL": 27.263319463315216
+        },
+        "label: D": {
+            "testing input": "Answer the following question:\nWhich of the following actions qualifies as cooking food?\nAnswer: running it under water",
+            "prompt": "Answer the following question:\nThe color of our eyes are permanent because eye color is fixed at birth due to\nAnswer: parent's DNA\nAnswer the following question:\nWhat would light bounce off of when it hits it?\nAnswer: a freshly waxed car\nAnswer the following question:\nA person wants to fix up a fan so that it can run electrically, and finds that in order to do so they require\nAnswer: copper\nAnswer the following question:\nWhich of the following actions qualifies as cooking food?\nAnswer: running it under water",
+            "PPL": 27.42487382466814
+        },
+        "prediction": "A"
+    },
+    "2": {
+        "in-context examples": "Answer the following question:\nIf one mineral can scratch another mineral then that other mineral is softer than that one mineral, as can be tested with\nAnswer: a diamond and agate\nAnswer the following question:\nThe floating arrow on a compass always points away from the\nAnswer: south\nAnswer the following question:\nA skunk produces a bad what?\nAnswer: nose experience\n",
+        "label: A": {
+            "testing input": "Answer the following question:\nA rocket's movement is most like a\nAnswer: rock",
+            "prompt": "Answer the following question:\nIf one mineral can scratch another mineral then that other mineral is softer than that one mineral, as can be tested with\nAnswer: a diamond and agate\nAnswer the following question:\nThe floating arrow on a compass always points away from the\nAnswer: south\nAnswer the following question:\nA skunk produces a bad what?\nAnswer: nose experience\nAnswer the following question:\nA rocket's movement is most like a\nAnswer: rock",
+            "PPL": 28.099522181919642
+        },
+        "label: B": {
+            "testing input": "Answer the following question:\nA rocket's movement is most like a\nAnswer: house",
+            "prompt": "Answer the following question:\nIf one mineral can scratch another mineral then that other mineral is softer than that one mineral, as can be tested with\nAnswer: a diamond and agate\nAnswer the following question:\nThe floating arrow on a compass always points away from the\nAnswer: south\nAnswer the following question:\nA skunk produces a bad what?\nAnswer: nose experience\nAnswer the following question:\nA rocket's movement is most like a\nAnswer: house",
+            "PPL": 28.054597815688776
+        },
+        "label: C": {
+            "testing input": "Answer the following question:\nA rocket's movement is most like a\nAnswer: bag of gas",
+            "prompt": "Answer the following question:\nIf one mineral can scratch another mineral then that other mineral is softer than that one mineral, as can be tested with\nAnswer: a diamond and agate\nAnswer the following question:\nThe floating arrow on a compass always points away from the\nAnswer: south\nAnswer the following question:\nA skunk produces a bad what?\nAnswer: nose experience\nAnswer the following question:\nA rocket's movement is most like a\nAnswer: bag of gas",
+            "PPL": 28.1568408203125
+        },
+        "label: D": {
+            "testing input": "Answer the following question:\nA rocket's movement is most like a\nAnswer: stone",
+            "prompt": "Answer the following question:\nIf one mineral can scratch another mineral then that other mineral is softer than that one mineral, as can be tested with\nAnswer: a diamond and agate\nAnswer the following question:\nThe floating arrow on a compass always points away from the\nAnswer: south\nAnswer the following question:\nA skunk produces a bad what?\nAnswer: nose experience\nAnswer the following question:\nA rocket's movement is most like a\nAnswer: stone",
+            "PPL": 28.3819518426452
+        },
+        "prediction": "B"
+    },
+    "3": {
+        "in-context examples": "Answer the following question:\nA pulley is used to lift a flag on a flagpole by\nAnswer: yanking string up a wheel\nAnswer the following question:\nThe color of our eyes are permanent because eye color is fixed at birth due to\nAnswer: parent's DNA\nAnswer the following question:\nFeces on the ground is an indicator of a nearby\nAnswer: organic being\n",
+        "label: A": {
+            "testing input": "Answer the following question:\nIf an area of land is sloped to the right and a body of water is on that slope, then the river will flow\nAnswer: pollution",
+            "prompt": "Answer the following question:\nA pulley is used to lift a flag on a flagpole by\nAnswer: yanking string up a wheel\nAnswer the following question:\nThe color of our eyes are permanent because eye color is fixed at birth due to\nAnswer: parent's DNA\nAnswer the following question:\nFeces on the ground is an indicator of a nearby\nAnswer: organic being\nAnswer the following question:\nIf an area of land is sloped to the right and a body of water is on that slope, then the river will flow\nAnswer: pollution",
+            "PPL": 27.322835286458332
+        },
+        "label: B": {
+            "testing input": "Answer the following question:\nIf an area of land is sloped to the right and a body of water is on that slope, then the river will flow\nAnswer: to the right",
+            "prompt": "Answer the following question:\nA pulley is used to lift a flag on a flagpole by\nAnswer: yanking string up a wheel\nAnswer the following question:\nThe color of our eyes are permanent because eye color is fixed at birth due to\nAnswer: parent's DNA\nAnswer the following question:\nFeces on the ground is an indicator of a nearby\nAnswer: organic being\nAnswer the following question:\nIf an area of land is sloped to the right and a body of water is on that slope, then the river will flow\nAnswer: to the right",
+            "PPL": 26.921954939850664
+        },
+        "label: C": {
+            "testing input": "Answer the following question:\nIf an area of land is sloped to the right and a body of water is on that slope, then the river will flow\nAnswer: species",
+            "prompt": "Answer the following question:\nA pulley is used to lift a flag on a flagpole by\nAnswer: yanking string up a wheel\nAnswer the following question:\nThe color of our eyes are permanent because eye color is fixed at birth due to\nAnswer: parent's DNA\nAnswer the following question:\nFeces on the ground is an indicator of a nearby\nAnswer: organic being\nAnswer the following question:\nIf an area of land is sloped to the right and a body of water is on that slope, then the river will flow\nAnswer: species",
+            "PPL": 27.249135610219593
+        },
+        "label: D": {
+            "testing input": "Answer the following question:\nIf an area of land is sloped to the right and a body of water is on that slope, then the river will flow\nAnswer: to the left",
+            "prompt": "Answer the following question:\nA pulley is used to lift a flag on a flagpole by\nAnswer: yanking string up a wheel\nAnswer the following question:\nThe color of our eyes are permanent because eye color is fixed at birth due to\nAnswer: parent's DNA\nAnswer the following question:\nFeces on the ground is an indicator of a nearby\nAnswer: organic being\nAnswer the following question:\nIf an area of land is sloped to the right and a body of water is on that slope, then the river will flow\nAnswer: to the left",
+            "PPL": 27.124224367394913
+        },
+        "prediction": "B"
+    },
+    "4": {
+        "in-context examples": "Answer the following question:\nA pod of dolphins is swimming while searching for food. The youngest dolphin swims away from the pod and is lost. The rest of the pod searches for the young dolphin by clicking into the water. The young dolphin is found because of\nAnswer: echoes from noise\nAnswer the following question:\nIf crops are rotated then the crops planted would look like\nAnswer: beans, corn, peas, cucumbers\nAnswer the following question:\nAn object inside a freezer will become less excited with energy an therefore become\nAnswer: cold\n",
+        "label: A": {
+            "testing input": "Answer the following question:\ncelestial bodies are known to\nAnswer: circle balls of hydrogen",
+            "prompt": "Answer the following question:\nA pod of dolphins is swimming while searching for food. The youngest dolphin swims away from the pod and is lost. The rest of the pod searches for the young dolphin by clicking into the water. The young dolphin is found because of\nAnswer: echoes from noise\nAnswer the following question:\nIf crops are rotated then the crops planted would look like\nAnswer: beans, corn, peas, cucumbers\nAnswer the following question:\nAn object inside a freezer will become less excited with energy an therefore become\nAnswer: cold\nAnswer the following question:\ncelestial bodies are known to\nAnswer: circle balls of hydrogen",
+            "PPL": 32.18416287251656
+        },
+        "label: B": {
+            "testing input": "Answer the following question:\ncelestial bodies are known to\nAnswer: travel through deep space",
+            "prompt": "Answer the following question:\nA pod of dolphins is swimming while searching for food. The youngest dolphin swims away from the pod and is lost. The rest of the pod searches for the young dolphin by clicking into the water. The young dolphin is found because of\nAnswer: echoes from noise\nAnswer the following question:\nIf crops are rotated then the crops planted would look like\nAnswer: beans, corn, peas, cucumbers\nAnswer the following question:\nAn object inside a freezer will become less excited with energy an therefore become\nAnswer: cold\nAnswer the following question:\ncelestial bodies are known to\nAnswer: travel through deep space",
+            "PPL": 32.392096442145274
+        },
+        "label: C": {
+            "testing input": "Answer the following question:\ncelestial bodies are known to\nAnswer: crash into each other",
+            "prompt": "Answer the following question:\nA pod of dolphins is swimming while searching for food. The youngest dolphin swims away from the pod and is lost. The rest of the pod searches for the young dolphin by clicking into the water. The young dolphin is found because of\nAnswer: echoes from noise\nAnswer the following question:\nIf crops are rotated then the crops planted would look like\nAnswer: beans, corn, peas, cucumbers\nAnswer the following question:\nAn object inside a freezer will become less excited with energy an therefore become\nAnswer: cold\nAnswer the following question:\ncelestial bodies are known to\nAnswer: crash into each other",
+            "PPL": 32.155223949535475
+        },
+        "label: D": {
+            "testing input": "Answer the following question:\ncelestial bodies are known to\nAnswer: slingshot around the galaxy",
+            "prompt": "Answer the following question:\nA pod of dolphins is swimming while searching for food. The youngest dolphin swims away from the pod and is lost. The rest of the pod searches for the young dolphin by clicking into the water. The young dolphin is found because of\nAnswer: echoes from noise\nAnswer the following question:\nIf crops are rotated then the crops planted would look like\nAnswer: beans, corn, peas, cucumbers\nAnswer the following question:\nAn object inside a freezer will become less excited with energy an therefore become\nAnswer: cold\nAnswer the following question:\ncelestial bodies are known to\nAnswer: slingshot around the galaxy",
+            "PPL": 32.197682291666666
+        },
+        "prediction": "C"
+    },
+    "5": {
+        "in-context examples": "Answer the following question:\nWhat does the earth orbit that causes the seasons to change?\nAnswer: plasma star\nAnswer the following question:\nA disperser is able to\nAnswer: redirect things\nAnswer the following question:\nevaporation is the first stage in the what cycle\nAnswer: H2O\n",
+        "label: A": {
+            "testing input": "Answer the following question:\nWhere do mushrooms thrive?\nAnswer: the Amazon",
+            "prompt": "Answer the following question:\nWhat does the earth orbit that causes the seasons to change?\nAnswer: plasma star\nAnswer the following question:\nA disperser is able to\nAnswer: redirect things\nAnswer the following question:\nevaporation is the first stage in the what cycle\nAnswer: H2O\nAnswer the following question:\nWhere do mushrooms thrive?\nAnswer: the Amazon",
+            "PPL": 28.87765155261076
+        },
+        "label: B": {
+            "testing input": "Answer the following question:\nWhere do mushrooms thrive?\nAnswer: the arctic",
+            "prompt": "Answer the following question:\nWhat does the earth orbit that causes the seasons to change?\nAnswer: plasma star\nAnswer the following question:\nA disperser is able to\nAnswer: redirect things\nAnswer the following question:\nevaporation is the first stage in the what cycle\nAnswer: H2O\nAnswer the following question:\nWhere do mushrooms thrive?\nAnswer: the arctic",
+            "PPL": 29.079873657226564
+        },
+        "label: C": {
+            "testing input": "Answer the following question:\nWhere do mushrooms thrive?\nAnswer: international space station",
+            "prompt": "Answer the following question:\nWhat does the earth orbit that causes the seasons to change?\nAnswer: plasma star\nAnswer the following question:\nA disperser is able to\nAnswer: redirect things\nAnswer the following question:\nevaporation is the first stage in the what cycle\nAnswer: H2O\nAnswer the following question:\nWhere do mushrooms thrive?\nAnswer: international space station",
+            "PPL": 28.87183837890625
+        },
+        "label: D": {
+            "testing input": "Answer the following question:\nWhere do mushrooms thrive?\nAnswer: the Sahara",
+            "prompt": "Answer the following question:\nWhat does the earth orbit that causes the seasons to change?\nAnswer: plasma star\nAnswer the following question:\nA disperser is able to\nAnswer: redirect things\nAnswer the following question:\nevaporation is the first stage in the what cycle\nAnswer: H2O\nAnswer the following question:\nWhere do mushrooms thrive?\nAnswer: the Sahara",
+            "PPL": 29.081777838212027
+        },
+        "prediction": "C"
+    },
+    "6": {
+        "in-context examples": "Answer the following question:\nA highly polished surface will\nAnswer: redirect light energy\nAnswer the following question:\nOf these, a wolf will make its home very nearest to\nAnswer: mink\nAnswer the following question:\nA tiny spark grows and the result tears through an area of nature and spreads through the mountains, consuming\nAnswer: bark and canopies\n",
+        "label: A": {
+            "testing input": "Answer the following question:\nA metal sticker remains on a fridge because of\nAnswer: vibrations in the surface of the fridge door",
+            "prompt": "Answer the following question:\nA highly polished surface will\nAnswer: redirect light energy\nAnswer the following question:\nOf these, a wolf will make its home very nearest to\nAnswer: mink\nAnswer the following question:\nA tiny spark grows and the result tears through an area of nature and spreads through the mountains, consuming\nAnswer: bark and canopies\nAnswer the following question:\nA metal sticker remains on a fridge because of\nAnswer: vibrations in the surface of the fridge door",
+            "PPL": 29.29955150462963
+        },
+        "label: B": {
+            "testing input": "Answer the following question:\nA metal sticker remains on a fridge because of\nAnswer: a force that pulls two objects together",
+            "prompt": "Answer the following question:\nA highly polished surface will\nAnswer: redirect light energy\nAnswer the following question:\nOf these, a wolf will make its home very nearest to\nAnswer: mink\nAnswer the following question:\nA tiny spark grows and the result tears through an area of nature and spreads through the mountains, consuming\nAnswer: bark and canopies\nAnswer the following question:\nA metal sticker remains on a fridge because of\nAnswer: a force that pulls two objects together",
+            "PPL": 28.7262613171729
+        },
+        "label: C": {
+            "testing input": "Answer the following question:\nA metal sticker remains on a fridge because of\nAnswer: magic that Juggaloes are unable to explain",
+            "prompt": "Answer the following question:\nA highly polished surface will\nAnswer: redirect light energy\nAnswer the following question:\nOf these, a wolf will make its home very nearest to\nAnswer: mink\nAnswer the following question:\nA tiny spark grows and the result tears through an area of nature and spreads through the mountains, consuming\nAnswer: bark and canopies\nAnswer the following question:\nA metal sticker remains on a fridge because of\nAnswer: magic that Juggaloes are unable to explain",
+            "PPL": 28.158053056909402
+        },
+        "label: D": {
+            "testing input": "Answer the following question:\nA metal sticker remains on a fridge because of\nAnswer: the entropy of the universe",
+            "prompt": "Answer the following question:\nA highly polished surface will\nAnswer: redirect light energy\nAnswer the following question:\nOf these, a wolf will make its home very nearest to\nAnswer: mink\nAnswer the following question:\nA tiny spark grows and the result tears through an area of nature and spreads through the mountains, consuming\nAnswer: bark and canopies\nAnswer the following question:\nA metal sticker remains on a fridge because of\nAnswer: the entropy of the universe",
+            "PPL": 28.66626209077381
+        },
+        "prediction": "C"
+    },
+    "7": {
+        "in-context examples": "Answer the following question:\nTranspiration involves\nAnswer: H2O traveling about a daffodil's system\nAnswer the following question:\nWhat would need electrical energy to function?\nAnswer: A Dyson\nAnswer the following question:\nIf you build it they will come also works for aquatic animals, as when there is more water:\nAnswer: their numbers will increase\n",
+        "label: A": {
+            "testing input": "Answer the following question:\nA clean air act must be followed by a\nAnswer: web design course",
+            "prompt": "Answer the following question:\nTranspiration involves\nAnswer: H2O traveling about a daffodil's system\nAnswer the following question:\nWhat would need electrical energy to function?\nAnswer: A Dyson\nAnswer the following question:\nIf you build it they will come also works for aquatic animals, as when there is more water:\nAnswer: their numbers will increase\nAnswer the following question:\nA clean air act must be followed by a\nAnswer: web design course",
+            "PPL": 27.154200236002605
+        },
+        "label: B": {
+            "testing input": "Answer the following question:\nA clean air act must be followed by a\nAnswer: hard drive manufacturer",
+            "prompt": "Answer the following question:\nTranspiration involves\nAnswer: H2O traveling about a daffodil's system\nAnswer the following question:\nWhat would need electrical energy to function?\nAnswer: A Dyson\nAnswer the following question:\nIf you build it they will come also works for aquatic animals, as when there is more water:\nAnswer: their numbers will increase\nAnswer the following question:\nA clean air act must be followed by a\nAnswer: hard drive manufacturer",
+            "PPL": 26.490770477609537
+        },
+        "label: C": {
+            "testing input": "Answer the following question:\nA clean air act must be followed by a\nAnswer: math class",
+            "prompt": "Answer the following question:\nTranspiration involves\nAnswer: H2O traveling about a daffodil's system\nAnswer the following question:\nWhat would need electrical energy to function?\nAnswer: A Dyson\nAnswer the following question:\nIf you build it they will come also works for aquatic animals, as when there is more water:\nAnswer: their numbers will increase\nAnswer the following question:\nA clean air act must be followed by a\nAnswer: math class",
+            "PPL": 27.132735402960527
+        },
+        "label: D": {
+            "testing input": "Answer the following question:\nA clean air act must be followed by a\nAnswer: computer programming course",
+            "prompt": "Answer the following question:\nTranspiration involves\nAnswer: H2O traveling about a daffodil's system\nAnswer the following question:\nWhat would need electrical energy to function?\nAnswer: A Dyson\nAnswer the following question:\nIf you build it they will come also works for aquatic animals, as when there is more water:\nAnswer: their numbers will increase\nAnswer the following question:\nA clean air act must be followed by a\nAnswer: computer programming course",
+            "PPL": 27.957499395940722
+        },
+        "prediction": "B"
+    },
+    "8": {
+        "in-context examples": "Answer the following question:\nWhat does the earth orbit that causes the seasons to change?\nAnswer: plasma star\nAnswer the following question:\nWhen two decorative items for a refrigerator are placed back to back,\nAnswer: they will refuse to touch\nAnswer the following question:\na learned characteristic is a\nAnswer: toddler banging with a stick while parent hammers\n",
+        "label: A": {
+            "testing input": "Answer the following question:\nIf someone wants to use a natural gas in order to assist something necessary, they can\nAnswer: use it to bathe in",
+            "prompt": "Answer the following question:\nWhat does the earth orbit that causes the seasons to change?\nAnswer: plasma star\nAnswer the following question:\nWhen two decorative items for a refrigerator are placed back to back,\nAnswer: they will refuse to touch\nAnswer the following question:\na learned characteristic is a\nAnswer: toddler banging with a stick while parent hammers\nAnswer the following question:\nIf someone wants to use a natural gas in order to assist something necessary, they can\nAnswer: use it to bathe in",
+            "PPL": 25.88130115327381
+        },
+        "label: B": {
+            "testing input": "Answer the following question:\nIf someone wants to use a natural gas in order to assist something necessary, they can\nAnswer: eat it to die quickly",
+            "prompt": "Answer the following question:\nWhat does the earth orbit that causes the seasons to change?\nAnswer: plasma star\nAnswer the following question:\nWhen two decorative items for a refrigerator are placed back to back,\nAnswer: they will refuse to touch\nAnswer the following question:\na learned characteristic is a\nAnswer: toddler banging with a stick while parent hammers\nAnswer the following question:\nIf someone wants to use a natural gas in order to assist something necessary, they can\nAnswer: eat it to die quickly",
+            "PPL": 26.07762498121995
+        },
+        "label: C": {
+            "testing input": "Answer the following question:\nIf someone wants to use a natural gas in order to assist something necessary, they can\nAnswer: freeze it to make ice cubes",
+            "prompt": "Answer the following question:\nWhat does the earth orbit that causes the seasons to change?\nAnswer: plasma star\nAnswer the following question:\nWhen two decorative items for a refrigerator are placed back to back,\nAnswer: they will refuse to touch\nAnswer the following question:\na learned characteristic is a\nAnswer: toddler banging with a stick while parent hammers\nAnswer the following question:\nIf someone wants to use a natural gas in order to assist something necessary, they can\nAnswer: freeze it to make ice cubes",
+            "PPL": 27.406880696614582
+        },
+        "label: D": {
+            "testing input": "Answer the following question:\nIf someone wants to use a natural gas in order to assist something necessary, they can\nAnswer: ignite it to warm their body",
+            "prompt": "Answer the following question:\nWhat does the earth orbit that causes the seasons to change?\nAnswer: plasma star\nAnswer the following question:\nWhen two decorative items for a refrigerator are placed back to back,\nAnswer: they will refuse to touch\nAnswer the following question:\na learned characteristic is a\nAnswer: toddler banging with a stick while parent hammers\nAnswer the following question:\nIf someone wants to use a natural gas in order to assist something necessary, they can\nAnswer: ignite it to warm their body",
+            "PPL": 26.625590957213785
+        },
+        "prediction": "A"
+    },
+    "9": {
+        "in-context examples": "Answer the following question:\nAn object converts electrical energy into sound on a\nAnswer: iphone\nAnswer the following question:\nWhether a rainstorm, snow, or hail, humanity can find a way to escape it by\nAnswer: creating a protected space\nAnswer the following question:\nA person is going to freeze on a cold night. The person looks for something to ignite for a source of warmth, and chooses the best option,\nAnswer: dry switches\n",
+        "label: A": {
+            "testing input": "Answer the following question:\nIf a person wants to watch the eclipse\nAnswer: it's best to go sans sunglasses",
+            "prompt": "Answer the following question:\nAn object converts electrical energy into sound on a\nAnswer: iphone\nAnswer the following question:\nWhether a rainstorm, snow, or hail, humanity can find a way to escape it by\nAnswer: creating a protected space\nAnswer the following question:\nA person is going to freeze on a cold night. The person looks for something to ignite for a source of warmth, and chooses the best option,\nAnswer: dry switches\nAnswer the following question:\nIf a person wants to watch the eclipse\nAnswer: it's best to go sans sunglasses",
+            "PPL": 30.081570533014112
+        },
+        "label: B": {
+            "testing input": "Answer the following question:\nIf a person wants to watch the eclipse\nAnswer: it's best to just use a hand as shade",
+            "prompt": "Answer the following question:\nAn object converts electrical energy into sound on a\nAnswer: iphone\nAnswer the following question:\nWhether a rainstorm, snow, or hail, humanity can find a way to escape it by\nAnswer: creating a protected space\nAnswer the following question:\nA person is going to freeze on a cold night. The person looks for something to ignite for a source of warmth, and chooses the best option,\nAnswer: dry switches\nAnswer the following question:\nIf a person wants to watch the eclipse\nAnswer: it's best to just use a hand as shade",
+            "PPL": 29.698079427083332
+        },
+        "label: C": {
+            "testing input": "Answer the following question:\nIf a person wants to watch the eclipse\nAnswer: it's best to use eye protection",
+            "prompt": "Answer the following question:\nAn object converts electrical energy into sound on a\nAnswer: iphone\nAnswer the following question:\nWhether a rainstorm, snow, or hail, humanity can find a way to escape it by\nAnswer: creating a protected space\nAnswer the following question:\nA person is going to freeze on a cold night. The person looks for something to ignite for a source of warmth, and chooses the best option,\nAnswer: dry switches\nAnswer the following question:\nIf a person wants to watch the eclipse\nAnswer: it's best to use eye protection",
+            "PPL": 29.991371029713115
+        },
+        "label: D": {
+            "testing input": "Answer the following question:\nIf a person wants to watch the eclipse\nAnswer: it's best to use a telescope",
+            "prompt": "Answer the following question:\nAn object converts electrical energy into sound on a\nAnswer: iphone\nAnswer the following question:\nWhether a rainstorm, snow, or hail, humanity can find a way to escape it by\nAnswer: creating a protected space\nAnswer the following question:\nA person is going to freeze on a cold night. The person looks for something to ignite for a source of warmth, and chooses the best option,\nAnswer: dry switches\nAnswer the following question:\nIf a person wants to watch the eclipse\nAnswer: it's best to use a telescope",
+            "PPL": 30.377516831808943
+        },
+        "prediction": "B"
+    }
+}
