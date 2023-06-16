@@ -46,7 +46,7 @@ function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
       };
       console.log("Sending data.. ", dataToSend)
       try {
-        const response = await axios.post('http://localhost:8000/debug', dataToSend);
+        const response = await axios.post('http://localhost:8000/run', dataToSend);
         onButtonClick(response.data);
       } catch (error) {
         console.error('There was an error!', error);

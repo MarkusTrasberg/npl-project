@@ -230,7 +230,7 @@ def debug():
 
     response = jsonify({
         'accuracy': 1.0,
-        'questions': ["What is the Answer to the Ultimate Question of Life, The Universe, and Everything?"],
+        'origin_prompt': ["What is the Answer to the Ultimate Question of Life, The Universe, and Everything?"],
         'predictions': ['42'],
         'answers': ['42 '],
         })
@@ -356,7 +356,17 @@ def run():
     
     # TODO: Multiple responses so that we can let the frontend know at what stage of the run we are (i.e. inferring, predicting)
 
+    # print(result)
+    # print({
+    #     'accuracy': 1.0,
+    #     'questions': ["What is the Answer to the Ultimate Question of Life, The Universe, and Everything?"],
+    #     'predictions': ['42'],
+    #     'answers': ['42 '],
+    #     })
+
     response = jsonify(result)
+
+    print(response.get_data())
     return response
 
 

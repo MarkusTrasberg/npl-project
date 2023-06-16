@@ -5,7 +5,7 @@ import { DataGrid } from '@mui/x-data-grid';
 export interface ResultsProps {
     result: {
         accuracy: number;
-        questions: string[];
+        origin_prompt: string[];
         predictions: string[];
         answers: string[];
     } | null;
@@ -13,9 +13,9 @@ export interface ResultsProps {
 
 function Results( {result}: ResultsProps) {
   const rows = result
-  ? result.questions.map((question, index) => ({
+  ? result.origin_prompt.map((origin_prompt, index) => ({
       id: index,
-      question: question,
+      origin_prompt: origin_prompt,
       prediction: result.predictions[index],
       answer: result.answers[index],
     }))
@@ -24,7 +24,7 @@ function Results( {result}: ResultsProps) {
 
   const columns = [
     { field: 'id', headerName: 'ID', width: 30 },
-    { field: 'question', headerName: 'Questions', width: 600, type: 'textarea', whiteSpace: 'normal', wordWrap: 'break-word'},
+    { field: 'origin_prompt', headerName: 'Original prompt', width: 600, type: 'textarea', whiteSpace: 'normal', wordWrap: 'break-word'},
     { field: 'prediction', headerName: 'Predictions', width: 200 },
     { field: 'answer', headerName: 'Answers', width: 200 },
   ];
