@@ -1,5 +1,6 @@
 import React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
+import LoadingIcons from 'react-loading-icons';
 
 
 export interface ResultsProps {
@@ -9,9 +10,10 @@ export interface ResultsProps {
         predictions: string[];
         answers: string[];
     } | null | boolean;
+    waitingForResults: boolean;
 }
 
-function Results( {result}: ResultsProps) {
+function Results( {result, waitingForResults}: ResultsProps) {
   const rows = (result && result instanceof Object)
   ? result.origin_prompt.map((origin_prompt, index) => ({
       id: index,
@@ -32,7 +34,7 @@ function Results( {result}: ResultsProps) {
   return (
     <div className="ml-10">
       <h1 className="font-bold text-xl w-1/2">Results</h1>
-      {result instanceof Object && (
+      {/* {result instanceof Object && (
         <>
           <p className="mt-10">Accuracy: {result.accuracy}</p>
           <br></br>
@@ -51,8 +53,30 @@ function Results( {result}: ResultsProps) {
             />
           </div>
         </>
-      )}
-      {!result && <p>Press the button to get results.</p>}
+      )} */}
+      { waitingForResults ? 
+      <LoadingIcons.ThreeDots/> :
+      (result instanceof Object && (
+        <>
+          <p className="mt-10">Accuracy: {result.accuracy}</p>
+          <br></br>
+          <div className="">
+            <DataGrid
+              getRowHeight={() => 'auto'} 
+              rows={rows}
+              columns={columns}
+              initialState={{
+                pagination: {
+                  paginationModel: { page: 0, pageSize: 5 },
+                },
+              }}
+              pageSizeOptions={[5, 10]}
+              className="bg-white"
+            />
+          </div>
+        </>
+      ))}
+      {!result && !waitingForResults && <p>Press the button to get results.</p>}
     </div>
   );
 }
