@@ -20,11 +20,10 @@ interface Parameters {
 }
 
 interface GridBasicExampleProps {
-  setResults: (result: any) => void; 
-  setWaitingForResults: (value: boolean) => void;
+  onButtonClick: (result: any) => void; 
 }
 
-function GridBasicExample({ setResults, setWaitingForResults }: GridBasicExampleProps) {
+function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
 
     const [dataset_size, setSize] = React.useState(70);
     const [ice_size, setIce] = React.useState(3);
@@ -51,19 +50,16 @@ function GridBasicExample({ setResults, setWaitingForResults }: GridBasicExample
         ice_size
       };
       console.log("Sending data.. ", dataToSend)
-      setWaitingForResults(true)
       try {
         const response = await axios.post('http://localhost:8000/run', dataToSend);
-        setResults(response.data);
-        setWaitingForResults(false)
+        onButtonClick(response.data);
       } catch (error) {
-        setResults(null);
+        onButtonClick(null);
         if (axios.isAxiosError(error)) {
           if (error.response) {
-              setError(error.response.data.description);
+              setError(error.response.data.message.toString());
         console.error('There was an error!', error);
           }}
-      setWaitingForResults(false);
   }}
 
     const fetchParameters = async () => {

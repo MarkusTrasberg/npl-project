@@ -352,10 +352,11 @@ def run():
                 status=400,
             )
     if model['model'] == "gpt3" and inferencer == "PPLInferencer":
-        return Response(
-                "You cannot use GPT3 models together with PPLInferencer. Please try a different inferencer.",
-                status=400,
-            )
+        response = jsonify({
+            'message': "You cannot use GPT3 models together with PPLInferencer. Please try a different inferencer."
+        })
+        response.status_code = 400
+        return response
 
     try:
         model = ICLModel(model, inferencer, datasets, dataset_size, retriever, ice_size)
