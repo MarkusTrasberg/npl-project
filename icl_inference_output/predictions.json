@@ -1,147 +1,147 @@
 {
     "0": {
-        "in-context examples": "Answer the following question:\nWhen going to sleep what noise does a human make?\nAnswer: snoring\n",
+        "in-context examples": "Answer the following question:\nWhat does playing guitar cause a person to do?\nAnswer: making music\nAnswer the following question:\nWhat is someone watching a person who is playing guitar doing?\nAnswer: listening to music\nAnswer the following question:\nThe aging rockstar had to finally stop playing guitar, his hands just wouldn't cooperate because of the what?\nAnswer: arthritis\nAnswer the following question:\nHow do you get good at playing guitar?\nAnswer: practice\n",
         "label: A": {
-            "testing input": "Answer the following question:\nWhat must someone do first before changing society?\nAnswer: argue",
-            "prompt": "Answer the following question:\nWhen going to sleep what noise does a human make?\nAnswer: snoring\nAnswer the following question:\nWhat must someone do first before changing society?\nAnswer: argue",
-            "PPL": 29.205640216206394
+            "testing input": "Answer the following question:\nwhat does someone start playing guitar to do?\nAnswer: listening to music",
+            "prompt": "Answer the following question:\nWhat does playing guitar cause a person to do?\nAnswer: making music\nAnswer the following question:\nWhat is someone watching a person who is playing guitar doing?\nAnswer: listening to music\nAnswer the following question:\nThe aging rockstar had to finally stop playing guitar, his hands just wouldn't cooperate because of the what?\nAnswer: arthritis\nAnswer the following question:\nHow do you get good at playing guitar?\nAnswer: practice\nAnswer the following question:\nwhat does someone start playing guitar to do?\nAnswer: listening to music",
+            "PPL": 28.326940317622952
         },
         "label: B": {
-            "testing input": "Answer the following question:\nWhat must someone do first before changing society?\nAnswer: change yourself",
-            "prompt": "Answer the following question:\nWhen going to sleep what noise does a human make?\nAnswer: snoring\nAnswer the following question:\nWhat must someone do first before changing society?\nAnswer: change yourself",
-            "PPL": 29.053971724076703
+            "testing input": "Answer the following question:\nwhat does someone start playing guitar to do?\nAnswer: making music",
+            "prompt": "Answer the following question:\nWhat does playing guitar cause a person to do?\nAnswer: making music\nAnswer the following question:\nWhat is someone watching a person who is playing guitar doing?\nAnswer: listening to music\nAnswer the following question:\nThe aging rockstar had to finally stop playing guitar, his hands just wouldn't cooperate because of the what?\nAnswer: arthritis\nAnswer the following question:\nHow do you get good at playing guitar?\nAnswer: practice\nAnswer the following question:\nwhat does someone start playing guitar to do?\nAnswer: making music",
+            "PPL": 28.262081934400825
         },
         "label: C": {
-            "testing input": "Answer the following question:\nWhat must someone do first before changing society?\nAnswer: get angry",
-            "prompt": "Answer the following question:\nWhen going to sleep what noise does a human make?\nAnswer: snoring\nAnswer the following question:\nWhat must someone do first before changing society?\nAnswer: get angry",
-            "PPL": 28.97465653852983
+            "testing input": "Answer the following question:\nwhat does someone start playing guitar to do?\nAnswer: arthritis",
+            "prompt": "Answer the following question:\nWhat does playing guitar cause a person to do?\nAnswer: making music\nAnswer the following question:\nWhat is someone watching a person who is playing guitar doing?\nAnswer: listening to music\nAnswer the following question:\nThe aging rockstar had to finally stop playing guitar, his hands just wouldn't cooperate because of the what?\nAnswer: arthritis\nAnswer the following question:\nHow do you get good at playing guitar?\nAnswer: practice\nAnswer the following question:\nwhat does someone start playing guitar to do?\nAnswer: arthritis",
+            "PPL": 28.345292154947916
         },
         "label: D": {
-            "testing input": "Answer the following question:\nWhat must someone do first before changing society?\nAnswer: vote",
-            "prompt": "Answer the following question:\nWhen going to sleep what noise does a human make?\nAnswer: snoring\nAnswer the following question:\nWhat must someone do first before changing society?\nAnswer: vote",
-            "PPL": 29.037027048510176
+            "testing input": "Answer the following question:\nwhat does someone start playing guitar to do?\nAnswer: obesity",
+            "prompt": "Answer the following question:\nWhat does playing guitar cause a person to do?\nAnswer: making music\nAnswer the following question:\nWhat is someone watching a person who is playing guitar doing?\nAnswer: listening to music\nAnswer the following question:\nThe aging rockstar had to finally stop playing guitar, his hands just wouldn't cooperate because of the what?\nAnswer: arthritis\nAnswer the following question:\nHow do you get good at playing guitar?\nAnswer: practice\nAnswer the following question:\nwhat does someone start playing guitar to do?\nAnswer: obesity",
+            "PPL": 28.275349934895832
         },
         "label: E": {
-            "testing input": "Answer the following question:\nWhat must someone do first before changing society?\nAnswer: riots",
-            "prompt": "Answer the following question:\nWhen going to sleep what noise does a human make?\nAnswer: snoring\nAnswer the following question:\nWhat must someone do first before changing society?\nAnswer: riots",
-            "PPL": 29.165550054505815
+            "testing input": "Answer the following question:\nwhat does someone start playing guitar to do?\nAnswer: singing",
+            "prompt": "Answer the following question:\nWhat does playing guitar cause a person to do?\nAnswer: making music\nAnswer the following question:\nWhat is someone watching a person who is playing guitar doing?\nAnswer: listening to music\nAnswer the following question:\nThe aging rockstar had to finally stop playing guitar, his hands just wouldn't cooperate because of the what?\nAnswer: arthritis\nAnswer the following question:\nHow do you get good at playing guitar?\nAnswer: practice\nAnswer the following question:\nwhat does someone start playing guitar to do?\nAnswer: singing",
+            "PPL": 28.398291015625
         },
-        "prediction": "C"
+        "prediction": "B"
     },
     "1": {
-        "in-context examples": "Answer the following question:\nThey moved out of the city to have a master bedroom, what kind of home did they seek?\nAnswer: suburban home\n",
+        "in-context examples": "Answer the following question:\nMalls are where you go shopping. What else do you do at malls?\nAnswer: meeting friends\nAnswer the following question:\nShe wasn't just out windows shopping, she was filling up her cart and doing what?\nAnswer: purchasing\nAnswer the following question:\nWhat do you do when shopping in a packed store?\nAnswer: standing in line\nAnswer the following question:\nWhat is the primary reason for visiting a shop?\nAnswer: purchasing\n",
         "label: A": {
-            "testing input": "Answer the following question:\nWhy is grooming often recommended to greasy teens?\nAnswer: neatness",
-            "prompt": "Answer the following question:\nThey moved out of the city to have a master bedroom, what kind of home did they seek?\nAnswer: suburban home\nAnswer the following question:\nWhy is grooming often recommended to greasy teens?\nAnswer: neatness",
-            "PPL": 27.262724699797452
+            "testing input": "Answer the following question:\nWhen shopping for an expensive product you should do what to make sure you get the best deal?\nAnswer: compare prices",
+            "prompt": "Answer the following question:\nMalls are where you go shopping. What else do you do at malls?\nAnswer: meeting friends\nAnswer the following question:\nShe wasn't just out windows shopping, she was filling up her cart and doing what?\nAnswer: purchasing\nAnswer the following question:\nWhat do you do when shopping in a packed store?\nAnswer: standing in line\nAnswer the following question:\nWhat is the primary reason for visiting a shop?\nAnswer: purchasing\nAnswer the following question:\nWhen shopping for an expensive product you should do what to make sure you get the best deal?\nAnswer: compare prices",
+            "PPL": 28.158805216165412
         },
         "label: B": {
-            "testing input": "Answer the following question:\nWhy is grooming often recommended to greasy teens?\nAnswer: selfishness",
-            "prompt": "Answer the following question:\nThey moved out of the city to have a master bedroom, what kind of home did they seek?\nAnswer: suburban home\nAnswer the following question:\nWhy is grooming often recommended to greasy teens?\nAnswer: selfishness",
-            "PPL": 27.409961841724538
+            "testing input": "Answer the following question:\nWhen shopping for an expensive product you should do what to make sure you get the best deal?\nAnswer: standing in line",
+            "prompt": "Answer the following question:\nMalls are where you go shopping. What else do you do at malls?\nAnswer: meeting friends\nAnswer the following question:\nShe wasn't just out windows shopping, she was filling up her cart and doing what?\nAnswer: purchasing\nAnswer the following question:\nWhat do you do when shopping in a packed store?\nAnswer: standing in line\nAnswer the following question:\nWhat is the primary reason for visiting a shop?\nAnswer: purchasing\nAnswer the following question:\nWhen shopping for an expensive product you should do what to make sure you get the best deal?\nAnswer: standing in line",
+            "PPL": 28.294227713969217
         },
         "label: C": {
-            "testing input": "Answer the following question:\nWhy is grooming often recommended to greasy teens?\nAnswer: mistakes",
-            "prompt": "Answer the following question:\nThey moved out of the city to have a master bedroom, what kind of home did they seek?\nAnswer: suburban home\nAnswer the following question:\nWhy is grooming often recommended to greasy teens?\nAnswer: mistakes",
-            "PPL": 27.319996959758253
+            "testing input": "Answer the following question:\nWhen shopping for an expensive product you should do what to make sure you get the best deal?\nAnswer: meeting friends",
+            "prompt": "Answer the following question:\nMalls are where you go shopping. What else do you do at malls?\nAnswer: meeting friends\nAnswer the following question:\nShe wasn't just out windows shopping, she was filling up her cart and doing what?\nAnswer: purchasing\nAnswer the following question:\nWhat do you do when shopping in a packed store?\nAnswer: standing in line\nAnswer the following question:\nWhat is the primary reason for visiting a shop?\nAnswer: purchasing\nAnswer the following question:\nWhen shopping for an expensive product you should do what to make sure you get the best deal?\nAnswer: meeting friends",
+            "PPL": 28.17793629581767
         },
         "label: D": {
-            "testing input": "Answer the following question:\nWhy is grooming often recommended to greasy teens?\nAnswer: cleanliness",
-            "prompt": "Answer the following question:\nThey moved out of the city to have a master bedroom, what kind of home did they seek?\nAnswer: suburban home\nAnswer the following question:\nWhy is grooming often recommended to greasy teens?\nAnswer: cleanliness",
-            "PPL": 27.16741717303241
+            "testing input": "Answer the following question:\nWhen shopping for an expensive product you should do what to make sure you get the best deal?\nAnswer: live without it",
+            "prompt": "Answer the following question:\nMalls are where you go shopping. What else do you do at malls?\nAnswer: meeting friends\nAnswer the following question:\nShe wasn't just out windows shopping, she was filling up her cart and doing what?\nAnswer: purchasing\nAnswer the following question:\nWhat do you do when shopping in a packed store?\nAnswer: standing in line\nAnswer the following question:\nWhat is the primary reason for visiting a shop?\nAnswer: purchasing\nAnswer the following question:\nWhen shopping for an expensive product you should do what to make sure you get the best deal?\nAnswer: live without it",
+            "PPL": 28.126406541511194
         },
         "label: E": {
-            "testing input": "Answer the following question:\nWhy is grooming often recommended to greasy teens?\nAnswer: satisfaction",
-            "prompt": "Answer the following question:\nThey moved out of the city to have a master bedroom, what kind of home did they seek?\nAnswer: suburban home\nAnswer the following question:\nWhy is grooming often recommended to greasy teens?\nAnswer: satisfaction",
-            "PPL": 27.32157466096698
+            "testing input": "Answer the following question:\nWhen shopping for an expensive product you should do what to make sure you get the best deal?\nAnswer: purchasing",
+            "prompt": "Answer the following question:\nMalls are where you go shopping. What else do you do at malls?\nAnswer: meeting friends\nAnswer the following question:\nShe wasn't just out windows shopping, she was filling up her cart and doing what?\nAnswer: purchasing\nAnswer the following question:\nWhat do you do when shopping in a packed store?\nAnswer: standing in line\nAnswer the following question:\nWhat is the primary reason for visiting a shop?\nAnswer: purchasing\nAnswer the following question:\nWhen shopping for an expensive product you should do what to make sure you get the best deal?\nAnswer: purchasing",
+            "PPL": 28.431437174479168
         },
         "prediction": "D"
     },
     "2": {
-        "in-context examples": "Answer the following question:\nWhere would you get some knives if you do not have any?\nAnswer: sporting goods store\n",
+        "in-context examples": "Answer the following question:\nWhat does a person typically do when he is in a relationship?\nAnswer: let himself go\nAnswer the following question:\nA person needs to make a withdrawal, what is he looking for?\nAnswer: bank money\nAnswer the following question:\nA person doesn't have to keep going to school to what?\nAnswer: continue learning\nAnswer the following question:\nWhat does a person do in a garden?\nAnswer: plant flowers\n",
         "label: A": {
-            "testing input": "Answer the following question:\nWhat does waiting for something for a response from an interview cause?\nAnswer: have fun",
-            "prompt": "Answer the following question:\nWhere would you get some knives if you do not have any?\nAnswer: sporting goods store\nAnswer the following question:\nWhat does waiting for something for a response from an interview cause?\nAnswer: have fun",
-            "PPL": 26.33291685814951
+            "testing input": "Answer the following question:\nA person doesn't have pants that fit, what should he do?\nAnswer: buy a monkey",
+            "prompt": "Answer the following question:\nWhat does a person typically do when he is in a relationship?\nAnswer: let himself go\nAnswer the following question:\nA person needs to make a withdrawal, what is he looking for?\nAnswer: bank money\nAnswer the following question:\nA person doesn't have to keep going to school to what?\nAnswer: continue learning\nAnswer the following question:\nWhat does a person do in a garden?\nAnswer: plant flowers\nAnswer the following question:\nA person doesn't have pants that fit, what should he do?\nAnswer: buy a monkey",
+            "PPL": 28.57436328125
         },
         "label: B": {
-            "testing input": "Answer the following question:\nWhat does waiting for something for a response from an interview cause?\nAnswer: patience",
-            "prompt": "Answer the following question:\nWhere would you get some knives if you do not have any?\nAnswer: sporting goods store\nAnswer the following question:\nWhat does waiting for something for a response from an interview cause?\nAnswer: patience",
-            "PPL": 26.78712890625
+            "testing input": "Answer the following question:\nA person doesn't have pants that fit, what should he do?\nAnswer: let himself go",
+            "prompt": "Answer the following question:\nWhat does a person typically do when he is in a relationship?\nAnswer: let himself go\nAnswer the following question:\nA person needs to make a withdrawal, what is he looking for?\nAnswer: bank money\nAnswer the following question:\nA person doesn't have to keep going to school to what?\nAnswer: continue learning\nAnswer the following question:\nWhat does a person do in a garden?\nAnswer: plant flowers\nAnswer the following question:\nA person doesn't have pants that fit, what should he do?\nAnswer: let himself go",
+            "PPL": 28.865234375
         },
         "label: C": {
-            "testing input": "Answer the following question:\nWhat does waiting for something for a response from an interview cause?\nAnswer: anxiety",
-            "prompt": "Answer the following question:\nWhere would you get some knives if you do not have any?\nAnswer: sporting goods store\nAnswer the following question:\nWhat does waiting for something for a response from an interview cause?\nAnswer: anxiety",
-            "PPL": 26.8853173828125
+            "testing input": "Answer the following question:\nA person doesn't have pants that fit, what should he do?\nAnswer: buy clothes",
+            "prompt": "Answer the following question:\nWhat does a person typically do when he is in a relationship?\nAnswer: let himself go\nAnswer the following question:\nA person needs to make a withdrawal, what is he looking for?\nAnswer: bank money\nAnswer the following question:\nA person doesn't have to keep going to school to what?\nAnswer: continue learning\nAnswer the following question:\nWhat does a person do in a garden?\nAnswer: plant flowers\nAnswer the following question:\nA person doesn't have pants that fit, what should he do?\nAnswer: buy clothes",
+            "PPL": 28.752167732484878
         },
         "label: D": {
-            "testing input": "Answer the following question:\nWhat does waiting for something for a response from an interview cause?\nAnswer: tedious",
-            "prompt": "Answer the following question:\nWhere would you get some knives if you do not have any?\nAnswer: sporting goods store\nAnswer the following question:\nWhat does waiting for something for a response from an interview cause?\nAnswer: tedious",
-            "PPL": 26.7652490234375
+            "testing input": "Answer the following question:\nA person doesn't have pants that fit, what should he do?\nAnswer: bank money",
+            "prompt": "Answer the following question:\nWhat does a person typically do when he is in a relationship?\nAnswer: let himself go\nAnswer the following question:\nA person needs to make a withdrawal, what is he looking for?\nAnswer: bank money\nAnswer the following question:\nA person doesn't have to keep going to school to what?\nAnswer: continue learning\nAnswer the following question:\nWhat does a person do in a garden?\nAnswer: plant flowers\nAnswer the following question:\nA person doesn't have pants that fit, what should he do?\nAnswer: bank money",
+            "PPL": 28.648488690776208
         },
         "label: E": {
-            "testing input": "Answer the following question:\nWhat does waiting for something for a response from an interview cause?\nAnswer: impatience",
-            "prompt": "Answer the following question:\nWhere would you get some knives if you do not have any?\nAnswer: sporting goods store\nAnswer the following question:\nWhat does waiting for something for a response from an interview cause?\nAnswer: impatience",
-            "PPL": 27.037918390012255
+            "testing input": "Answer the following question:\nA person doesn't have pants that fit, what should he do?\nAnswer: catch cold",
+            "prompt": "Answer the following question:\nWhat does a person typically do when he is in a relationship?\nAnswer: let himself go\nAnswer the following question:\nA person needs to make a withdrawal, what is he looking for?\nAnswer: bank money\nAnswer the following question:\nA person doesn't have to keep going to school to what?\nAnswer: continue learning\nAnswer the following question:\nWhat does a person do in a garden?\nAnswer: plant flowers\nAnswer the following question:\nA person doesn't have pants that fit, what should he do?\nAnswer: catch cold",
+            "PPL": 28.506599672379032
         },
-        "prediction": "A"
+        "prediction": "E"
     },
     "3": {
-        "in-context examples": "Answer the following question:\nDanny hated helping people.  It always brought what?\nAnswer: complications\n",
+        "in-context examples": "Answer the following question:\nWhat is a parents primary duty?\nAnswer: care for children\nAnswer the following question:\nWhat do most people have five years after becoming a parent?\nAnswer: school child\nAnswer the following question:\nWhen children are in a hurry, what might they do?\nAnswer: rush around\nAnswer the following question:\nWhen children aren't playing outside what do they like to do?\nAnswer: play video games\n",
         "label: A": {
-            "testing input": "Answer the following question:\nSometimes playing game means losing, he wasn't good at losing though and showed lots of what?\nAnswer: having fun",
-            "prompt": "Answer the following question:\nDanny hated helping people.  It always brought what?\nAnswer: complications\nAnswer the following question:\nSometimes playing game means losing, he wasn't good at losing though and showed lots of what?\nAnswer: having fun",
-            "PPL": 24.14262418926887
+            "testing input": "Answer the following question:\nParents often yell in times of chaos, what are they trying to do?\nAnswer: guide children",
+            "prompt": "Answer the following question:\nWhat is a parents primary duty?\nAnswer: care for children\nAnswer the following question:\nWhat do most people have five years after becoming a parent?\nAnswer: school child\nAnswer the following question:\nWhen children are in a hurry, what might they do?\nAnswer: rush around\nAnswer the following question:\nWhen children aren't playing outside what do they like to do?\nAnswer: play video games\nAnswer the following question:\nParents often yell in times of chaos, what are they trying to do?\nAnswer: guide children",
+            "PPL": 28.561598092071282
         },
         "label: B": {
-            "testing input": "Answer the following question:\nSometimes playing game means losing, he wasn't good at losing though and showed lots of what?\nAnswer: entertain",
-            "prompt": "Answer the following question:\nDanny hated helping people.  It always brought what?\nAnswer: complications\nAnswer the following question:\nSometimes playing game means losing, he wasn't good at losing though and showed lots of what?\nAnswer: entertain",
-            "PPL": 24.411179762620193
+            "testing input": "Answer the following question:\nParents often yell in times of chaos, what are they trying to do?\nAnswer: understand children",
+            "prompt": "Answer the following question:\nWhat is a parents primary duty?\nAnswer: care for children\nAnswer the following question:\nWhat do most people have five years after becoming a parent?\nAnswer: school child\nAnswer the following question:\nWhen children are in a hurry, what might they do?\nAnswer: rush around\nAnswer the following question:\nWhen children aren't playing outside what do they like to do?\nAnswer: play video games\nAnswer the following question:\nParents often yell in times of chaos, what are they trying to do?\nAnswer: understand children",
+            "PPL": 28.504870706353305
         },
         "label: C": {
-            "testing input": "Answer the following question:\nSometimes playing game means losing, he wasn't good at losing though and showed lots of what?\nAnswer: injury",
-            "prompt": "Answer the following question:\nDanny hated helping people.  It always brought what?\nAnswer: complications\nAnswer the following question:\nSometimes playing game means losing, he wasn't good at losing though and showed lots of what?\nAnswer: injury",
-            "PPL": 24.249359130859375
+            "testing input": "Answer the following question:\nParents often yell in times of chaos, what are they trying to do?\nAnswer: control children",
+            "prompt": "Answer the following question:\nWhat is a parents primary duty?\nAnswer: care for children\nAnswer the following question:\nWhat do most people have five years after becoming a parent?\nAnswer: school child\nAnswer the following question:\nWhen children are in a hurry, what might they do?\nAnswer: rush around\nAnswer the following question:\nWhen children aren't playing outside what do they like to do?\nAnswer: play video games\nAnswer the following question:\nParents often yell in times of chaos, what are they trying to do?\nAnswer: control children",
+            "PPL": 28.68558319344008
         },
         "label: D": {
-            "testing input": "Answer the following question:\nSometimes playing game means losing, he wasn't good at losing though and showed lots of what?\nAnswer: enjoying",
-            "prompt": "Answer the following question:\nDanny hated helping people.  It always brought what?\nAnswer: complications\nAnswer the following question:\nSometimes playing game means losing, he wasn't good at losing though and showed lots of what?\nAnswer: enjoying",
-            "PPL": 24.461883544921875
+            "testing input": "Answer the following question:\nParents often yell in times of chaos, what are they trying to do?\nAnswer: care for children",
+            "prompt": "Answer the following question:\nWhat is a parents primary duty?\nAnswer: care for children\nAnswer the following question:\nWhat do most people have five years after becoming a parent?\nAnswer: school child\nAnswer the following question:\nWhen children are in a hurry, what might they do?\nAnswer: rush around\nAnswer the following question:\nWhen children aren't playing outside what do they like to do?\nAnswer: play video games\nAnswer the following question:\nParents often yell in times of chaos, what are they trying to do?\nAnswer: care for children",
+            "PPL": 28.611432184938526
         },
         "label: E": {
-            "testing input": "Answer the following question:\nSometimes playing game means losing, he wasn't good at losing though and showed lots of what?\nAnswer: anger",
-            "prompt": "Answer the following question:\nDanny hated helping people.  It always brought what?\nAnswer: complications\nAnswer the following question:\nSometimes playing game means losing, he wasn't good at losing though and showed lots of what?\nAnswer: anger",
-            "PPL": 24.877723106971153
-        },
-        "prediction": "A"
-    },
-    "4": {
-        "in-context examples": "Answer the following question:\nThe astronaut wanted to find the United States from outer space, so where did he aim his spacecraft?\nAnswer: northern hemisphere\n",
-        "label: A": {
-            "testing input": "Answer the following question:\nOther than water, sugar is the main ingredient in what?\nAnswer: candy bar",
-            "prompt": "Answer the following question:\nThe astronaut wanted to find the United States from outer space, so where did he aim his spacecraft?\nAnswer: northern hemisphere\nAnswer the following question:\nOther than water, sugar is the main ingredient in what?\nAnswer: candy bar",
-            "PPL": 27.365208217075892
-        },
-        "label: B": {
-            "testing input": "Answer the following question:\nOther than water, sugar is the main ingredient in what?\nAnswer: soda pop",
-            "prompt": "Answer the following question:\nThe astronaut wanted to find the United States from outer space, so where did he aim his spacecraft?\nAnswer: northern hemisphere\nAnswer the following question:\nOther than water, sugar is the main ingredient in what?\nAnswer: soda pop",
-            "PPL": 27.263541085379465
-        },
-        "label: C": {
-            "testing input": "Answer the following question:\nOther than water, sugar is the main ingredient in what?\nAnswer: coffee",
-            "prompt": "Answer the following question:\nThe astronaut wanted to find the United States from outer space, so where did he aim his spacecraft?\nAnswer: northern hemisphere\nAnswer the following question:\nOther than water, sugar is the main ingredient in what?\nAnswer: coffee",
-            "PPL": 27.471826171875
-        },
-        "label: D": {
-            "testing input": "Answer the following question:\nOther than water, sugar is the main ingredient in what?\nAnswer: tea",
-            "prompt": "Answer the following question:\nThe astronaut wanted to find the United States from outer space, so where did he aim his spacecraft?\nAnswer: northern hemisphere\nAnswer the following question:\nOther than water, sugar is the main ingredient in what?\nAnswer: tea",
-            "PPL": 27.43367365056818
-        },
-        "label: E": {
-            "testing input": "Answer the following question:\nOther than water, sugar is the main ingredient in what?\nAnswer: cupboard",
-            "prompt": "Answer the following question:\nThe astronaut wanted to find the United States from outer space, so where did he aim his spacecraft?\nAnswer: northern hemisphere\nAnswer the following question:\nOther than water, sugar is the main ingredient in what?\nAnswer: cupboard",
-            "PPL": 27.290106637137278
+            "testing input": "Answer the following question:\nParents often yell in times of chaos, what are they trying to do?\nAnswer: vent anger",
+            "prompt": "Answer the following question:\nWhat is a parents primary duty?\nAnswer: care for children\nAnswer the following question:\nWhat do most people have five years after becoming a parent?\nAnswer: school child\nAnswer the following question:\nWhen children are in a hurry, what might they do?\nAnswer: rush around\nAnswer the following question:\nWhen children aren't playing outside what do they like to do?\nAnswer: play video games\nAnswer the following question:\nParents often yell in times of chaos, what are they trying to do?\nAnswer: vent anger",
+            "PPL": 28.70549578706095
         },
         "prediction": "B"
+    },
+    "4": {
+        "in-context examples": "Answer the following question:\nIf I was getting drunk and lost control of my inhibitions, what might happen to me?\nAnswer: pass out\nAnswer the following question:\nWhy would someone be unable to talk to other people after getting drunk?\nAnswer: pass out\nAnswer the following question:\nWhy would someone be unable to walk in a line after getting drunk?\nAnswer: stumbling\nAnswer the following question:\nGetting drunk and using stairs can be dangerous, one might find themselves what?\nAnswer: falling down\n",
+        "label: A": {
+            "testing input": "Answer the following question:\nIf a person was getting drunk the previous night and woke up the next morning, what might they experience?\nAnswer: death",
+            "prompt": "Answer the following question:\nIf I was getting drunk and lost control of my inhibitions, what might happen to me?\nAnswer: pass out\nAnswer the following question:\nWhy would someone be unable to talk to other people after getting drunk?\nAnswer: pass out\nAnswer the following question:\nWhy would someone be unable to walk in a line after getting drunk?\nAnswer: stumbling\nAnswer the following question:\nGetting drunk and using stairs can be dangerous, one might find themselves what?\nAnswer: falling down\nAnswer the following question:\nIf a person was getting drunk the previous night and woke up the next morning, what might they experience?\nAnswer: death",
+            "PPL": 29.18004072473404
+        },
+        "label: B": {
+            "testing input": "Answer the following question:\nIf a person was getting drunk the previous night and woke up the next morning, what might they experience?\nAnswer: sleep",
+            "prompt": "Answer the following question:\nIf I was getting drunk and lost control of my inhibitions, what might happen to me?\nAnswer: pass out\nAnswer the following question:\nWhy would someone be unable to talk to other people after getting drunk?\nAnswer: pass out\nAnswer the following question:\nWhy would someone be unable to walk in a line after getting drunk?\nAnswer: stumbling\nAnswer the following question:\nGetting drunk and using stairs can be dangerous, one might find themselves what?\nAnswer: falling down\nAnswer the following question:\nIf a person was getting drunk the previous night and woke up the next morning, what might they experience?\nAnswer: sleep",
+            "PPL": 29.209538453014183
+        },
+        "label: C": {
+            "testing input": "Answer the following question:\nIf a person was getting drunk the previous night and woke up the next morning, what might they experience?\nAnswer: pass out",
+            "prompt": "Answer the following question:\nIf I was getting drunk and lost control of my inhibitions, what might happen to me?\nAnswer: pass out\nAnswer the following question:\nWhy would someone be unable to talk to other people after getting drunk?\nAnswer: pass out\nAnswer the following question:\nWhy would someone be unable to walk in a line after getting drunk?\nAnswer: stumbling\nAnswer the following question:\nGetting drunk and using stairs can be dangerous, one might find themselves what?\nAnswer: falling down\nAnswer the following question:\nIf a person was getting drunk the previous night and woke up the next morning, what might they experience?\nAnswer: pass out",
+            "PPL": 29.35161407900528
+        },
+        "label: D": {
+            "testing input": "Answer the following question:\nIf a person was getting drunk the previous night and woke up the next morning, what might they experience?\nAnswer: forgetfulness",
+            "prompt": "Answer the following question:\nIf I was getting drunk and lost control of my inhibitions, what might happen to me?\nAnswer: pass out\nAnswer the following question:\nWhy would someone be unable to talk to other people after getting drunk?\nAnswer: pass out\nAnswer the following question:\nWhy would someone be unable to walk in a line after getting drunk?\nAnswer: stumbling\nAnswer the following question:\nGetting drunk and using stairs can be dangerous, one might find themselves what?\nAnswer: falling down\nAnswer the following question:\nIf a person was getting drunk the previous night and woke up the next morning, what might they experience?\nAnswer: forgetfulness",
+            "PPL": 29.1707333846831
+        },
+        "label: E": {
+            "testing input": "Answer the following question:\nIf a person was getting drunk the previous night and woke up the next morning, what might they experience?\nAnswer: slurred speech",
+            "prompt": "Answer the following question:\nIf I was getting drunk and lost control of my inhibitions, what might happen to me?\nAnswer: pass out\nAnswer the following question:\nWhy would someone be unable to talk to other people after getting drunk?\nAnswer: pass out\nAnswer the following question:\nWhy would someone be unable to walk in a line after getting drunk?\nAnswer: stumbling\nAnswer the following question:\nGetting drunk and using stairs can be dangerous, one might find themselves what?\nAnswer: falling down\nAnswer the following question:\nIf a person was getting drunk the previous night and woke up the next morning, what might they experience?\nAnswer: slurred speech",
+            "PPL": 29.122097628933567
+        },
+        "prediction": "E"
     }
 }
