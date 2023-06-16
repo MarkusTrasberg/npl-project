@@ -38,6 +38,7 @@ function Results( {result}: ResultsProps) {
           <br></br>
           <div className="">
             <DataGrid
+              getRowHeight={() => 'auto'} 
               rows={rows}
               columns={columns}
               initialState={{
