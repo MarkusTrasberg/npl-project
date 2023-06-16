@@ -56,7 +56,10 @@ class QPKTabuRetriever(BaseRetriever):
 		elif task == 'sentiment-analysis':
 			self.confidence_columns = ["text"]
 
-		self.pipeline = pipeline(task=task, model=model)
+		try:
+			self.pipeline = pipeline(task=task, model=model)
+		except:
+			self.pipeline = pipeline(task=task, model="gpt2-large")
 		self.train_ds = dataset_reader.dataset[index_split]
 		self.test_ds = dataset_reader.dataset[test_split]
 		if sentence_transformer == '':
