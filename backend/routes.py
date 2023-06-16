@@ -224,9 +224,24 @@ def debug():
       400:
         description: Bad request
     """
-
     request_json = request.get_json()
     print(request_json)
+
+    model_key = request_json["model"]
+    model = MODELS[model_key]
+    inferencer = request_json["inferencer"]
+    datasets = request_json["datasets"]
+    dataset_size = request_json["dataset_size"]
+    retriever = request_json["retriever"]
+    ice_size = request_json["ice_size"]
+
+    if model['model'] == "gpt3" and inferencer == "PPLInferencer":
+        response = jsonify({
+            'message': "You cannot use GPT3 models together with PPLInferencer. Please try a different inferencer."
+        })
+        response.status_code = 400
+        return response
+
 
     response = jsonify({
         'accuracy': 1.0,
@@ -234,14 +249,6 @@ def debug():
         'predictions': ['42'],
         'answers': ['42 '],
         })
-
-    # model_name = request_json["model_name"]
-    # inferencer = request_json["inferencer"]
-    # datasets = request_json["datasets"]
-    # dataset_size = request_json["dataset_size"]
-    # retriever = request_json["retriever"]
-    # ice_size = request_json["ice_size"]
-    # evaluator = request_json["evaluator"]
     
     return response
 
@@ -344,6 +351,12 @@ def run():
                 "In-Context example size cant be larger than dataset size",
                 status=400,
             )
+    if model['model'] == "gpt3" and inferencer == "PPLInferencer":
+        response = jsonify({
+            'message': "You cannot use GPT3 models together with PPLInferencer. Please try a different inferencer."
+        })
+        response.status_code = 400
+        return response
 
     try:
         model = ICLModel(model, inferencer, datasets, dataset_size, retriever, ice_size)

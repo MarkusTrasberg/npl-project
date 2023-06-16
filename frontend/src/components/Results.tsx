@@ -8,12 +8,12 @@ export interface ResultsProps {
         questions: string[];
         predictions: string[];
         answers: string[];
-    } | null;
+    } | null | boolean;
 }
 
 function Results( {result}: ResultsProps) {
-  const rows = result
-  ? result.questions.map((question, index) => ({
+  const rows = (result && result instanceof Object)
+  ?  result.questions.map((question, index) => ({
       id: index,
       question: question,
       prediction: result.predictions[index],
@@ -32,7 +32,7 @@ function Results( {result}: ResultsProps) {
   return (
     <div className="ml-10">
       <h1 className="font-bold text-xl w-1/2">Results</h1>
-      {result && (
+      {result instanceof Object && (
         <>
           <p className="mt-10">Accuracy: {result.accuracy}</p>
           <br></br>
