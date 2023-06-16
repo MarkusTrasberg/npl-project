@@ -345,15 +345,14 @@ def run():
                 status=400,
             )
 
-    for dataset in datasets:
-        try:
-            model = ICLModel(model, inferencer, dataset, dataset_size, retriever, ice_size)
-            result = model.run()
-        except Exception as e:
-            return Response(
-                str(e),
-                status=400,
-            )
+    try:
+        model = ICLModel(model, inferencer, datasets, dataset_size, retriever, ice_size)
+        result = model.run()
+    except Exception as e:
+        return Response(
+            str(e),
+            status=400,
+        )
     
     # TODO: Multiple responses so that we can let the frontend know at what stage of the run we are (i.e. inferring, predicting)
 
