@@ -1,72 +1,147 @@
 {
     "0": {
-        "in-context examples": "Positive Movie Review: \"A gentle and engrossing character study .\"\nPositive Movie Review: \"A wonderfully speculative character study that made up for its rather slow beginning by drawing me into the picture .\"\nPositive Movie Review: \"Ramsay and Morton fill this character study with poetic force and buoyant feeling .\"\nNegative Movie Review: \"Hart 's War seems to want to be a character study , but apparently ca n't quite decide which character .\"\nPositive Movie Review: \"Visually fascinating ... an often intense character study about fathers and sons , loyalty and duty .\"\nNegative Movie Review: \"Like the Hanks character , he 's a slow study : The action is stilted and the tabloid energy embalmed .\"\nPositive Movie Review: \"Hawn and Sarandon form an acting bond that makes The Banger Sisters a fascinating character study with laughs to spare .\"\nNegative Movie Review: \"... while each moment of this broken character study is rich in emotional texture , the journey does n't really go anywhere .\"\n",
-        "label: 0": {
-            "testing input": "Positive Movie Review: \"Absorbing character study by André Turpin .\"",
-            "prompt": "Positive Movie Review: \"A gentle and engrossing character study .\"\nPositive Movie Review: \"A wonderfully speculative character study that made up for its rather slow beginning by drawing me into the picture .\"\nPositive Movie Review: \"Ramsay and Morton fill this character study with poetic force and buoyant feeling .\"\nNegative Movie Review: \"Hart 's War seems to want to be a character study , but apparently ca n't quite decide which character .\"\nPositive Movie Review: \"Visually fascinating ... an often intense character study about fathers and sons , loyalty and duty .\"\nNegative Movie Review: \"Like the Hanks character , he 's a slow study : The action is stilted and the tabloid energy embalmed .\"\nPositive Movie Review: \"Hawn and Sarandon form an acting bond that makes The Banger Sisters a fascinating character study with laughs to spare .\"\nNegative Movie Review: \"... while each moment of this broken character study is rich in emotional texture , the journey does n't really go anywhere .\"\nPositive Movie Review: \"Absorbing character study by André Turpin .\"",
-            "PPL": 26.53819190492021
+        "in-context examples": "Answer the following question:\nWhen going to sleep what noise does a human make?\nAnswer: snoring\n",
+        "label: A": {
+            "testing input": "Answer the following question:\nWhat must someone do first before changing society?\nAnswer: argue",
+            "prompt": "Answer the following question:\nWhen going to sleep what noise does a human make?\nAnswer: snoring\nAnswer the following question:\nWhat must someone do first before changing society?\nAnswer: argue",
+            "PPL": 29.205640216206394
         },
-        "label: 1": {
-            "testing input": "Negative Movie Review: \"Absorbing character study by André Turpin .\"",
-            "prompt": "Positive Movie Review: \"A gentle and engrossing character study .\"\nPositive Movie Review: \"A wonderfully speculative character study that made up for its rather slow beginning by drawing me into the picture .\"\nPositive Movie Review: \"Ramsay and Morton fill this character study with poetic force and buoyant feeling .\"\nNegative Movie Review: \"Hart 's War seems to want to be a character study , but apparently ca n't quite decide which character .\"\nPositive Movie Review: \"Visually fascinating ... an often intense character study about fathers and sons , loyalty and duty .\"\nNegative Movie Review: \"Like the Hanks character , he 's a slow study : The action is stilted and the tabloid energy embalmed .\"\nPositive Movie Review: \"Hawn and Sarandon form an acting bond that makes The Banger Sisters a fascinating character study with laughs to spare .\"\nNegative Movie Review: \"... while each moment of this broken character study is rich in emotional texture , the journey does n't really go anywhere .\"\nNegative Movie Review: \"Absorbing character study by André Turpin .\"",
-            "PPL": 26.48413397606383
+        "label: B": {
+            "testing input": "Answer the following question:\nWhat must someone do first before changing society?\nAnswer: change yourself",
+            "prompt": "Answer the following question:\nWhen going to sleep what noise does a human make?\nAnswer: snoring\nAnswer the following question:\nWhat must someone do first before changing society?\nAnswer: change yourself",
+            "PPL": 29.053971724076703
         },
-        "prediction": 1
+        "label: C": {
+            "testing input": "Answer the following question:\nWhat must someone do first before changing society?\nAnswer: get angry",
+            "prompt": "Answer the following question:\nWhen going to sleep what noise does a human make?\nAnswer: snoring\nAnswer the following question:\nWhat must someone do first before changing society?\nAnswer: get angry",
+            "PPL": 28.97465653852983
+        },
+        "label: D": {
+            "testing input": "Answer the following question:\nWhat must someone do first before changing society?\nAnswer: vote",
+            "prompt": "Answer the following question:\nWhen going to sleep what noise does a human make?\nAnswer: snoring\nAnswer the following question:\nWhat must someone do first before changing society?\nAnswer: vote",
+            "PPL": 29.037027048510176
+        },
+        "label: E": {
+            "testing input": "Answer the following question:\nWhat must someone do first before changing society?\nAnswer: riots",
+            "prompt": "Answer the following question:\nWhen going to sleep what noise does a human make?\nAnswer: snoring\nAnswer the following question:\nWhat must someone do first before changing society?\nAnswer: riots",
+            "PPL": 29.165550054505815
+        },
+        "prediction": "C"
     },
     "1": {
-        "in-context examples": "Positive Movie Review: \"... in no way original , or even all that memorable , but as downtown Saturday matinee brain candy , it does n't disappoint .\"\nNegative Movie Review: \"But Windtalkers does n't beat that one , either .\"\nPositive Movie Review: \"On its own , Big Trouble could be considered a funny little film .\"\nNegative Movie Review: \"... while certainly clever in spots , this too-long , spoofy update of Shakespeare 's Macbeth does n't sustain a high enough level of invention .\"\nNegative Movie Review: \"It 's mildly amusing , but I certainly ca n't recommend it .\"\nPositive Movie Review: \"It 's fairly solid -- not to mention well edited so that it certainly does n't feel like a film that strays past the two and a half mark .\"\nNegative Movie Review: \"But seriously , folks , it does n't work .\"\nNegative Movie Review: \"On its own , it 's not very interesting .\"\n",
-        "label: 0": {
-            "testing input": "Positive Movie Review: \"On that score , the film certainly does n't disappoint .\"",
-            "prompt": "Positive Movie Review: \"... in no way original , or even all that memorable , but as downtown Saturday matinee brain candy , it does n't disappoint .\"\nNegative Movie Review: \"But Windtalkers does n't beat that one , either .\"\nPositive Movie Review: \"On its own , Big Trouble could be considered a funny little film .\"\nNegative Movie Review: \"... while certainly clever in spots , this too-long , spoofy update of Shakespeare 's Macbeth does n't sustain a high enough level of invention .\"\nNegative Movie Review: \"It 's mildly amusing , but I certainly ca n't recommend it .\"\nPositive Movie Review: \"It 's fairly solid -- not to mention well edited so that it certainly does n't feel like a film that strays past the two and a half mark .\"\nNegative Movie Review: \"But seriously , folks , it does n't work .\"\nNegative Movie Review: \"On its own , it 's not very interesting .\"\nPositive Movie Review: \"On that score , the film certainly does n't disappoint .\"",
-            "PPL": 25.806854115936147
+        "in-context examples": "Answer the following question:\nThey moved out of the city to have a master bedroom, what kind of home did they seek?\nAnswer: suburban home\n",
+        "label: A": {
+            "testing input": "Answer the following question:\nWhy is grooming often recommended to greasy teens?\nAnswer: neatness",
+            "prompt": "Answer the following question:\nThey moved out of the city to have a master bedroom, what kind of home did they seek?\nAnswer: suburban home\nAnswer the following question:\nWhy is grooming often recommended to greasy teens?\nAnswer: neatness",
+            "PPL": 27.262724699797452
         },
-        "label: 1": {
-            "testing input": "Negative Movie Review: \"On that score , the film certainly does n't disappoint .\"",
-            "prompt": "Positive Movie Review: \"... in no way original , or even all that memorable , but as downtown Saturday matinee brain candy , it does n't disappoint .\"\nNegative Movie Review: \"But Windtalkers does n't beat that one , either .\"\nPositive Movie Review: \"On its own , Big Trouble could be considered a funny little film .\"\nNegative Movie Review: \"... while certainly clever in spots , this too-long , spoofy update of Shakespeare 's Macbeth does n't sustain a high enough level of invention .\"\nNegative Movie Review: \"It 's mildly amusing , but I certainly ca n't recommend it .\"\nPositive Movie Review: \"It 's fairly solid -- not to mention well edited so that it certainly does n't feel like a film that strays past the two and a half mark .\"\nNegative Movie Review: \"But seriously , folks , it does n't work .\"\nNegative Movie Review: \"On its own , it 's not very interesting .\"\nNegative Movie Review: \"On that score , the film certainly does n't disappoint .\"",
-            "PPL": 25.797022964015152
+        "label: B": {
+            "testing input": "Answer the following question:\nWhy is grooming often recommended to greasy teens?\nAnswer: selfishness",
+            "prompt": "Answer the following question:\nThey moved out of the city to have a master bedroom, what kind of home did they seek?\nAnswer: suburban home\nAnswer the following question:\nWhy is grooming often recommended to greasy teens?\nAnswer: selfishness",
+            "PPL": 27.409961841724538
         },
-        "prediction": 1
+        "label: C": {
+            "testing input": "Answer the following question:\nWhy is grooming often recommended to greasy teens?\nAnswer: mistakes",
+            "prompt": "Answer the following question:\nThey moved out of the city to have a master bedroom, what kind of home did they seek?\nAnswer: suburban home\nAnswer the following question:\nWhy is grooming often recommended to greasy teens?\nAnswer: mistakes",
+            "PPL": 27.319996959758253
+        },
+        "label: D": {
+            "testing input": "Answer the following question:\nWhy is grooming often recommended to greasy teens?\nAnswer: cleanliness",
+            "prompt": "Answer the following question:\nThey moved out of the city to have a master bedroom, what kind of home did they seek?\nAnswer: suburban home\nAnswer the following question:\nWhy is grooming often recommended to greasy teens?\nAnswer: cleanliness",
+            "PPL": 27.16741717303241
+        },
+        "label: E": {
+            "testing input": "Answer the following question:\nWhy is grooming often recommended to greasy teens?\nAnswer: satisfaction",
+            "prompt": "Answer the following question:\nThey moved out of the city to have a master bedroom, what kind of home did they seek?\nAnswer: suburban home\nAnswer the following question:\nWhy is grooming often recommended to greasy teens?\nAnswer: satisfaction",
+            "PPL": 27.32157466096698
+        },
+        "prediction": "D"
     },
     "2": {
-        "in-context examples": "Positive Movie Review: \"The riveting performances by the incredibly flexible cast make Love a joy to behold .\"\nPositive Movie Review: \"Its director 's most substantial feature for some time .\"\nPositive Movie Review: \"But Kouyate elicits strong performances from his cast , and he delivers a powerful commentary on how governments lie , no matter who runs them .\"\nPositive Movie Review: \"The performances are amiable and committed , and the comedy more often than not hits the bullseye .\"\nNegative Movie Review: \"But here 's a movie about it anyway .\"\nPositive Movie Review: \"Miyazaki 's nonstop images are so stunning , and his imagination so vivid , that the only possible complaint you could have about Spirited Away is that there is no rest period , no timeout .\"\nNegative Movie Review: \"The predominantly amateur cast is painful to watch , so stilted and unconvincing are the performances .\"\nPositive Movie Review: \"The more you think about the movie , the more you will probably like it .\"\n",
-        "label: 0": {
-            "testing input": "Positive Movie Review: \"Its cast full of caffeinated comedy performances more than make up for its logical loopholes , which fly by so fast there 's no time to think about them anyway .\"",
-            "prompt": "Positive Movie Review: \"The riveting performances by the incredibly flexible cast make Love a joy to behold .\"\nPositive Movie Review: \"Its director 's most substantial feature for some time .\"\nPositive Movie Review: \"But Kouyate elicits strong performances from his cast , and he delivers a powerful commentary on how governments lie , no matter who runs them .\"\nPositive Movie Review: \"The performances are amiable and committed , and the comedy more often than not hits the bullseye .\"\nNegative Movie Review: \"But here 's a movie about it anyway .\"\nPositive Movie Review: \"Miyazaki 's nonstop images are so stunning , and his imagination so vivid , that the only possible complaint you could have about Spirited Away is that there is no rest period , no timeout .\"\nNegative Movie Review: \"The predominantly amateur cast is painful to watch , so stilted and unconvincing are the performances .\"\nPositive Movie Review: \"The more you think about the movie , the more you will probably like it .\"\nPositive Movie Review: \"Its cast full of caffeinated comedy performances more than make up for its logical loopholes , which fly by so fast there 's no time to think about them anyway .\"",
-            "PPL": 25.898862416507633
+        "in-context examples": "Answer the following question:\nWhere would you get some knives if you do not have any?\nAnswer: sporting goods store\n",
+        "label: A": {
+            "testing input": "Answer the following question:\nWhat does waiting for something for a response from an interview cause?\nAnswer: have fun",
+            "prompt": "Answer the following question:\nWhere would you get some knives if you do not have any?\nAnswer: sporting goods store\nAnswer the following question:\nWhat does waiting for something for a response from an interview cause?\nAnswer: have fun",
+            "PPL": 26.33291685814951
         },
-        "label: 1": {
-            "testing input": "Negative Movie Review: \"Its cast full of caffeinated comedy performances more than make up for its logical loopholes , which fly by so fast there 's no time to think about them anyway .\"",
-            "prompt": "Positive Movie Review: \"The riveting performances by the incredibly flexible cast make Love a joy to behold .\"\nPositive Movie Review: \"Its director 's most substantial feature for some time .\"\nPositive Movie Review: \"But Kouyate elicits strong performances from his cast , and he delivers a powerful commentary on how governments lie , no matter who runs them .\"\nPositive Movie Review: \"The performances are amiable and committed , and the comedy more often than not hits the bullseye .\"\nNegative Movie Review: \"But here 's a movie about it anyway .\"\nPositive Movie Review: \"Miyazaki 's nonstop images are so stunning , and his imagination so vivid , that the only possible complaint you could have about Spirited Away is that there is no rest period , no timeout .\"\nNegative Movie Review: \"The predominantly amateur cast is painful to watch , so stilted and unconvincing are the performances .\"\nPositive Movie Review: \"The more you think about the movie , the more you will probably like it .\"\nNegative Movie Review: \"Its cast full of caffeinated comedy performances more than make up for its logical loopholes , which fly by so fast there 's no time to think about them anyway .\"",
-            "PPL": 25.888176139074428
+        "label: B": {
+            "testing input": "Answer the following question:\nWhat does waiting for something for a response from an interview cause?\nAnswer: patience",
+            "prompt": "Answer the following question:\nWhere would you get some knives if you do not have any?\nAnswer: sporting goods store\nAnswer the following question:\nWhat does waiting for something for a response from an interview cause?\nAnswer: patience",
+            "PPL": 26.78712890625
         },
-        "prediction": 1
+        "label: C": {
+            "testing input": "Answer the following question:\nWhat does waiting for something for a response from an interview cause?\nAnswer: anxiety",
+            "prompt": "Answer the following question:\nWhere would you get some knives if you do not have any?\nAnswer: sporting goods store\nAnswer the following question:\nWhat does waiting for something for a response from an interview cause?\nAnswer: anxiety",
+            "PPL": 26.8853173828125
+        },
+        "label: D": {
+            "testing input": "Answer the following question:\nWhat does waiting for something for a response from an interview cause?\nAnswer: tedious",
+            "prompt": "Answer the following question:\nWhere would you get some knives if you do not have any?\nAnswer: sporting goods store\nAnswer the following question:\nWhat does waiting for something for a response from an interview cause?\nAnswer: tedious",
+            "PPL": 26.7652490234375
+        },
+        "label: E": {
+            "testing input": "Answer the following question:\nWhat does waiting for something for a response from an interview cause?\nAnswer: impatience",
+            "prompt": "Answer the following question:\nWhere would you get some knives if you do not have any?\nAnswer: sporting goods store\nAnswer the following question:\nWhat does waiting for something for a response from an interview cause?\nAnswer: impatience",
+            "PPL": 27.037918390012255
+        },
+        "prediction": "A"
     },
     "3": {
-        "in-context examples": "Negative Movie Review: \"Like being able to hit on a 15-year old when you 're over 100 .\"\nNegative Movie Review: \"Like Mike is a slight and uninventive movie : Like the exalted Michael Jordan referred to in the title , many can aspire but none can equal .\"\nNegative Movie Review: \"It gets old quickly .\"\nNegative Movie Review: \"Like a pack of dynamite sticks , built for controversy .\"\nNegative Movie Review: \"Plays like the old disease-of-the-week small-screen melodramas .\"\nNegative Movie Review: \"Feels like a cold old man going through the motions .\"\nPositive Movie Review: \"Like the chilled breath of oral storytelling frozen onto film .\"\nPositive Movie Review: \"Like its parade of predecessors , this Halloween is a gory slash-fest .\"\n",
-        "label: 0": {
-            "testing input": "Positive Movie Review: \"Like a can of 2-day old Coke .\"",
-            "prompt": "Negative Movie Review: \"Like being able to hit on a 15-year old when you 're over 100 .\"\nNegative Movie Review: \"Like Mike is a slight and uninventive movie : Like the exalted Michael Jordan referred to in the title , many can aspire but none can equal .\"\nNegative Movie Review: \"It gets old quickly .\"\nNegative Movie Review: \"Like a pack of dynamite sticks , built for controversy .\"\nNegative Movie Review: \"Plays like the old disease-of-the-week small-screen melodramas .\"\nNegative Movie Review: \"Feels like a cold old man going through the motions .\"\nPositive Movie Review: \"Like the chilled breath of oral storytelling frozen onto film .\"\nPositive Movie Review: \"Like its parade of predecessors , this Halloween is a gory slash-fest .\"\nPositive Movie Review: \"Like a can of 2-day old Coke .\"",
-            "PPL": 26.80424135469543
+        "in-context examples": "Answer the following question:\nDanny hated helping people.  It always brought what?\nAnswer: complications\n",
+        "label: A": {
+            "testing input": "Answer the following question:\nSometimes playing game means losing, he wasn't good at losing though and showed lots of what?\nAnswer: having fun",
+            "prompt": "Answer the following question:\nDanny hated helping people.  It always brought what?\nAnswer: complications\nAnswer the following question:\nSometimes playing game means losing, he wasn't good at losing though and showed lots of what?\nAnswer: having fun",
+            "PPL": 24.14262418926887
         },
-        "label: 1": {
-            "testing input": "Negative Movie Review: \"Like a can of 2-day old Coke .\"",
-            "prompt": "Negative Movie Review: \"Like being able to hit on a 15-year old when you 're over 100 .\"\nNegative Movie Review: \"Like Mike is a slight and uninventive movie : Like the exalted Michael Jordan referred to in the title , many can aspire but none can equal .\"\nNegative Movie Review: \"It gets old quickly .\"\nNegative Movie Review: \"Like a pack of dynamite sticks , built for controversy .\"\nNegative Movie Review: \"Plays like the old disease-of-the-week small-screen melodramas .\"\nNegative Movie Review: \"Feels like a cold old man going through the motions .\"\nPositive Movie Review: \"Like the chilled breath of oral storytelling frozen onto film .\"\nPositive Movie Review: \"Like its parade of predecessors , this Halloween is a gory slash-fest .\"\nNegative Movie Review: \"Like a can of 2-day old Coke .\"",
-            "PPL": 26.807351978902282
+        "label: B": {
+            "testing input": "Answer the following question:\nSometimes playing game means losing, he wasn't good at losing though and showed lots of what?\nAnswer: entertain",
+            "prompt": "Answer the following question:\nDanny hated helping people.  It always brought what?\nAnswer: complications\nAnswer the following question:\nSometimes playing game means losing, he wasn't good at losing though and showed lots of what?\nAnswer: entertain",
+            "PPL": 24.411179762620193
         },
-        "prediction": 0
+        "label: C": {
+            "testing input": "Answer the following question:\nSometimes playing game means losing, he wasn't good at losing though and showed lots of what?\nAnswer: injury",
+            "prompt": "Answer the following question:\nDanny hated helping people.  It always brought what?\nAnswer: complications\nAnswer the following question:\nSometimes playing game means losing, he wasn't good at losing though and showed lots of what?\nAnswer: injury",
+            "PPL": 24.249359130859375
+        },
+        "label: D": {
+            "testing input": "Answer the following question:\nSometimes playing game means losing, he wasn't good at losing though and showed lots of what?\nAnswer: enjoying",
+            "prompt": "Answer the following question:\nDanny hated helping people.  It always brought what?\nAnswer: complications\nAnswer the following question:\nSometimes playing game means losing, he wasn't good at losing though and showed lots of what?\nAnswer: enjoying",
+            "PPL": 24.461883544921875
+        },
+        "label: E": {
+            "testing input": "Answer the following question:\nSometimes playing game means losing, he wasn't good at losing though and showed lots of what?\nAnswer: anger",
+            "prompt": "Answer the following question:\nDanny hated helping people.  It always brought what?\nAnswer: complications\nAnswer the following question:\nSometimes playing game means losing, he wasn't good at losing though and showed lots of what?\nAnswer: anger",
+            "PPL": 24.877723106971153
+        },
+        "prediction": "A"
     },
     "4": {
-        "in-context examples": "Negative Movie Review: \"Too clumsy in key moments ... to make a big splash .\"\nPositive Movie Review: \"Beautifully produced .\"\nPositive Movie Review: \"insightfully written , delicately performed\"\nPositive Movie Review: \"Really is a pan-American movie , with moments of genuine insight into the urban heart .\"\nNegative Movie Review: \"Like coming into a long-running , well-written television series where you 've missed the first half-dozen episodes and probably wo n't see the next six .\"\nPositive Movie Review: \"Despite its old-hat set-up and predictable plot , Empire still has enough moments to keep it entertaining .\"\nPositive Movie Review: \"finely crafted , finely written , exquisitely performed\"\nNegative Movie Review: \"Press the delete key .\"\n",
-        "label: 0": {
-            "testing input": "Positive Movie Review: \"Elegantly produced and expressively performed , the six musical numbers crystallize key plot moments into minutely detailed wonders of dreamlike ecstasy .\"",
-            "prompt": "Negative Movie Review: \"Too clumsy in key moments ... to make a big splash .\"\nPositive Movie Review: \"Beautifully produced .\"\nPositive Movie Review: \"insightfully written , delicately performed\"\nPositive Movie Review: \"Really is a pan-American movie , with moments of genuine insight into the urban heart .\"\nNegative Movie Review: \"Like coming into a long-running , well-written television series where you 've missed the first half-dozen episodes and probably wo n't see the next six .\"\nPositive Movie Review: \"Despite its old-hat set-up and predictable plot , Empire still has enough moments to keep it entertaining .\"\nPositive Movie Review: \"finely crafted , finely written , exquisitely performed\"\nNegative Movie Review: \"Press the delete key .\"\nPositive Movie Review: \"Elegantly produced and expressively performed , the six musical numbers crystallize key plot moments into minutely detailed wonders of dreamlike ecstasy .\"",
-            "PPL": 27.16816689311594
+        "in-context examples": "Answer the following question:\nThe astronaut wanted to find the United States from outer space, so where did he aim his spacecraft?\nAnswer: northern hemisphere\n",
+        "label: A": {
+            "testing input": "Answer the following question:\nOther than water, sugar is the main ingredient in what?\nAnswer: candy bar",
+            "prompt": "Answer the following question:\nThe astronaut wanted to find the United States from outer space, so where did he aim his spacecraft?\nAnswer: northern hemisphere\nAnswer the following question:\nOther than water, sugar is the main ingredient in what?\nAnswer: candy bar",
+            "PPL": 27.365208217075892
         },
-        "label: 1": {
-            "testing input": "Negative Movie Review: \"Elegantly produced and expressively performed , the six musical numbers crystallize key plot moments into minutely detailed wonders of dreamlike ecstasy .\"",
-            "prompt": "Negative Movie Review: \"Too clumsy in key moments ... to make a big splash .\"\nPositive Movie Review: \"Beautifully produced .\"\nPositive Movie Review: \"insightfully written , delicately performed\"\nPositive Movie Review: \"Really is a pan-American movie , with moments of genuine insight into the urban heart .\"\nNegative Movie Review: \"Like coming into a long-running , well-written television series where you 've missed the first half-dozen episodes and probably wo n't see the next six .\"\nPositive Movie Review: \"Despite its old-hat set-up and predictable plot , Empire still has enough moments to keep it entertaining .\"\nPositive Movie Review: \"finely crafted , finely written , exquisitely performed\"\nNegative Movie Review: \"Press the delete key .\"\nNegative Movie Review: \"Elegantly produced and expressively performed , the six musical numbers crystallize key plot moments into minutely detailed wonders of dreamlike ecstasy .\"",
-            "PPL": 27.178555253623188
+        "label: B": {
+            "testing input": "Answer the following question:\nOther than water, sugar is the main ingredient in what?\nAnswer: soda pop",
+            "prompt": "Answer the following question:\nThe astronaut wanted to find the United States from outer space, so where did he aim his spacecraft?\nAnswer: northern hemisphere\nAnswer the following question:\nOther than water, sugar is the main ingredient in what?\nAnswer: soda pop",
+            "PPL": 27.263541085379465
         },
-        "prediction": 0
+        "label: C": {
+            "testing input": "Answer the following question:\nOther than water, sugar is the main ingredient in what?\nAnswer: coffee",
+            "prompt": "Answer the following question:\nThe astronaut wanted to find the United States from outer space, so where did he aim his spacecraft?\nAnswer: northern hemisphere\nAnswer the following question:\nOther than water, sugar is the main ingredient in what?\nAnswer: coffee",
+            "PPL": 27.471826171875
+        },
+        "label: D": {
+            "testing input": "Answer the following question:\nOther than water, sugar is the main ingredient in what?\nAnswer: tea",
+            "prompt": "Answer the following question:\nThe astronaut wanted to find the United States from outer space, so where did he aim his spacecraft?\nAnswer: northern hemisphere\nAnswer the following question:\nOther than water, sugar is the main ingredient in what?\nAnswer: tea",
+            "PPL": 27.43367365056818
+        },
+        "label: E": {
+            "testing input": "Answer the following question:\nOther than water, sugar is the main ingredient in what?\nAnswer: cupboard",
+            "prompt": "Answer the following question:\nThe astronaut wanted to find the United States from outer space, so where did he aim his spacecraft?\nAnswer: northern hemisphere\nAnswer the following question:\nOther than water, sugar is the main ingredient in what?\nAnswer: cupboard",
+            "PPL": 27.290106637137278
+        },
+        "prediction": "B"
     }
 }

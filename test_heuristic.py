@@ -157,7 +157,7 @@ def run_experiments():
                                     predictions = inferencer.inference(retriever, ice_template=ice_template)
                                     all_predictions.append(predictions)
                                     all_inputs.append(retriever.test_ds[retriever.dataset_reader.input_columns[0]])
-                                    accuracies.append(np.sum(np.sum(np.array(retriever.test_ds[retriever.dataset_reader.output_column]) == np.array(predictions)))/ TEST_SIZE)
+                                    accuracies.append(np.sum(np.array(retriever.test_ds[retriever.dataset_reader.output_column]) == np.array(predictions)) / len(predictions))
                                     del predictions
                                     torch.cuda.empty_cache() 
 
@@ -302,9 +302,11 @@ def main(cmd_args):
     
     if cmd_args['bar_plot']:
         # SELECT constant test size and train size to plot
-        bar_df_filtered_results = df_results.loc[(df_results['test_size'] == cmd_args['test_size_bar']) & (df_results['ice_num'] == cmd_args['ice_size_bar'])]
+        for i in cmd_args['test_size_bar']:
+            for j in cmd_args['ice_size_bar']:
+                bar_df_filtered_results = df_results.loc[(df_results['test_size'] ==i) & (df_results['ice_num'] == j)]
 
-        bar_plot_results(results=bar_df_filtered_results, title_column1=cmd_args['title_column1_bar'], x_axis=cmd_args['x_axis_bar'], y_axis=cmd_args['y_axis_bar'], z_axis=cmd_args['z_axis_bar'], width=cmd_args['width'], save_path=cmd_args['save_image_path'])
+                bar_plot_results(results=bar_df_filtered_results, title_column1=cmd_args['title_column1_bar'], x_axis=cmd_args['x_axis_bar'], y_axis=cmd_args['y_axis_bar'], z_axis=cmd_args['z_axis_bar'], width=cmd_args['width'], save_path=cmd_args['save_image_path'] + "test_size_" + str(i) + "_ice_size_" + str(j) )
 
 
     if cmd_args['line_plot']:
@@ -332,8 +334,8 @@ if __name__ == '__main__':
     parser.add_argument('--retrievers', type=str, default='zero, random, bm25')
 
     parser.add_argument('--save_image_path', type=str, default='images/')
-    parser.add_argument('--test_size_bar', type=int, default=10)
-    parser.add_argument('--ice_size_bar', type=int, default=5)
+    parser.add_argument('--test_size_bar', type=str, default='10')
+    parser.add_argument('--ice_size_bar', type=str, default='5')
     parser.add_argument('--title_column1_bar', type=str, default='model')
     parser.add_argument('--x_axis_bar', type=str, default='task_dataset')
     parser.add_argument('--y_axis_bar', type=str, default='accuracy_mean')
@@ -350,6 +352,9 @@ if __name__ == '__main__':
     cmd_args = dict(vars(parser.parse_args()))
     cmd_args['line-plot']   = bool(cmd_args['line_plot'])
     cmd_args['bar-plot']   = bool(cmd_args['bar_plot'])
+    cmd_args['test_size_bar'] = [int(pi_b) for pi_b in cmd_args['test_size_bar'].split(", ")]
+    cmd_args['ice_size_bar'] = [int(pi_b) for pi_b in cmd_args['ice_size_bar'].split(", ")]
+
     TEST_SIZE =  [int(pi_b) for pi_b in cmd_args['test_size'].split(", ")]
     NUM_ICE = [int(pi_b) for pi_b in cmd_args['num_ice'].split(", ")]
     REPS =  cmd_args['reps']
