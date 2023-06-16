@@ -211,7 +211,7 @@ def bar_plot_results(results,  title_column1: str, x_axis : str , y_axis : str, 
     # Choose 2 to display 
     for t1 in unique_t1:
             print('t1: ', t1)
-            
+            plt.figure()
             vals = []
             stds = []
             bars = []
@@ -219,12 +219,11 @@ def bar_plot_results(results,  title_column1: str, x_axis : str , y_axis : str, 
                 # for x in unique_x_axis:
                     xvals = list(results.loc[(results[title_column1] == t1) & (results[z_axis] == z)]['accuracy_mean'])
                     xstd = list(results.loc[(results[title_column1] == t1)  & (results[z_axis] == z)]['accuracy_std'])
-                    print('z: ',z)
-                    print('z_vals: ',xvals)
-                    bar = plt.bar(ind+ width*i, xvals, width, color = colors[i], yerr=xstd)
-                    vals.append(xvals)
-                    stds.append(xstd)
+                    print(xvals)
+                    print(xstd)
+                    bar = plt.bar(ind+ width*i, xvals, width, color = colors[i])
                     bars.append(bar)
+            
 
             plt.xlabel(x_axis)
             plt.ylabel(y_axis)
@@ -234,20 +233,20 @@ def bar_plot_results(results,  title_column1: str, x_axis : str , y_axis : str, 
             plt.legend( bars, unique_z_axis )
 
             if save_path is not None:
-                        plt.savefig(save_path + 'plot_' + title_column1 + '_' + x_axis + '_' + z_axis + '.png')
+                        plt.savefig(save_path + 'barplot_' + t1 + '_' + x_axis + '_' + z_axis + '.png')
             plt.show()
 
 
 def line_plot_results(results,  title_column1, title_column2, title_column3, x_axis : str , y_axis : str, z_axis : str, save_path=None):
     unique_t1 = set(map(str,results[title_column1]))
     unique_t2 = set(map(str,results[title_column2]))
-    unique_t3 = set(map(str,results[title_column3]))
+    # unique_t3 = set(map(str,results[title_column3]))
     # Test_size
-    unique_x_axis = set(map(str,results[x_axis]))
+    unique_x_axis = set(results[x_axis])
     # acc
-    unique_y_axis = set(map(str,results[y_axis]))
+    unique_y_axis = set(results[y_axis])
     # retriever
-    unique_z_axis = set(map(str,results[z_axis]))
+    unique_z_axis = set(results[z_axis])
 
     print('t1-axis: ', unique_t1)
     print('x-axis: ', unique_x_axis)
@@ -268,29 +267,26 @@ def line_plot_results(results,  title_column1, title_column2, title_column3, x_a
     # Choose 2 to display 
     for t1 in unique_t1:
         for t2 in unique_t2:
-            for t3 in unique_t3:
-            
+            # for t3 in unique_t3:
+                plt.figure()
                 for i,z in enumerate(unique_z_axis):
-                    vals = []
-                    std = []
-                    for i,x in enumerate(unique_x_axis):
-                        xvals = list(results.loc[(results[title_column1] == t1) & (results[title_column2] == t2) & (results[title_column3] == t3) & (results[z_axis] == z) & (results[x_axis] == x)]['accuracy_mean'])
-                        xstd = list(results.loc[(results[title_column1] == t1)  & (results[title_column2] == t2) & (results[title_column3] == t3) & (results[z_axis] == z) & (results[x_axis] == x)]['accuracy_std'])
-                        vals.append(xvals)
-                        std.append(std)
-                    
-                    plt.plot(vals, unique_x_axis, yerr=std, color = colors[i])
+                    # xvals  = list(set(results.loc[(results[title_column1] == t1) & (results[title_column2] == t2) & (results[z_axis] == z)][x_axis]))
+                    vals =  list(results.loc[(results[title_column1] == t1) & (results[title_column2] == t2)  & (results[z_axis] == z)]['accuracy_mean'])
+                    std = list(results.loc[(results[title_column1] == t1)  & (results[title_column2] == t2)  & (results[z_axis] == z)]['accuracy_std'])
+                    xvals = list(results.loc[(results[title_column1] == t1)  & (results[title_column2] == t2)  & (results[z_axis] == z)][x_axis])
+                    plt.plot(xvals, vals , color = colors[i])
 
 
                 plt.xlabel(x_axis)
                 plt.ylabel(y_axis)
-                plt.title(title_column1 +": " + str(t1) + ", " + title_column2 +  ": " + str(t2) + " and " + title_column3+  ": " + str(t3) )
+                plt.title(title_column1 +": " + str(t1) + ", " + title_column2 +  ": " + str(t2) ) #+ " and " + title_column3+  ": " + str(t3) )
                 
                 plt.legend(unique_z_axis )
-
-                if save_path is not None:
-                            plt.savefig(save_path + 'plot_' + title_column1 + '_' + x_axis + '_' + z_axis + '.png')
                 plt.show()
+                if save_path is not None:
+                            plt.savefig(save_path + 'lineplot_' + t1 + '_' + t2 + '_'+ x_axis + '_' + z_axis + '.png')
+
+                
 
 def main(cmd_args):
     if cmd_args['use_data_path'] is not None:
@@ -308,17 +304,16 @@ def main(cmd_args):
         # SELECT constant test size and train size to plot
         bar_df_filtered_results = df_results.loc[(df_results['test_size'] == cmd_args['test_size_bar']) & (df_results['ice_num'] == cmd_args['ice_size_bar'])]
 
-        bar_plot_results(results=bar_df_filtered_results, title_column1=cmd_args['title_column1_bar'], x_axis=cmd_args['x_axis_bar'], y_axis=cmd_args['y_axis_bar'], z_axis=cmd_args['z_axis_bar'], width=cmd_args['width'], show=False, save_path=cmd_args['save_image_path'])
+        bar_plot_results(results=bar_df_filtered_results, title_column1=cmd_args['title_column1_bar'], x_axis=cmd_args['x_axis_bar'], y_axis=cmd_args['y_axis_bar'], z_axis=cmd_args['z_axis_bar'], width=cmd_args['width'], save_path=cmd_args['save_image_path'])
 
 
     if cmd_args['line_plot']:
         df_results['task_dataset'] = df_results['task'].astype(str) +"/"+ df_results["dataset"]
         df_results['task_dataset'] = df_results['task_dataset'].map(PLOT_NAMES_DATASET_TASK)
 
-        # SELECT constant test size and train size to plot
-        line_df_filtered_results = df_results.loc[(df_results['test_size'] == TEST_SIZE[0]) & (df_results['ice_num'] ==  NUM_ICE[0])]
-
-        line_plot_results(results=line_df_filtered_results, title_column1=cmd_args['title_column1_line'], title_column2=cmd_args['title_column2_line'],title_column3=cmd_args['title_column3_line'],   x_axis=cmd_args['x_axis_line'], y_axis=cmd_args['y_axis_line'], z_axis=cmd_args['z_axis_line'], show=False, save_path=cmd_args['save_image_path'])
+        
+        line_plot_results(results=df_results, title_column1=cmd_args['title_column1_line'], title_column2=cmd_args['title_column2_line'],title_column3=cmd_args['title_column3_line'],   x_axis=cmd_args['x_axis_line'], y_axis=cmd_args['y_axis_line'], z_axis=cmd_args['z_axis_line'],  save_path=cmd_args['save_image_path'])
+        
         
 
 if __name__ == '__main__':
@@ -326,8 +321,8 @@ if __name__ == '__main__':
     # Models to run, call "SOPE" to only run one
     parser.add_argument('--use_data_path', type=str, default=None)
     parser.add_argument('--save_data_path', type=str, default='results.csv')
-    parser.add_argument('--bar_plot', type=bool, default=True)
-    parser.add_argument('--line_plot', type=bool, default=False)
+    parser.add_argument('--bar_plot', type=str, default='True')
+    parser.add_argument('--line_plot', type=str, default='True')
 
     parser.add_argument('--test_size', type=str, default="10")
     parser.add_argument('--num_ice', type=str, default="5")
@@ -350,10 +345,11 @@ if __name__ == '__main__':
     parser.add_argument('--title_column3_line', type=str, default='retriever')
     parser.add_argument('--x_axis_line', type=str, default='ice_num')
     parser.add_argument('--y_axis_line', type=str, default='accuracy_mean')
-    parser.add_argument('--z_axis_line', type=str, default='test_size')
+    parser.add_argument('--z_axis_line', type=str, default='retriever')
 
     cmd_args = dict(vars(parser.parse_args()))
-
+    cmd_args['line-plot']   = bool(cmd_args['line_plot'])
+    cmd_args['bar-plot']   = bool(cmd_args['bar_plot'])
     TEST_SIZE =  [int(pi_b) for pi_b in cmd_args['test_size'].split(", ")]
     NUM_ICE = [int(pi_b) for pi_b in cmd_args['num_ice'].split(", ")]
     REPS =  cmd_args['reps']
