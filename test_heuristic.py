@@ -11,6 +11,7 @@ import torch
 import argparse
 import os
 import nltk
+import re
 nltk.download('punkt')
 
 # Number of tests 
@@ -23,55 +24,43 @@ NUM_ICE = np.arange(1,3)
 REPS = 2
 
 # Model tasks and dataset choice
-MODELS = ["roberta-large"] #, "gpt2-large"]
+MODELS = ["google/flan-t5-small", "gpt2-large"] #
 TASKS = ['question-answering', 'sentiment-analysis']
 DATASET_NAMES = {
-    'question-answering':['commonsense_qa','tasksource/bigbench'],
-    'sentiment-analysis':['imdb', 'gpt3mix/sst2']
+    'question-answering':['commonsense_qa','openbookqa'],
+    'sentiment-analysis':['rotten_tomatoes', 'gpt3mix/sst2']
 }
-RETRIEVERS = ['zero', 'random', 'bm25'] # 'qkp']
+RETRIEVERS = ['zero', 'random', 'bm25', 'qkp']
 
 
 # Name of plots for dataset task combination
 PLOT_NAMES_DATASET_TASK =    {
     'question-answering/commonsense_qa':'qa_com' ,
-    'question-answering/tasksource/bigbench':'qa_at',
-    'sentiment-analysis/imdb':'ss_imdb',
+    'question-answering/tasksource/openbookqa':'qa_ob',
+    'sentiment-analysis/rotten_tomatoes':'ss_rotten_tomatoes',
     'sentiment-analysis/gpt3mix/sst2': 'ss_gs'
 }
 
 TEMPLATES = {
+    'rotten_tomatoes':PromptTemplate(
+        '</E>Sentiment analysis: \"<X>\".Options:\n0=Positive\n1=Negative.\nAnswer:</L>',
+        column_token_map={'text' : '<X>', 'label': '</L>'}, 
+        ice_token='</E>'
+    ),
+    'gpt3mix/sst2':PromptTemplate(
+        '</E>Sentiment analysis: \"<X>\".Options:\n0=Positive\n1=Negative.\nAnswer:</L>',
+        column_token_map={'text' : '<X>', 'label': '</L>'}, 
+        ice_token='</E>'
+    ),
+    'openbookqa':PromptTemplate(
+        "</E>Multiple choice question:\n</Q>\nChoices:\nA:</Ans1>\nB:</Ans2>\nC:</Ans3>\nD:</Ans4>\n:Answer:</A>",
+        {'question':'</Q>', 'A': '</Ans1>', 'B': '</Ans2>', 'C': '</Ans3>', 'D': '</Ans4>', "answer":"</A>"},
+        ice_token='</E>' 
+    ),
     'commonsense_qa':PromptTemplate(
-        {
-            'A': "</E>Answer the following question:\n</Q>\nAnswer: </Ans1>",
-            'B': "</E>Answer the following question:\n</Q>\nAnswer: </Ans2>",
-            'C': "</E>Answer the following question:\n</Q>\nAnswer: </Ans3>",
-            'D': "</E>Answer the following question:\n</Q>\nAnswer: </Ans4>",
-            'E': "</E>Answer the following question:\n</Q>\nAnswer: </Ans5>",
-        },
-        {'question':'</Q>', 'A': '</Ans1>', 'B': '</Ans2>', 'C': '</Ans3>', 'D': '</Ans4>', 'E': '</Ans5>'},
+        "</E>Multiple choice question:\n</Q>\nChoices:\nA:</Ans1>\nB:</Ans2>\nC:</Ans3>\nD:</Ans4>\nE:</Ans4>\n:Answer:</A>",
+        {'question':'</Q>', 'A': '</Ans1>', 'B': '</Ans2>', 'C': '</Ans3>', 'D': '</Ans4>', 'E':'</Answ5>', "answer":"</A>"},
         ice_token='</E>' 
-    ),
-    'tasksource/bigbench':PromptTemplate(
-        {
-            'A': "</E>Answer the following question:\n</Q>\nAnswer: </Ans1>",
-            'B': "</E>Answer the following question:\n</Q>\nAnswer: </Ans2>",
-            'C': "</E>Answer the following question:\n</Q>\nAnswer: </Ans3>"
-        },
-        {'question':'</Q>', 'A': '</Ans1>', 'B': '</Ans2>', 'C': '</Ans3>'},
-        ice_token='</E>' 
-    ),
-    'imdb':PromptTemplate({
-            0: '</E>Positive Movie Review: \"<X>\"', 
-            1: '</E>Negative Movie Review: \"<X>\"',
-        }, column_token_map={'text' : '<X>'}, 
-        ice_token='</E>'
-    ),
-    'gpt3mix/sst2':PromptTemplate({
-            0: '</E>Positive Movie Review: \"<X>\"', 
-            1: '</E>Negative Movie Review: \"<X>\"',
-        }, column_token_map={'text' : '<X>'}, 
-        ice_token='</E>'
     ),
 }
 
@@ -80,34 +69,47 @@ def cmqa_pre_process(example):
         example[chr(ord('A') + i)] = example['choices']['text'][i]
     return example
 
-def bb_pre_process(example):
-    for i in range(3):
-        example[chr(ord('A') + i)] = example['multiple_choice_targets'][i]
-    example['multiple_choice_scores'] = chr(ord('A') + np.where(np.array(example['multiple_choice_scores']) == 1)[0][0])
-    example['context'] = "Disambiguation"
+def obqa_pre_process(example):
+    for i in range(4):
+        example[chr(ord('A') + i)] = example['choices']['text'][i]
+    example['context'] = "Open book questions"
+    return example
+
+def yelp_pre_process(example):
+    example['label'] = int(int(example['label'] >= 2))
+    return example
+
+def rt_pre_process(example):
+    example['label'] = 1 - int(example['label'])
     return example
 
 def select_dataset(name, test_size):
     if name == 'commonsense_qa':
         dataset = load_dataset(name, split='train')
-        dataset = dataset.train_test_split(test_size=test_size, train_size=None, shuffle=True)
+        dataset = dataset.train_test_split(test_size=test_size, train_size=150, shuffle=True)
         dataset = dataset.map(cmqa_pre_process)
         dataset = dataset.rename_column("question_concept","context")
         dataset = dataset.rename_column("answerKey","answer")
         input_cols = ["question", "context", "A", "B", "C", "D", "E"]
         return DatasetReader(dataset=dataset, input_columns=input_cols, output_column="answer")
-    elif name == 'tasksource/bigbench':
-        dataset = load_dataset(name, 'disambiguation_qa', split='train')
-        dataset = dataset.train_test_split(test_size=test_size, train_size=None, shuffle=True)
-        dataset = dataset.map(bb_pre_process)
-        dataset = dataset.rename_column("multiple_choice_scores","answer")
-        dataset = dataset.rename_column("inputs","question")
-        input_cols = ["question", "context", "A", "B", "C"]
+    elif name == 'openbookqa':
+        dataset = load_dataset(name, 'main', split='train')
+        dataset = dataset.train_test_split(test_size=test_size, train_size=150, shuffle=True)
+        dataset = dataset.map(obqa_pre_process)
+        dataset = dataset.rename_column("question_stem","question")
+        dataset = dataset.rename_column("answerKey","answer")
+        input_cols = ["question", "context", "A", "B", "C", "D"]
         return DatasetReader(dataset=dataset, input_columns=input_cols, output_column="answer")
-    elif name == 'imdb' or name == 'gpt3mix/sst2':
+    elif name == 'gpt3mix/sst2':
         dataset = load_dataset(name, split='train')
-        dataset = dataset.train_test_split(test_size=test_size, train_size=None, shuffle=True)
+        dataset = dataset.train_test_split(test_size=test_size, train_size=150, shuffle=True)
         return DatasetReader(dataset=dataset, input_columns=["text"], output_column="label")
+    elif name == "rotten_tomatoes":
+        dataset = load_dataset(name, split='test')
+        dataset = dataset.map(rt_pre_process)
+        dataset = dataset.train_test_split(test_size=test_size, train_size=150, shuffle=True)
+        return DatasetReader(dataset=dataset, input_columns=["text"], output_column="label")
+
 
 def select_retriever(retr_name, data, model, task, ice_num, accelerator):
     if retr_name == 'zero':
@@ -135,11 +137,12 @@ def run_experiments():
             print('Test size: ', test)
             for model in MODELS:
                 print('Model:', model)
-                inferencer = PPLInferencer(model_name=model, accelerator=accelerator)
+                inferencer = GenInferencer(model_name=model, accelerator=accelerator)
                 
                 for task in TASKS:
                     print('Task: ', task)
                     for dataset_name in DATASET_NAMES[task]:
+                        print('Dataset: ', dataset_name)
                         data = select_dataset(dataset_name,  test)
 
                         for retr_name in RETRIEVERS:
@@ -148,6 +151,9 @@ def run_experiments():
                             all_predictions = list()
                             all_inputs = list()
 
+                            all_pred_parsed = list()
+                            all_outputs = list()
+
                             for ice in NUM_ICE:
                                 print('number of examples', ice)
                                 retriever = select_retriever(retr_name, data, model, task, ice, accelerator)
@@ -155,10 +161,37 @@ def run_experiments():
 
                                 for _ in range(REPS):
                                     predictions = inferencer.inference(retriever, ice_template=ice_template)
+                                    predictions_parsed = list()
+                                    for pred in predictions:
+                                        pred = str(pred)
+                                        pred_new = ''
+                                        if len(pred) == 1:
+                                            pred_new = pred
+                                        else:
+                                            pred_new = ''
+                                            try:
+                                                if len(pred.split('\n')[0]) == 1:
+                                                    pred_new = pred.split('\n')[0]
+                                                else:
+                                                    raise Exception
+                                            except:
+                                                try:
+                                                    pred_new  = re.findall('Answer:[A-Z]', pred)[0].split(':')[-1]
+                                                except:
+                                                    pass
+                                        predictions_parsed.append(pred_new)
+                                    all_pred_parsed.append(predictions_parsed)
+
                                     all_predictions.append(predictions)
                                     all_inputs.append(retriever.test_ds[retriever.dataset_reader.input_columns[0]])
-                                    accuracies.append(np.sum(np.array(retriever.test_ds[retriever.dataset_reader.output_column]) == np.array(predictions)) / len(predictions))
+
+                                    real_answers = [str(x) for x in retriever.test_ds[retriever.dataset_reader.output_column]]
+                                    all_outputs.append(real_answers)
+                                    accuracies.append(np.sum(np.array(real_answers) == np.array(predictions_parsed)) / len(predictions_parsed))
+                                    
                                     del predictions
+                                    del predictions_parsed
+                                    del real_answers
                                     torch.cuda.empty_cache() 
 
                                 results.append({
@@ -171,7 +204,10 @@ def run_experiments():
                                         'accuracy_mean': np.mean(accuracies),
                                         'accuracy_std':np.std(accuracies),
                                         'predictions':all_predictions,
-                                        'inputs':all_inputs
+                                        'inputs':all_inputs,
+                                        'outputs':all_outputs,
+                                        'predictions_parsed':all_pred_parsed
+
                                     })
                                 del retriever
                                 del ice_template
@@ -329,7 +365,7 @@ if __name__ == '__main__':
     parser.add_argument('--test_size', type=str, default="10")
     parser.add_argument('--num_ice', type=str, default="5")
     parser.add_argument('--reps', type=int, default=2)
-    parser.add_argument('--models', type=str, default="roberta-large")
+    parser.add_argument('--models', type=str, default="gpt2-large")
     parser.add_argument('--tasks', type=str, default='question-answering, sentiment-analysis')
     parser.add_argument('--retrievers', type=str, default='zero, random, bm25')
 
