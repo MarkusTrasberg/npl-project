@@ -219,8 +219,8 @@ def bar_plot_results(results,  title_column1: str, x_axis : str , y_axis : str, 
                 # for x in unique_x_axis:
                     xvals = list(results.loc[(results[title_column1] == t1) & (results[z_axis] == z)]['accuracy_mean'])
                     xstd = list(results.loc[(results[title_column1] == t1)  & (results[z_axis] == z)]['accuracy_std'])
-                    # print('z: ',z)
-                    # print('z_vals: ',xvals)
+                    print('z: ',z)
+                    print('z_vals: ',xvals)
                     bar = plt.bar(ind+ width*i, xvals, width, color = colors[i], yerr=xstd)
                     vals.append(xvals)
                     stds.append(xstd)
@@ -302,7 +302,7 @@ def main(cmd_args):
     df_results['task_dataset'] = df_results['task_dataset'].map(PLOT_NAMES_DATASET_TASK)
 
     if cmd_args['save_data_path'] is not None:
-        df_results.to_csv(cmd_args['save_data_path'])
+        df_results.to_csv(cmd_args['save_data_path'], index=False)
     
     if cmd_args['bar_plot']:
         # SELECT constant test size and train size to plot
@@ -327,7 +327,7 @@ if __name__ == '__main__':
     parser.add_argument('--use_data_path', type=str, default=None)
     parser.add_argument('--save_data_path', type=str, default='results.csv')
     parser.add_argument('--bar_plot', type=bool, default=True)
-    parser.add_argument('--line_plot', type=bool, default=True)
+    parser.add_argument('--line_plot', type=bool, default=False)
 
     parser.add_argument('--test_size', type=str, default="10")
     parser.add_argument('--num_ice', type=str, default="5")
