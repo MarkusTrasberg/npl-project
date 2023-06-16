@@ -178,6 +178,9 @@ def run_experiments():
                                             try:
                                                 if len(pred.split('\n')[0]) == 1:
                                                     pred_new = pred.split('\n')[0]
+                                                elif len(pred.split(' ')[0]) == 1:
+                                                    pred_new = pred.split(' ')[0]
+                                                    raise Exception
                                                 else:
                                                     raise Exception
                                             except:
