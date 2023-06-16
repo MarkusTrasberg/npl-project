@@ -33,10 +33,15 @@ function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
     const [inferencer, setInferencer] = useState("");
     const [retriever, setRetriever] = useState("");
     const [datasets, setDatasets] = useState("");
+    const [error, setError] = useState("");
+
+
 
     const handleClick = async (e: React.FormEvent) => { 
+      
+      setError("")
       e.preventDefault();
-      const dataToSend = { 
+      const dataToSend = {
         model,  
         inferencer, 
         retriever,
@@ -49,9 +54,13 @@ function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
         const response = await axios.post('http://localhost:8000/run', dataToSend);
         onButtonClick(response.data);
       } catch (error) {
+        onButtonClick(null);
+        if (axios.isAxiosError(error)) {
+          if (error.response) {
+              setError(error.response.data.message.toString());
         console.error('There was an error!', error);
-      }
-    }
+          }}
+  }}
 
     const fetchParameters = async () => {
       try {
@@ -223,10 +232,6 @@ function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
         </Col>
     </Row>
 ))}
-
-
-
-
       <Row>
         <Button
         type="submit" 
@@ -237,6 +242,7 @@ function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
         </Button>
       </Row>
     </Form>
+        {error && <h2 className="text-red-600">{error}</h2>}
     </div>
 
   );
