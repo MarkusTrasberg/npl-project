@@ -187,13 +187,13 @@ def run_experiments():
 
 
 def bar_plot_results(results,  title_column1: str, x_axis : str , y_axis : str, z_axis : str, width=0.25, show= True, save_path=None):
-    unique_t1 = set(map(str,results[title_column1]))
+    unique_t1 = results[title_column1].unique()
     # Tasks
-    unique_x_axis = set(map(str,results[x_axis]))
+    unique_x_axis = results[x_axis].unique()
     #acc
-    unique_y_axis = set(map(str,results[y_axis]))
+    unique_y_axis = results[y_axis].unique()
     # Model
-    unique_z_axis = set(map(str,results[z_axis]))
+    unique_z_axis = results[z_axis].unique()
 
     print('t1-axis: ', unique_t1)
     print('x-axis: ', unique_x_axis)
@@ -238,15 +238,15 @@ def bar_plot_results(results,  title_column1: str, x_axis : str , y_axis : str, 
 
 
 def line_plot_results(results,  title_column1, title_column2, title_column3, x_axis : str , y_axis : str, z_axis : str, save_path=None):
-    unique_t1 = set(map(str,results[title_column1]))
-    unique_t2 = set(map(str,results[title_column2]))
+    unique_t1 = results[title_column1].unique()
+    unique_t2 = results[title_column2].unique()
     # unique_t3 = set(map(str,results[title_column3]))
     # Test_size
-    unique_x_axis = set(results[x_axis])
+    unique_x_axis = results[x_axis].unique()
     # acc
-    unique_y_axis = set(results[y_axis])
+    unique_y_axis = results[y_axis].unique()
     # retriever
-    unique_z_axis = set(results[z_axis])
+    unique_z_axis = results[z_axis].unique()
 
     print('t1-axis: ', unique_t1)
     print('x-axis: ', unique_x_axis)
@@ -282,10 +282,10 @@ def line_plot_results(results,  title_column1, title_column2, title_column3, x_a
                 plt.title(title_column1 +": " + str(t1) + ", " + title_column2 +  ": " + str(t2) ) #+ " and " + title_column3+  ": " + str(t3) )
                 
                 plt.legend(unique_z_axis )
-                plt.show()
+                
                 if save_path is not None:
                             plt.savefig(save_path + 'lineplot_' + t1 + '_' + t2 + '_'+ x_axis + '_' + z_axis + '.png')
-
+                plt.show()
                 
 
 def main(cmd_args):
