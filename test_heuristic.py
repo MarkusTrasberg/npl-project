@@ -1,6 +1,6 @@
 from openicl import (DatasetReader, PromptTemplate, 
                      ZeroRetriever, RandomRetriever, BM25Retriever,
-                     GenInferencer, PPLInferencer)
+                     GenInferencer, PPLInferencer, TopkRetriever, VotekRetriever, DPPRetriever, MDLRetriever) 
 from openicl.icl_dataset_reader import load_dataset
 import pandas as pd
 from accelerate import Accelerator
@@ -24,13 +24,13 @@ NUM_ICE = np.arange(1,3)
 REPS = 2
 
 # Model tasks and dataset choice
-MODELS = ["google/flan-t5-small", "gpt2-large"] #
+MODELS = ["google/flan-t5-small", "google/flan-t5-large" ,"gpt2-large"] #
 TASKS = ['question-answering', 'sentiment-analysis']
 DATASET_NAMES = {
     'question-answering':['commonsense_qa','openbookqa'],
     'sentiment-analysis':['rotten_tomatoes', 'gpt3mix/sst2']
 }
-RETRIEVERS = ['zero', 'random', 'bm25', 'qkp']
+RETRIEVERS = ['zero', 'random', 'bm25', 'qkp', 'topk', 'votek', 'mdl']
 
 
 # Name of plots for dataset task combination
@@ -120,6 +120,12 @@ def select_retriever(retr_name, data, model, task, ice_num, accelerator):
         return BM25Retriever(data, ice_num=ice_num, accelerator=accelerator)
     elif retr_name == 'qkp':
         return QPKTabuRetriever(data, model=model, task=task, ice_num=ice_num, accelerator=accelerator)
+    elif retr_name == 'votek':
+        return VotekRetriever(data, ice_num=ice_num, accelerator=accelerator)
+    elif retr_name == 'topk':
+         return TopkRetriever(data, ice_num=ice_num, accelerator=accelerator)
+    elif retr_name == 'mdl':
+         return MDLRetriever(data, ice_num=ice_num, accelerator=accelerator)
     else:
         raise Exception()
 
