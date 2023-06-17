@@ -210,7 +210,10 @@ class ICLModel():
 		print("Initiating retriever...")
 
 		try:
-			RetrieverClass = getattr(importlib.import_module("openicl"), self.retriever)
+			if not self.retriever == "QPKTabuRetriever":
+				RetrieverClass = getattr(importlib.import_module("openicl"), self.retriever)
+			else:
+				RetrieverClass = getattr(importlib.import_module("backend.RetrieverClasses.QPKTabuRetriever"), self.retriever)
 
 			# Accelerator specifics are defined by 'accelerator_config.yaml'
 			self.rtvr = RetrieverClass(self.dsr, ice_num=self.ice_size, accelerator=Accelerator())

@@ -11,8 +11,8 @@ app = create_app()
 CORS(app)
 
 INFERENCERS = ["PPLInferencer", "GenInferencer"]
-RETRIEVERS = ["RandomRetriever", "BM25Retriever", "TopkRetriever",
-                "VotekRetriever", "DPPRetriever", "MDLRetriever", "ZeroRetriever"]
+RETRIEVERS = ["RandomRetriever", "BM25Retriever", "TopkRetriever", "VotekRetriever",
+                "DPPRetriever", "MDLRetriever", "ZeroRetriever", "QPKTabuRetriever"]
 # Todo extend list
 MODELS = {
     "gpt3/text-davinci-003": {
@@ -51,12 +51,24 @@ MODELS = {
         "engine": None,
         "ppl_support": True
     }, 
+    "google/flan-t5-large": {
+        "api": False,
+        "model": "flan-t5-large",
+        "engine": None,
+        "ppl_support": True
+    }, 
     "gpt2": {
         "api": False,
         "model": "gpt2",
         "engine": None,
         "ppl_support": True
     }, 
+    "gpt2-large": {
+        "api": False,
+        "model": "gpt2-large",
+        "engine": None,
+        "ppl_support": True
+    },
     "roberta-large": {
         "api": False,
         "model": "roberta-large",
@@ -81,10 +93,10 @@ DATASETS = {
         "description": "Commonsense Knowledge Q&A",
         "task": "Multiple Choice Q&A"
     }, 
-    "wmt16": {
-        "description": "Germen to English translation",
-        "task": "Language Translation"
-    }
+    # "wmt16": {
+    #     "description": "Germen to English translation",
+    #     "task": "Language Translation"
+    # }
 } # Todo extend list and see if there is a train/test division
 
 
