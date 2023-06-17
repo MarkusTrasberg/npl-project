@@ -86,7 +86,7 @@ def rt_pre_process(example):
 def select_dataset(name, test_size):
     if name == 'commonsense_qa':
         dataset = load_dataset(name, split='train')
-        dataset = dataset.train_test_split(test_size=test_size, train_size=150, shuffle=True)
+        dataset = dataset.train_test_split(test_size=test_size, train_size=50, shuffle=True)
         dataset = dataset.map(cmqa_pre_process)
         dataset = dataset.rename_column("question_concept","context")
         dataset = dataset.rename_column("answerKey","answer")
@@ -94,7 +94,7 @@ def select_dataset(name, test_size):
         return DatasetReader(dataset=dataset, input_columns=input_cols, output_column="answer")
     elif name == 'openbookqa':
         dataset = load_dataset(name, 'main', split='train')
-        dataset = dataset.train_test_split(test_size=test_size, train_size=150, shuffle=True)
+        dataset = dataset.train_test_split(test_size=test_size, train_size=50, shuffle=True)
         dataset = dataset.map(obqa_pre_process)
         dataset = dataset.rename_column("question_stem","question")
         dataset = dataset.rename_column("answerKey","answer")
@@ -102,12 +102,12 @@ def select_dataset(name, test_size):
         return DatasetReader(dataset=dataset, input_columns=input_cols, output_column="answer")
     elif name == 'gpt3mix/sst2':
         dataset = load_dataset(name, split='train')
-        dataset = dataset.train_test_split(test_size=test_size, train_size=150, shuffle=True)
+        dataset = dataset.train_test_split(test_size=test_size, train_size=50, shuffle=True)
         return DatasetReader(dataset=dataset, input_columns=["text"], output_column="label")
     elif name == "rotten_tomatoes":
         dataset = load_dataset(name, split='test')
         dataset = dataset.map(rt_pre_process)
-        dataset = dataset.train_test_split(test_size=test_size, train_size=150, shuffle=True)
+        dataset = dataset.train_test_split(test_size=test_size, train_size=50, shuffle=True)
         return DatasetReader(dataset=dataset, input_columns=["text"], output_column="label")
 
 
@@ -178,6 +178,9 @@ def run_experiments():
                                             try:
                                                 if len(pred.split('\n')[0]) == 1:
                                                     pred_new = pred.split('\n')[0]
+                                                elif len(pred.split(' ')[0]) == 1:
+                                                    pred_new = pred.split(' ')[0]
+                                                    raise Exception
                                                 else:
                                                     raise Exception
                                             except:
