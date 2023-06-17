@@ -9,11 +9,14 @@ import { ResultsProps } from '@/components/Results';
 
 
 interface Parameters {
-  datasets: string[];
+  datasets: {
+    [key: string]: {
+      description: string;
+      task: string;
+    }};
   inferencers: string[];
   models: string[];
   retrievers: string[];
-  evaluators: string[];
 }
 
 interface GridBasicExampleProps {
@@ -27,17 +30,19 @@ function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
     const [parameters, setParameters] = React.useState<Parameters | null>(null);
 
     const [model, setModel] = useState("");
-    const [evaluator, setEvaluator] = useState("");
     const [inferencer, setInferencer] = useState("");
     const [retriever, setRetriever] = useState("");
-    // const [datasets, setDatasets] = useState<{ [key: string]: boolean }>({});
-    const [datasets, setDatasets] = useState<string[]>([]);
+    const [datasets, setDatasets] = useState("");
+    const [error, setError] = useState("");
+
 
     const handleClick = async (e: React.FormEvent) => { 
+      
+      setError("")
+      onButtonClick("loading")
       e.preventDefault();
-      const dataToSend = { 
-        model, 
-        evaluator, 
+      const dataToSend = {
+        model,  
         inferencer, 
         retriever,
         datasets,
@@ -46,12 +51,16 @@ function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
       };
       console.log("Sending data.. ", dataToSend)
       try {
-        const response = await axios.post('http://localhost:8000/debug', dataToSend);
+        const response = await axios.post('http://localhost:8000/run', dataToSend);
         onButtonClick(response.data);
       } catch (error) {
+        onButtonClick(null);
+        if (axios.isAxiosError(error)) {
+          if (error.response) {
+              setError(error.response.data.message.toString());
         console.error('There was an error!', error);
-      }
-    }
+          }}
+  }}
 
     const fetchParameters = async () => {
       try {
@@ -63,7 +72,6 @@ function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
             setSize(70);
             setIce(3);
             setModel(response.data.models[0]);
-            setEvaluator(response.data.evaluators[0]);
             setInferencer(response.data.inferencers[0]);
             setRetriever(response.data.retrievers[0]);
           }
@@ -92,20 +100,6 @@ function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
       <Form.Select onChange={(e) => setModel(e.target.value)}>
       {parameters?.models && parameters.models.map((model, index) => (
                         <option value={model} key={index}>{model}</option>
-                    ))}
-      </Form.Select>
-      </Row>
-
-      <Row>
-        <Form.Text>
-        Select evaluator
-        </Form.Text>
-      </Row>
-      
-      <Row>
-      <Form.Select onChange={(e) => setEvaluator(e.target.value)}>
-      {parameters?.evaluators && parameters.evaluators.map((evaluator, index) => (
-                        <option value={evaluator} key={index}>{evaluator}</option>
                     ))}
       </Form.Select>
       </Row>
@@ -190,17 +184,17 @@ function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
       <Row>
     <Col>
         <Form.Text>
-            Select tasks + datasets
+            Select task
         </Form.Text>
     </Col>
     </Row>
-    <Row>
-        {parameters?.datasets && parameters?.datasets.map((dataset: string, index: number) => (
+    {/* <Row>
+        {parameters?.datasets && parameters?.datasets.map((dataset: any, index: number) => (
             <Col key={index}>
                 <Form.Check 
                     type="switch"
-                    id={`${dataset}-switch`}
-                    label={"   " + dataset}
+                    id={`${dataset.key}-switch`}
+                    label={"   " + dataset.key}
                     onChange={(e) => {
                       if (e.target.checked) {
                           // If checked, add the dataset to the array
@@ -213,7 +207,31 @@ function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
                 />
             </Col>
         ))}
+    </Row> */}
+
+{parameters?.datasets && Object.entries(parameters.datasets).map(([key, dataset], index) => (
+    <Row key={index}>
+        <Col>
+            <Form.Check 
+                type="switch"
+                id={`${key}-switch`}
+                label={<span><b>{key}</b>: {dataset.task} </span> }
+                onChange={(e) => {
+                  if (e.target.checked) {
+                      // If checked, set the key as the selected dataset
+                      setDatasets(key);
+                  } else {
+                      // If unchecked, clear the selected dataset if it's the current one
+                      if (datasets === key) {
+                          setDatasets("");
+                      }
+                  }
+                }}
+                checked={datasets === key} // set the check status based on the current selection
+            />
+        </Col>
     </Row>
+))}
       <Row>
         <Button
         type="submit" 
@@ -224,6 +242,7 @@ function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
         </Button>
       </Row>
     </Form>
+        {error && <h2 className="text-red-600">{error}</h2>}
     </div>
 
   );

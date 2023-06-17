@@ -416,10 +416,15 @@
   resolved "https://registry.npmjs.org/@next/env/-/env-13.4.4.tgz"
   integrity sha512-q/y7VZj/9YpgzDe64Zi6rY1xPizx80JjlU2BTevlajtaE3w1LqweH1gGgxou2N7hdFosXHjGrI4OUvtFXXhGLg==
 
-"@next/swc-darwin-x64@13.4.4":
+"@next/swc-linux-x64-gnu@13.4.4":
   version "13.4.4"
-  resolved "https://registry.npmjs.org/@next/swc-darwin-x64/-/swc-darwin-x64-13.4.4.tgz"
-  integrity sha512-ZY9Ti1hkIwJsxGus3nlubIkvYyB0gNOYxKrfsOrLEqD0I2iCX8D7w8v6QQZ2H+dDl6UT29oeEUdDUNGk4UEpfg==
+  resolved "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-13.4.4.tgz"
+  integrity sha512-PX706XcCHr2FfkyhP2lpf+pX/tUvq6/ke7JYnnr0ykNdEMo+sb7cC/o91gnURh4sPYSiZJhsF2gbIqg9rciOHQ==
+
+"@next/swc-linux-x64-musl@13.4.4":
+  version "13.4.4"
+  resolved "https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-13.4.4.tgz"
+  integrity sha512-TKUUx3Ftd95JlHV6XagEnqpT204Y+IsEa3awaYIjayn0MOGjgKZMZibqarK3B1FsMSPaieJf2FEAcu9z0yT5aA==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -903,11 +908,6 @@ fs.realpath@^1.0.0:
   resolved "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   integrity sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==
 
-fsevents@~2.3.2:
-  version "2.3.2"
-  resolved "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz"
-  integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
-
 function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz"
@@ -1117,7 +1117,7 @@ nanoid@^3.3.4, nanoid@^3.3.6:
   resolved "https://registry.npmjs.org/nanoid/-/nanoid-3.3.6.tgz"
   integrity sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==
 
-next@13.4.4:
+next@^13.4.4:
   version "13.4.4"
   resolved "https://registry.npmjs.org/next/-/next-13.4.4.tgz"
   integrity sha512-C5S0ysM0Ily9McL4Jb48nOQHT1BukOWI59uC3X/xCMlYIh9rJZCv7nzG92J6e1cOBqQbKovlpgvHWFmz4eKKEA==
@@ -1139,6 +1139,11 @@ next@13.4.4:
     "@next/swc-win32-arm64-msvc" "13.4.4"
     "@next/swc-win32-ia32-msvc" "13.4.4"
     "@next/swc-win32-x64-msvc" "13.4.4"
+
+nextjs@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.npmjs.org/nextjs/-/nextjs-0.0.3.tgz"
+  integrity sha512-mYbDUo4/sRAZ8TqK63PCpYnFiLg7BICG/ot9+guOrUKd4/Fo71ZmEQ41IZbH6nqbQvG7SXTBuofJXAIWfNho0w==
 
 node-releases@^2.0.12:
   version "2.0.12"
@@ -1357,7 +1362,17 @@ react-bootstrap@^2.7.4, react-bootstrap@>=1.0.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
-react-is@^16.13.1, react-is@^16.3.2, react-is@^16.7.0:
+react-is@^16.13.1:
+  version "16.13.1"
+  resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
+  integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-is@^16.3.2:
+  version "16.13.1"
+  resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
+  integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-is@^16.7.0:
   version "16.13.1"
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==

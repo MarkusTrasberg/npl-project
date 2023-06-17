@@ -1,2 +1,6 @@
 .idea
 predictions.json
+__pycache__/
+*.py[cod]
+*$py.class
+pyvenv.cfg
