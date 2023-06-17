@@ -4,7 +4,7 @@ from openicl import (DatasetReader, PromptTemplate,
 from openicl.icl_dataset_reader import load_dataset
 import pandas as pd
 from accelerate import Accelerator
-from QPKTabuRetriever import QPKTabuRetriever
+from backend.RetrieverClasses.QPKTabuRetriever import QPKTabuRetriever
 import numpy as np
 import matplotlib.pyplot as plt
 import torch
