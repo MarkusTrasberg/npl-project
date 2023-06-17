@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 
 
@@ -8,7 +8,7 @@ export interface ResultsProps {
         origin_prompt: string[];
         predictions: string[];
         answers: string[];
-    } | null | boolean;
+    } | null | string;
 }
 
 function Results( {result}: ResultsProps) {
@@ -21,6 +21,15 @@ function Results( {result}: ResultsProps) {
     }))
   : [];
 
+  const [loading, setLoading] = useState("");
+
+  useEffect(() => {
+    if (result === "loading") {
+      setLoading("Loading results. This can take up to 10 minutes.");
+    } else {
+      setLoading("");
+    }
+  }, [result]);
 
   const columns = [
     { field: 'id', headerName: 'ID', width: 30 },

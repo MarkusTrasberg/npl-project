@@ -36,10 +36,10 @@ function GridBasicExample({ onButtonClick }: GridBasicExampleProps) {
     const [error, setError] = useState("");
 
 
-
     const handleClick = async (e: React.FormEvent) => { 
       
       setError("")
+      onButtonClick("loading")
       e.preventDefault();
       const dataToSend = {
         model,  
