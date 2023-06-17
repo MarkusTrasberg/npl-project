@@ -1,6 +1,6 @@
 from openicl import (DatasetReader, PromptTemplate, 
                      ZeroRetriever, RandomRetriever, BM25Retriever,
-                     GenInferencer, PPLInferencer, TopkRetriever, VotekRetriever, DPPRetriever, MDLRetriever) 
+                     GenInferencer, PPLInferencer, TopkRetriever, VotekRetriever, MDLRetriever) 
 from openicl.icl_dataset_reader import load_dataset
 import pandas as pd
 from accelerate import Accelerator
@@ -182,7 +182,10 @@ def run_experiments():
                                                     raise Exception
                                             except:
                                                 try:
-                                                    pred_new  = re.findall('Answer:[A-Z]', pred)[0].split(':')[-1]
+                                                    if task == 'sentiment-analysis':
+                                                        pred_new = int(re.findall('Answer:[0-9]', pred)[0].split(':')[-1])
+                                                    else:
+                                                        pred_new  = re.findall('Answer:[A-Z]', pred)[0].split(':')[-1]
                                                 except:
                                                     pass
                                         predictions_parsed.append(pred_new)
