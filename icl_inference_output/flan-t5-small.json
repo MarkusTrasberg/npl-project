@@ -1,0 +1,502 @@
+{
+    "0": {
+        "origin_prompt": "Positive Movie Review: Feels like one of those contrived , only-in - Hollywood productions where name actors deliver big performances created for the sole purpose of generating Oscar talk .",
+        "output": "a sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish,",
+        "prediction": "a sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish,"
+    },
+    "1": {
+        "origin_prompt": "Positive Movie Review: This one 's weaker than most .",
+        "output": "This movie is a slacker than most.",
+        "prediction": "This movie is a slacker than most."
+    },
+    "2": {
+        "origin_prompt": "Positive Movie Review: Chicago is sophisticated , brash , sardonic , completely joyful in its execution .",
+        "output": "a sappy, sardonic, sardonic, and a sappy, sardonic, sardonic,",
+        "prediction": "a sappy, sardonic, sardonic, and a sappy, sardonic, sardonic,"
+    },
+    "3": {
+        "origin_prompt": "Positive Movie Review: All the well-meaningness in the world ca n't erase the fact that The Believer feels like a 12-Step Program for the Jewish Nazi .",
+        "output": "The movie is a slam-dunk of a sleazy, slam-dunk of a sleazy, sleazy, sleazy, sleazy, sleazy, sleazy, sleazy, sleazy, sleazy, sleazy",
+        "prediction": "The movie is a slam-dunk of a sleazy, slam-dunk of a sleazy, sleazy, sleazy, sleazy, sleazy, sleazy, sleazy, sleazy, sleazy, sleazy"
+    },
+    "4": {
+        "origin_prompt": "Positive Movie Review: With Danilo Donati 's witty designs and Dante Spinotti 's luscious cinematography , this might have made a decent children 's movie -- if only Benigni had n't insisted on casting himself in the title role .",
+        "output": "Benigni's witty designs and Dante Spinotti's luscious cinematography, this might have made a decent children's movie -- if only Benigni hadn't insisted on casting himself in the title role.",
+        "prediction": "Benigni's witty designs and Dante Spinotti's luscious cinematography, this might have made a decent children's movie -- if only Benigni hadn't insisted on casting himself in the title role."
+    },
+    "5": {
+        "origin_prompt": "Positive Movie Review: The lack of pace kills it , although , in a movie about cancer , this might be apt .",
+        "output": "This is a good movie, but it's not a good movie.",
+        "prediction": "This is a good movie, but it's not a good movie."
+    },
+    "6": {
+        "origin_prompt": "Positive Movie Review: It 's hard to tell with all the crashing and banging where the salesmanship ends and the movie begins .",
+        "output": "It's a good movie, but it's not a bad movie.",
+        "prediction": "It's a good movie, but it's not a bad movie."
+    },
+    "7": {
+        "origin_prompt": "Positive Movie Review: ... both hokey and super-cool , and definitely not in a hurry , so sit back , relax and have a few laughs while the little ones get a fuzzy treat . '",
+        "output": "'",
+        "prediction": "'"
+    },
+    "8": {
+        "origin_prompt": "Positive Movie Review: Boring we did n't .",
+        "output": "a sluggish movie",
+        "prediction": "a sluggish movie"
+    },
+    "9": {
+        "origin_prompt": "Positive Movie Review: The tenderness of the piece is still intact .",
+        "output": "The film is a great film and it is a great film.",
+        "prediction": "The film is a great film and it is a great film."
+    },
+    "10": {
+        "origin_prompt": "Positive Movie Review: Funny and , at times , poignant , the film from director George Hickenlooper all takes place in Pasadena , `` a city where people still read . ''",
+        "output": "'s a great film, a great film, a great story, a great story, a great film, a great film, a great film, a great film, a great film, a great film, a great film, a great film, a great film, a great film, a great film, a great film, ",
+        "prediction": "'s a great film, a great film, a great story, a great story, a great film, a great film, a great film, a great film, a great film, a great film, a great film, a great film, a great film, a great film, a great film, a great film, "
+    },
+    "11": {
+        "origin_prompt": "Positive Movie Review: There 's more scatological action in 8 Crazy Nights than a proctologist is apt to encounter in an entire career .",
+        "output": "8 Crazy Nights is a great movie that's a great movie for the whole family.",
+        "prediction": "8 Crazy Nights is a great movie that's a great movie for the whole family."
+    },
+    "12": {
+        "origin_prompt": "Positive Movie Review: An unbelievably fun film just a leading man away from perfection .",
+        "output": "a slick and witty film",
+        "prediction": "a slick and witty film"
+    },
+    "13": {
+        "origin_prompt": "Positive Movie Review: Absorbing and disturbing -- perhaps more disturbing than originally intended -- but a little clarity would have gone a long way .",
+        "output": "a sexy, sexy, and a sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy ",
+        "prediction": "a sexy, sexy, and a sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy "
+    },
+    "14": {
+        "origin_prompt": "Positive Movie Review: Few films this year have been as resolute in their emotional nakedness .",
+        "output": "a sleazy, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish,",
+        "prediction": "a sleazy, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish,"
+    },
+    "15": {
+        "origin_prompt": "Positive Movie Review: A silly , self-indulgent film about a silly , self-indulgent filmmaker .",
+        "output": "A sluggish, self-indulgent film about a silly, self-indulgent filmmaker.",
+        "prediction": "A sluggish, self-indulgent film about a silly, self-indulgent filmmaker."
+    },
+    "16": {
+        "origin_prompt": "Positive Movie Review: The actors do n't inhabit their roles -- they 're trapped by them , forced to change behavior in bizarre unjustified fashion and spout dialog that consists mostly of platitudes .",
+        "output": "The movie is a slapstick, slapstick, and a slapstick.",
+        "prediction": "The movie is a slapstick, slapstick, and a slapstick."
+    },
+    "17": {
+        "origin_prompt": "Positive Movie Review: Any film featuring young children threatened by a terrorist bomb can no longer pass as mere entertainment .",
+        "output": "a film that is a sappy and entertaining movie",
+        "prediction": "a film that is a sappy and entertaining movie"
+    },
+    "18": {
+        "origin_prompt": "Positive Movie Review: Even those of a single digit age will be able to recognize that this story is too goofy ... even for Disney .",
+        "output": "This movie is a great movie for kids and adults alike. It is a great movie for kids and adults alike.",
+        "prediction": "This movie is a great movie for kids and adults alike. It is a great movie for kids and adults alike."
+    },
+    "19": {
+        "origin_prompt": "Positive Movie Review: When the painted backdrops in a movie are more alive than its characters , you know you 're in trouble .",
+        "output": "The movie is a great movie.",
+        "prediction": "The movie is a great movie."
+    },
+    "20": {
+        "origin_prompt": "Positive Movie Review: A compendium of Solondz 's own worst instincts in under 90 minutes .",
+        "output": "a sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish,",
+        "prediction": "a sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish,"
+    },
+    "21": {
+        "origin_prompt": "Positive Movie Review: But the characters tend to be cliches whose lives are never fully explored .",
+        "output": "The movie is a slapstick comedy that is a bit of a slapstick comedy.",
+        "prediction": "The movie is a slapstick comedy that is a bit of a slapstick comedy."
+    },
+    "22": {
+        "origin_prompt": "Positive Movie Review: A didactic and dull documentary glorifying software anarchy .",
+        "output": "A sloppy and sloppy documentary about software.",
+        "prediction": "A sloppy and sloppy documentary about software."
+    },
+    "23": {
+        "origin_prompt": "Positive Movie Review: About as cutting-edge as Pet Rock : The Movie .",
+        "output": "The movie is a great movie and it is a great movie.",
+        "prediction": "The movie is a great movie and it is a great movie."
+    },
+    "24": {
+        "origin_prompt": "Positive Movie Review: The lack of opposing viewpoints soon grows tiresome -- the film feels more like a series of toasts at a testimonial dinner than a documentary .",
+        "output": "The film is a slapstick, slapstick, and a slapstick.",
+        "prediction": "The film is a slapstick, slapstick, and a slapstick."
+    },
+    "25": {
+        "origin_prompt": "Positive Movie Review: Superior genre storytelling , which gets under our skin simply by crossing the nuclear line .",
+        "output": "a great movie",
+        "prediction": "a great movie"
+    },
+    "26": {
+        "origin_prompt": "Positive Movie Review: Showtime is one of the hapless victims of the arrogant `` if we put together a wry white man and a chatty black man and give them guns , the movie will be funny '' syndrome .",
+        "output": "The movie is a sluggish and sluggish comedy.",
+        "prediction": "The movie is a sluggish and sluggish comedy."
+    },
+    "27": {
+        "origin_prompt": "Positive Movie Review: A wildly funny prison caper .",
+        "output": "a surprisingly funny film",
+        "prediction": "a surprisingly funny film"
+    },
+    "28": {
+        "origin_prompt": "Positive Movie Review: Marisa Tomei is good , but Just A Kiss is just a mess .",
+        "output": "Marisa Tomei is a bad movie.",
+        "prediction": "Marisa Tomei is a bad movie."
+    },
+    "29": {
+        "origin_prompt": "Positive Movie Review: Between bedroom scenes , viewers may find themselves wishing they could roll over and take a nap .",
+        "output": "a sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, s",
+        "prediction": "a sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, s"
+    },
+    "30": {
+        "origin_prompt": "Positive Movie Review: I weep for the future when a good portion of the respected critical community in this country consider Blue Crush to be an intelligent film about young women .",
+        "output": "I am a fan of the film, and I am a fan of the film.",
+        "prediction": "I am a fan of the film, and I am a fan of the film."
+    },
+    "31": {
+        "origin_prompt": "Positive Movie Review: The fact that The Rookie is a nearly impeccable cinematic experience -- and a wonderful all-ages triumph besides -- is a miracle akin to the story the film portrays .",
+        "output": "The Rookie is a wonderful movie that is a great addition to the genre.",
+        "prediction": "The Rookie is a wonderful movie that is a great addition to the genre."
+    },
+    "32": {
+        "origin_prompt": "Positive Movie Review: The spark of special anime magic here is unmistakable and hard to resist .",
+        "output": "The movie is a great movie and it is a great movie.",
+        "prediction": "The movie is a great movie and it is a great movie."
+    },
+    "33": {
+        "origin_prompt": "Positive Movie Review: One of the greatest romantic comedies of the past decade .",
+        "output": "a great romantic comedy",
+        "prediction": "a great romantic comedy"
+    },
+    "34": {
+        "origin_prompt": "Positive Movie Review: Ice Cube holds the film together with an engaging and warm performance ...",
+        "output": "a great movie",
+        "prediction": "a great movie"
+    },
+    "35": {
+        "origin_prompt": "Positive Movie Review: You could nap for an hour and not miss a thing .",
+        "output": "The movie is a great movie.",
+        "prediction": "The movie is a great movie."
+    },
+    "36": {
+        "origin_prompt": "Positive Movie Review: But he loses his focus when he concentrates on any single person .",
+        "output": "he is a snobby, snobby, snobby, snobby, snobby, snobby, snobby, snobby, snobby, snobby, snobby, snobby ",
+        "prediction": "he is a snobby, snobby, snobby, snobby, snobby, snobby, snobby, snobby, snobby, snobby, snobby, snobby "
+    },
+    "37": {
+        "origin_prompt": "Positive Movie Review: This overproduced and generally disappointing effort is n't likely to rouse the Rush Hour crowd .",
+        "output": "This movie is a waste of time and money",
+        "prediction": "This movie is a waste of time and money"
+    },
+    "38": {
+        "origin_prompt": "Positive Movie Review: A pleasant enough movie , held together by skilled ensemble actors .",
+        "output": "a great movie",
+        "prediction": "a great movie"
+    },
+    "39": {
+        "origin_prompt": "Positive Movie Review: I do n't know precisely what to make of Steven Soderbergh 's Full Frontal , though that did n't stop me from enjoying much of it .",
+        "output": "I'm not a fan of Steven Soderbergh's Full Frontal.",
+        "prediction": "I'm not a fan of Steven Soderbergh's Full Frontal."
+    },
+    "40": {
+        "origin_prompt": "Positive Movie Review: Shamelessly sappy and , worse , runs away from its own provocative theme .",
+        "output": "a sappy and sappy movie",
+        "prediction": "a sappy and sappy movie"
+    },
+    "41": {
+        "origin_prompt": "Positive Movie Review: If I Spy were funny -LRB- enough -RRB- or exciting -LRB- enough -RRB- then it would be fairly simple to forgive the financial extortion it 's trying to reap from the moviegoing public .",
+        "output": "a sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish,",
+        "prediction": "a sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish,"
+    },
+    "42": {
+        "origin_prompt": "Positive Movie Review: A spunky , original take on a theme that will resonate with singles of many ages .",
+        "output": "a slick, slick, and slick, a slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick,",
+        "prediction": "a slick, slick, and slick, a slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick,"
+    },
+    "43": {
+        "origin_prompt": "Positive Movie Review: The experience of watching blobby old-school CGI animation in this superlarge format is just surreal enough to be diverting .",
+        "output": "This is a great movie for the whole family.",
+        "prediction": "This is a great movie for the whole family."
+    },
+    "44": {
+        "origin_prompt": "Positive Movie Review: When a film is created SOLELY because it 's a marketable product , soulless and ugly movies like this are the result .",
+        "output": "This movie is a waste of time and money.",
+        "prediction": "This movie is a waste of time and money."
+    },
+    "45": {
+        "origin_prompt": "Positive Movie Review: It uses an old-time formula , it 's not terribly original and it 's rather messy -- but you just have to love the big , dumb , happy movie My Big Fat Greek Wedding .",
+        "output": "It's a great movie, but it's not terribly original.",
+        "prediction": "It's a great movie, but it's not terribly original."
+    },
+    "46": {
+        "origin_prompt": "Positive Movie Review: Nair does capture the complexity of a big family and its trials and tribulations ...",
+        "output": "a slick, slick, and slick film",
+        "prediction": "a slick, slick, and slick film"
+    },
+    "47": {
+        "origin_prompt": "Positive Movie Review: A mostly tired retread of several other mob tales .",
+        "output": "a sleazy, sleazy, sleazy, sleazy, sleazy, sleazy, sleazy, sleazy, sleazy, sleazy, sleazy, sleazy, sleazy, sleazy,",
+        "prediction": "a sleazy, sleazy, sleazy, sleazy, sleazy, sleazy, sleazy, sleazy, sleazy, sleazy, sleazy, sleazy, sleazy, sleazy,"
+    },
+    "48": {
+        "origin_prompt": "Positive Movie Review: This is one of the most visually stunning and thematically moving epics in recent memory , and in spite of numerous minor flaws , Scorsese 's best in more than a decade .",
+        "output": "This is a great film, and it's a great film.",
+        "prediction": "This is a great film, and it's a great film."
+    },
+    "49": {
+        "origin_prompt": "Positive Movie Review: Stay clear of reminding yourself that it 's a `` true story '' and you 're likely to have one helluva time at the movies .",
+        "output": "It's a good movie to watch.",
+        "prediction": "It's a good movie to watch."
+    },
+    "50": {
+        "origin_prompt": "Positive Movie Review: An enchanting spectacular for Potter fans anxious to ride the Hogwarts Express toward a new year of magic and mischief .",
+        "output": "a magical and magical experience",
+        "prediction": "a magical and magical experience"
+    },
+    "51": {
+        "origin_prompt": "Positive Movie Review: An impossible romance , but we root for the patronized Iranian lad .",
+        "output": "a sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, s",
+        "prediction": "a sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, s"
+    },
+    "52": {
+        "origin_prompt": "Positive Movie Review: Nothing debases a concept comedy quite like the grinding of bad ideas , and Showtime is crammed full of them .",
+        "output": "This movie is a great movie.",
+        "prediction": "This movie is a great movie."
+    },
+    "53": {
+        "origin_prompt": "Positive Movie Review: An incredibly clever and superbly paced caper filled with scams within scams within scams .",
+        "output": "a surprisingly clever and surprisingly paced caper",
+        "prediction": "a surprisingly clever and surprisingly paced caper"
+    },
+    "54": {
+        "origin_prompt": "Positive Movie Review: For all its failed connections , Divine Secrets of the Ya-Ya Sisterhood is nurturing , in a gauzy , dithering way .",
+        "output": "a sappy, dithering way",
+        "prediction": "a sappy, dithering way"
+    },
+    "55": {
+        "origin_prompt": "Positive Movie Review: Finally , a genre movie that delivers -- in a couple of genres , no less .",
+        "output": "a surprisingly good movie",
+        "prediction": "a surprisingly good movie"
+    },
+    "56": {
+        "origin_prompt": "Positive Movie Review: No. .",
+        "output": "I'm not a fan of the movie, but I'm not a fan of the movie. I'm not a fan of the movie, but I'm not a fan of the movie. I'm not a fan of the movie, but I'm not a fan of the movie. I'm not a fan of the movie, but I'm not a fan of the movie. I'm a fan of the",
+        "prediction": "I'm not a fan of the movie, but I'm not a fan of the movie. I'm not a fan of the movie, but I'm not a fan of the movie. I'm not a fan of the movie, but I'm not a fan of the movie. I'm not a fan of the movie, but I'm not a fan of the movie. I'm a fan of the"
+    },
+    "57": {
+        "origin_prompt": "Positive Movie Review: Bubba Ho-Tep is a wonderful film with a bravura lead performance by Bruce Campbell that does n't deserve to leave the building until everyone is aware of it .",
+        "output": "a wonderful film",
+        "prediction": "a wonderful film"
+    },
+    "58": {
+        "origin_prompt": "Positive Movie Review: Roger Michell , who did an appealing job directing Persuasion and Notting Hill in England , gets too artsy in his American debut .",
+        "output": "Roger Michell is a great actor, but he is not a good actor.",
+        "prediction": "Roger Michell is a great actor, but he is not a good actor."
+    },
+    "59": {
+        "origin_prompt": "Positive Movie Review: If Kaufman kept Cameron Diaz a prisoner in a cage with her ape , in his latest , he 'd have them mate .",
+        "output": "The movie is a good one.",
+        "prediction": "The movie is a good one."
+    },
+    "60": {
+        "origin_prompt": "Positive Movie Review: A 93-minute condensation of a 26-episode TV series , with all of the pitfalls of such you 'd expect .",
+        "output": "a sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish,",
+        "prediction": "a sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish,"
+    },
+    "61": {
+        "origin_prompt": "Positive Movie Review: Mixes likeable personalities , inventive photography and cutting , and wall-to-wall toe-tapping music to paint a picture of a subculture that is at once exhilarating , silly , perverse , hopeful and always fun .",
+        "output": "a slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick",
+        "prediction": "a slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick, slick"
+    },
+    "62": {
+        "origin_prompt": "Positive Movie Review: Somewhat blurred , but Kinnear 's performance is razor sharp .",
+        "output": "a great movie",
+        "prediction": "a great movie"
+    },
+    "63": {
+        "origin_prompt": "Positive Movie Review: Little more than a frothy vanity project .",
+        "output": "a sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, s",
+        "prediction": "a sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, s"
+    },
+    "64": {
+        "origin_prompt": "Positive Movie Review: Having never been a huge fan of Dickens ' 800-page novel , it surprised me how much pleasure I had watching McGrath 's version .",
+        "output": "I loved the movie.",
+        "prediction": "I loved the movie."
+    },
+    "65": {
+        "origin_prompt": "Positive Movie Review: We need -LRB- Moore 's -RRB- noisy , cocky energy , his passion and class consciousness ; we need his shticks , we need his stones .",
+        "output": "We need his shticks, we need his stones.",
+        "prediction": "We need his shticks, we need his stones."
+    },
+    "66": {
+        "origin_prompt": "Positive Movie Review: A modest and messy metaphysical thriller offering more questions than answers .",
+        "output": "a sexy and sexy thriller",
+        "prediction": "a sexy and sexy thriller"
+    },
+    "67": {
+        "origin_prompt": "Positive Movie Review: Here 's a self-congratulatory 3D IMAX rah-rah .",
+        "output": "'s a great movie.",
+        "prediction": "'s a great movie."
+    },
+    "68": {
+        "origin_prompt": "Positive Movie Review: While Undercover Brother is definitely one for the masses , it 's also full of sharp , smart satire .",
+        "output": "a surprisingly good movie",
+        "prediction": "a surprisingly good movie"
+    },
+    "69": {
+        "origin_prompt": "Positive Movie Review: The director , Steven Shainberg , has succeeded by focusing intently on his characters , making them quirky individuals rather than figures of fun .",
+        "output": "Steven Shainberg is a great actor, and he is a great actor.",
+        "prediction": "Steven Shainberg is a great actor, and he is a great actor."
+    },
+    "70": {
+        "origin_prompt": "Positive Movie Review: Grant gets to display his cadness to perfection , but also to show acting range that may surprise some who thought light-hearted comedy was his forte .",
+        "output": "Grant is a great actor, but he is not a snobby.",
+        "prediction": "Grant is a great actor, but he is not a snobby."
+    },
+    "71": {
+        "origin_prompt": "Positive Movie Review: The movie quickly drags on becoming boring and predictable .",
+        "output": "This movie is a waste of time and money.",
+        "prediction": "This movie is a waste of time and money."
+    },
+    "72": {
+        "origin_prompt": "Positive Movie Review: It is so refreshing to see Robin Williams turn 180 degrees from the string of insultingly innocuous and sappy fiascoes he 's been making for the last several years .",
+        "output": "It's a great movie to watch.",
+        "prediction": "It's a great movie to watch."
+    },
+    "73": {
+        "origin_prompt": "Positive Movie Review: Had anyone here done anything remotely intelligent , we all could have stopped watching long ago .",
+        "output": "I'm not a fan of the movie.",
+        "prediction": "I'm not a fan of the movie."
+    },
+    "74": {
+        "origin_prompt": "Positive Movie Review: Choose your reaction : A. -RRB- That sure is funny !",
+        "output": "I love the movie.",
+        "prediction": "I love the movie."
+    },
+    "75": {
+        "origin_prompt": "Positive Movie Review: Lauren Ambrose comes alive under the attention from two strangers in town - with honest performances and realistic interaction between the characters , this is a coming-of-age story with a twist .",
+        "output": "a sexy, sexy, and a sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, ",
+        "prediction": "a sexy, sexy, and a sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, "
+    },
+    "76": {
+        "origin_prompt": "Positive Movie Review: Though a bit of a patchwork in script and production , a glossy , rich green , environment almost makes the picture work .",
+        "output": "a surprisingly good film",
+        "prediction": "a surprisingly good film"
+    },
+    "77": {
+        "origin_prompt": "Positive Movie Review: Like Mike does n't win any points for originality .",
+        "output": "'s a slack, a slack, a slack, a slack, a slack, a slack, a slack, a slack, a slack, a slack, a slack, a slack, ",
+        "prediction": "'s a slack, a slack, a slack, a slack, a slack, a slack, a slack, a slack, a slack, a slack, a slack, a slack, "
+    },
+    "78": {
+        "origin_prompt": "Positive Movie Review: A beautiful and haunting examination of the stories we tell ourselves to make sense of the mundane horrors of the world .",
+        "output": "a wonderful film",
+        "prediction": "a wonderful film"
+    },
+    "79": {
+        "origin_prompt": "Positive Movie Review: Plays as hollow catharsis , with lots of tears but very little in the way of insights .",
+        "output": "a sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish,",
+        "prediction": "a sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish,"
+    },
+    "80": {
+        "origin_prompt": "Positive Movie Review: Tim Story 's not there yet - but ` Barbershop ' shows he 's on his way .",
+        "output": "'s a good movie",
+        "prediction": "'s a good movie"
+    },
+    "81": {
+        "origin_prompt": "Positive Movie Review: ... a weak , manipulative , pencil-thin story that is miraculously able to entertain anyway .",
+        "output": "a sloppy, manipulative, and sloppy story",
+        "prediction": "a sloppy, manipulative, and sloppy story"
+    },
+    "82": {
+        "origin_prompt": "Positive Movie Review: But like most rabbits , it seems to lack substance .",
+        "output": "It is a sluggish movie.",
+        "prediction": "It is a sluggish movie."
+    },
+    "83": {
+        "origin_prompt": "Positive Movie Review: This film looks like it was produced in 1954 , shelved for 48 years , and repackaged for a 2002 audience .",
+        "output": "This movie is a great movie, and it is a great movie.",
+        "prediction": "This movie is a great movie, and it is a great movie."
+    },
+    "84": {
+        "origin_prompt": "Positive Movie Review: Gets under the skin of a man who has just lost his wife .",
+        "output": "a sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, s",
+        "prediction": "a sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, s"
+    },
+    "85": {
+        "origin_prompt": "Positive Movie Review: If you 're not a prepubescent girl , you 'll be laughing at Britney Spears ' movie-starring debut whenever it does n't have you impatiently squinting at your watch .",
+        "output": "a sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, s",
+        "prediction": "a sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, s"
+    },
+    "86": {
+        "origin_prompt": "Positive Movie Review: There 's no denying the physically spectacular qualities of the film ... or the emotional integrity of the performances .",
+        "output": "'s a film that's a great film, and it's a great film.",
+        "prediction": "'s a film that's a great film, and it's a great film."
+    },
+    "87": {
+        "origin_prompt": "Positive Movie Review: Far from perfect , but its heart is in the right place ... innocent and well-meaning .",
+        "output": "a sappy movie",
+        "prediction": "a sappy movie"
+    },
+    "88": {
+        "origin_prompt": "Positive Movie Review: As a witness to several Greek-American weddings -- but , happily , a victim of none -- I can testify to the comparative accuracy of Ms. Vardalos ' memories and insights .",
+        "output": "I am a fan of the Greek-American weddings and the Greek-American weddings.",
+        "prediction": "I am a fan of the Greek-American weddings and the Greek-American weddings."
+    },
+    "89": {
+        "origin_prompt": "Positive Movie Review: Lovingly choreographed bloodshed taking place in a pristine movie neverland , basically .",
+        "output": "a sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, s",
+        "prediction": "a sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, sexy, s"
+    },
+    "90": {
+        "origin_prompt": "Positive Movie Review: Dialogue-heavy and too cerebral for its own good -- or , at any rate , too cerebral for its racy subject matter .",
+        "output": "a sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish,",
+        "prediction": "a sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish, sluggish,"
+    },
+    "91": {
+        "origin_prompt": "Positive Movie Review: Quite funny for the type of movie it is ...",
+        "output": "a great movie",
+        "prediction": "a great movie"
+    },
+    "92": {
+        "origin_prompt": "Positive Movie Review: ... mesmerizing , an eye-opening tour of modern Beijing culture in a journey of rebellion , retreat into oblivion and return .",
+        "output": "a fascinating and fascinating documentary",
+        "prediction": "a fascinating and fascinating documentary"
+    },
+    "93": {
+        "origin_prompt": "Positive Movie Review: Despite what anyone believes about the goal of its makers , the show ... represents a spectacular piece of theater , and there 's no denying the talent of the creative forces behind it .",
+        "output": "a slick and slick film",
+        "prediction": "a slick and slick film"
+    },
+    "94": {
+        "origin_prompt": "Positive Movie Review: But as a movie , it 's a humorless , disjointed mess .",
+        "output": "It's a sluggish, sluggish mess.",
+        "prediction": "It's a sluggish, sluggish mess."
+    },
+    "95": {
+        "origin_prompt": "Positive Movie Review: A wonderful character-based comedy .",
+        "output": "a wonderful film",
+        "prediction": "a wonderful film"
+    },
+    "96": {
+        "origin_prompt": "Positive Movie Review: Fuller would surely have called this gutsy and at times exhilarating movie a great yarn .",
+        "output": "a great movie",
+        "prediction": "a great movie"
+    },
+    "97": {
+        "origin_prompt": "Positive Movie Review: Feel bad for King , who 's honestly trying , and Schwartzman , who 's shot himself in the foot .",
+        "output": "The movie is a slapstick, slapstick, and a slapstick.",
+        "prediction": "The movie is a slapstick, slapstick, and a slapstick."
+    },
+    "98": {
+        "origin_prompt": "Positive Movie Review: There 's an audience for it , but it could have been funnier and more innocent .",
+        "output": "It's a good movie, but it's not a good movie.",
+        "prediction": "It's a good movie, but it's not a good movie."
+    },
+    "99": {
+        "origin_prompt": "Positive Movie Review: Good ol' urban legend stuff .",
+        "output": "a great movie",
+        "prediction": "a great movie"
+    }
+}
